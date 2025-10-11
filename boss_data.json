@@ -1,0 +1,196 @@
+{
+    "Articuno": {
+        "type1": "Ice",
+        "type2": "Flying",
+        "level": 70,
+        "rank": 7,
+        "location": "Exploration 3",
+        "moveset": [
+            "Struggle",
+            "Gust",
+            "Powder Snow",
+            "Agility",
+            "Ancientpower",
+            "Freeze-Dry",
+            "Ice Beam",
+            "Reflect",
+            "Blizzard"
+        ]
+    },
+    "Zapdos": {
+        "type1": "Electric",
+        "type2": "Flying",
+        "level": 70,
+        "rank": 7,
+        "location": "Exploration 1",
+        "moveset": [
+            "Struggle",
+            "Peck",
+            "Thunder Wave",
+            "Thundershock",
+            "Agility",
+            "Ancientpower",
+            "Drill Peck",
+            "Discharge",
+            "Rain Dance",
+            "Thunder",
+            "Zap Cannon"
+        ]
+    },
+    "Moltres": {
+        "type1": "Fire",
+        "type2": "Flying",
+        "level": 70,
+        "rank": 7,
+        "location": "One Island",
+        "moveset": [
+            "Leer",
+            "Struggle",
+            "Gust",
+            "Ember",
+            "Wing Attack",
+            "Agility",
+            "Ancientpower",
+            "Incinerate",
+            "Air Slash",
+            "Flamethrower",
+            "Heat Wave"
+        ]
+    },
+    "Mewtwo": {
+        "type1": "Psychic",
+        "type2": null,
+        "level": 70,
+        "rank": 10,
+        "location": "Mystic Cave",
+        "moveset": [
+            "Confusion",
+            "Swift",
+            "Struggle",
+            "Barrier",
+            "Ancientpower",
+            "Psychic",
+            "Recover"
+        ]
+    },
+    "Mew": {
+        "type1": "Psychic",
+        "type2": null,
+        "level": 70,
+        "location": "Anywhere (Mythical)",
+        "moveset": [
+            "Struggle",
+            "Pound",
+            "Mega Punch",
+            "Ancientpower",
+            "Barrier",
+            "Psychic"
+        ]
+    },
+    "Raikou": {
+        "type1": "Electric",
+        "type2": null,
+        "level": 70,
+        "rank": 7,
+        "location": "Magnet Mines",
+        "moveset": [
+            "Struggle",
+            "Thundershock",
+            "Leer",
+            "Quick Attack",
+            "Spark",
+            "Bite",
+            "Crunch",
+            "Discharge",
+            "Reflect",
+            "Rain Dance",
+            "Thunder",
+            "Zap Cannon"
+        ]
+    },
+    "Entei": {
+        "type1": "Fire",
+        "type2": null,
+        "level": 70,
+        "rank": 7,
+        "location": "Mt Ember",
+        "moveset": [
+            "Leer",
+            "Sacred Fire",
+            "Ember",
+            "Smokescreen",
+            "Struggle",
+            "Flame Wheel",
+            "Bite",
+            "Scary Face",
+            "Crunch",
+            "Flamethrower",
+            "Fire Blast"
+        ]
+    },
+    "Suicune": {
+        "type1": "Water",
+        "type2": null,
+        "level": 70,
+        "rank": 7,
+        "location": "Ice Path",
+        "moveset": [
+            "Struggle",
+            "Water Gun",
+            "Leer",
+            "Gust",
+            "Water Pulse",
+            "Bite",
+            "Crunch",
+            "Rain Dance",
+            "Blizzard"
+        ]
+    },
+    "Lugia": {
+        "type1": "Psychic",
+        "type2": "Flying",
+        "level": 70,
+        "rank": 9,
+        "location": "Birthday Island",
+        "moveset": [
+            "Struggle",
+            "Gust",
+            "Ancientpower",
+            "Recover",
+            "Aeroblast",
+            "Rain Dance",
+            "Swift"
+        ]
+    },
+    "Ho-Oh": {
+        "type1": "Fire",
+        "type2": "Flying",
+        "level": 70,
+        "rank": 9,
+        "location": "Birthday Island",
+        "moveset": [
+            "Ancientpower",
+            "Struggle",
+            "Gust",
+            "Swift",
+            "Recover",
+            "Sacred Fire",
+            "Fire Blast"
+        ]
+    },
+    "Celebi": {
+        "type1": "Psychic",
+        "type2": "Grass",
+        "level": 70,
+        "location": "Anywhere (Mythical)",
+        "moveset": [
+            "Confusion",
+            "Struggle",
+            "Heal Bell",
+            "Magical Leaf",
+            "Ancientpower",
+            "Leech Seed",
+            "Recover"
+        ]
+    }
+}

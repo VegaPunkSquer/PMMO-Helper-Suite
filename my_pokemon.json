@@ -1,0 +1,398 @@
+[
+    {
+        "nickname": "Dragonite",
+        "species": "Dragonite",
+        "level": 103,
+        "nature": "Hasty",
+        "ivs": {
+            "hp": 30,
+            "energy": 26,
+            "attack": 23,
+            "defense": 16,
+            "special-attack": 24,
+            "special-defense": 28,
+            "speed": 15,
+            "hp_reg": 26,
+            "en_reg": 25
+        },
+        "evs": {
+            "hp": 1504,
+            "energy": 1369,
+            "attack": 2210,
+            "defense": 2200,
+            "special-attack": 847,
+            "special-defense": 431,
+            "speed": 2205,
+            "hp_reg": 969,
+            "en_reg": 2170
+        }
+    },
+    {
+        "nickname": "Tyranitar",
+        "species": "Tyranitar",
+        "level": 104,
+        "nature": "Relaxed",
+        "ivs": {
+            "hp": 26,
+            "energy": 2,
+            "attack": 16,
+            "defense": 25,
+            "special-attack": 24,
+            "special-defense": 3,
+            "speed": 28,
+            "hp_reg": 20,
+            "en_reg": 12
+        },
+        "evs": {
+            "hp": 1798,
+            "energy": 2400,
+            "attack": 2400,
+            "defense": 2400,
+            "special-attack": 2400,
+            "special-defense": 2400,
+            "speed": 2400,
+            "hp_reg": 2400,
+            "en_reg": 2400
+        }
+    },
+    {
+        "nickname": "Ampharos",
+        "species": "Ampharos",
+        "level": 102,
+        "nature": "Quirky",
+        "ivs": {
+            "hp": 30,
+            "energy": 10,
+            "attack": 21,
+            "defense": 23,
+            "special-attack": 11,
+            "special-defense": 25,
+            "speed": 24,
+            "hp_reg": 14,
+            "en_reg": 28
+        },
+        "evs": {
+            "hp": 80,
+            "energy": 465,
+            "attack": 1133,
+            "defense": 278,
+            "special-attack": 826,
+            "special-defense": 195,
+            "speed": 1741,
+            "hp_reg": 329,
+            "en_reg": 467
+        }
+    },
+    {
+        "nickname": "Lapras",
+        "species": "Lapras",
+        "level": 102,
+        "nature": "Calm",
+        "ivs": {
+            "hp": 30,
+            "energy": 25,
+            "attack": 14,
+            "defense": 25,
+            "special-attack": 12,
+            "special-defense": 12,
+            "speed": 15,
+            "hp_reg": 31,
+            "en_reg": 31
+        },
+        "evs": {
+            "hp": 344,
+            "energy": 338,
+            "attack": 325,
+            "defense": 2200,
+            "special-attack": 1358,
+            "special-defense": 106,
+            "speed": 574,
+            "hp_reg": 586,
+            "en_reg": 2061
+        }
+    },
+    {
+        "nickname": "Arcanine",
+        "species": "Arcanine",
+        "level": 102,
+        "nature": "Rash",
+        "ivs": {
+            "hp": 30,
+            "energy": 25,
+            "attack": 26,
+            "defense": 9,
+            "special-attack": 25,
+            "special-defense": 30,
+            "speed": 11,
+            "hp_reg": 30,
+            "en_reg": 28
+        },
+        "evs": {
+            "hp": 256,
+            "energy": 868,
+            "attack": 1985,
+            "defense": 886,
+            "special-attack": 670,
+            "special-defense": 583,
+            "speed": 624,
+            "hp_reg": 423,
+            "en_reg": 536
+        }
+    },
+    {
+        "nickname": "Alakazam",
+        "species": "Alakazam",
+        "level": 102,
+        "nature": "Gentle",
+        "ivs": {
+            "hp": 31,
+            "energy": 18,
+            "attack": 18,
+            "defense": 21,
+            "special-attack": 24,
+            "special-defense": 20,
+            "speed": 31,
+            "hp_reg": 14,
+            "en_reg": 13
+        },
+        "evs": {
+            "hp": 79,
+            "energy": 47,
+            "attack": 473,
+            "defense": 475,
+            "special-attack": 193,
+            "special-defense": 214,
+            "speed": 426,
+            "hp_reg": 113,
+            "en_reg": 588
+        }
+    },
+    {
+        "nickname": "Umbreon",
+        "species": "Umbreon",
+        "level": 101,
+        "nature": "Mild",
+        "ivs": {
+            "hp": 29,
+            "energy": 18,
+            "attack": 10,
+            "defense": 19,
+            "special-attack": 29,
+            "special-defense": 26,
+            "speed": 29,
+            "hp_reg": 19,
+            "en_reg": 22
+        },
+        "evs": {
+            "hp": 148,
+            "energy": 350,
+            "attack": 253,
+            "defense": 175,
+            "special-attack": 608,
+            "special-defense": 153,
+            "speed": 270,
+            "hp_reg": 136,
+            "en_reg": 214
+        }
+    },
+    {
+        "nickname": "Vaporeon",
+        "species": "Vaporeon",
+        "level": 102,
+        "nature": "Lonely",
+        "ivs": {
+            "hp": 25,
+            "energy": 26,
+            "attack": 27,
+            "defense": 22,
+            "special-attack": 29,
+            "special-defense": 31,
+            "speed": 20,
+            "hp_reg": 12,
+            "en_reg": 30
+        },
+        "evs": {
+            "hp": 164,
+            "energy": 201,
+            "attack": 436,
+            "defense": 1468,
+            "special-attack": 614,
+            "special-defense": 44,
+            "speed": 713,
+            "hp_reg": 299,
+            "en_reg": 1023
+        }
+    },
+    {
+        "nickname": "Aerodactyl",
+        "species": "Aerodactyl",
+        "level": 100,
+        "nature": "Hardy",
+        "ivs": {
+            "hp": 15,
+            "energy": 15,
+            "attack": 15,
+            "defense": 15,
+            "special-attack": 15,
+            "special-defense": 15,
+            "speed": 15,
+            "hp_reg": 15,
+            "en_reg": 15
+        },
+        "evs": {
+            "hp": 13,
+            "energy": 18,
+            "attack": 255,
+            "defense": 237,
+            "special-attack": 63,
+            "special-defense": 40,
+            "speed": 672,
+            "hp_reg": 33,
+            "en_reg": 243
+        }
+    },
+    {
+        "nickname": "Omastar",
+        "species": "Omastar",
+        "level": 101,
+        "nature": "Hardy",
+        "ivs": {
+            "hp": 15,
+            "energy": 15,
+            "attack": 15,
+            "defense": 15,
+            "special-attack": 15,
+            "special-defense": 15,
+            "speed": 15,
+            "hp_reg": 15,
+            "en_reg": 15
+        },
+        "evs": {
+            "hp": 641,
+            "energy": 1656,
+            "attack": 1243,
+            "defense": 1341,
+            "special-attack": 2010,
+            "special-defense": 863,
+            "speed": 2012,
+            "hp_reg": 768,
+            "en_reg": 1072
+        }
+    },
+    {
+        "nickname": "",
+        "species": "Rhyhorn",
+        "level": 1,
+        "nature": "Bashful",
+        "ivs": {
+            "hp": 24,
+            "energy": 31,
+            "attack": 29,
+            "defense": 22,
+            "special-attack": 18,
+            "special-defense": 24,
+            "speed": 14,
+            "hp_reg": 29,
+            "en_reg": 7
+        },
+        "evs": {
+            "hp": 10,
+            "energy": 5,
+            "attack": 0,
+            "defense": 5,
+            "special-attack": 0,
+            "special-defense": 0,
+            "speed": 60,
+            "hp_reg": 0,
+            "en_reg": 0
+        },
+        "notes": ""
+    },
+    {
+        "nickname": "",
+        "species": "Jolteon",
+        "level": 5,
+        "nature": "Mild",
+        "ivs": {
+            "hp": 26,
+            "energy": 26,
+            "attack": 17,
+            "defense": 27,
+            "special-attack": 21,
+            "special-defense": 20,
+            "speed": 30,
+            "hp_reg": 29,
+            "en_reg": 26
+        },
+        "evs": {
+            "hp": 0,
+            "energy": 0,
+            "attack": 0,
+            "defense": 0,
+            "special-attack": 0,
+            "special-defense": 0,
+            "speed": 0,
+            "hp_reg": 0,
+            "en_reg": 0
+        },
+        "notes": "Adicionado via Calculadora de Stats"
+    },
+    {
+        "nickname": "Gengar",
+        "species": "Gengar",
+        "level": 25,
+        "nature": "Quiet",
+        "ivs": {
+            "hp": 20,
+            "energy": 22,
+            "attack": 26,
+            "defense": 13,
+            "special-attack": 27,
+            "special-defense": 28,
+            "speed": 24,
+            "hp_reg": 11,
+            "en_reg": 16
+        },
+        "evs": {
+            "hp": 20,
+            "energy": 15,
+            "attack": 1,
+            "defense": 0,
+            "special-attack": 1,
+            "special-defense": 12,
+            "speed": 2,
+            "hp_reg": 0,
+            "en_reg": 0
+        },
+        "notes": "Adicionado via Calculadora de Stats"
+    },
+    {
+        "nickname": "Beednill",
+        "species": "Beedrill",
+        "level": 24,
+        "nature": "Bashful",
+        "ivs": {
+            "hp": 28,
+            "energy": 5,
+            "attack": 31,
+            "defense": 7,
+            "special-attack": 30,
+            "special-defense": 24,
+            "speed": 11,
+            "hp_reg": 25,
+            "en_reg": 14
+        },
+        "evs": {
+            "hp": 10,
+            "energy": 0,
+            "attack": 0,
+            "defense": 0,
+            "special-attack": 0,
+            "special-defense": 0,
+            "speed": 200,
+            "hp_reg": 0,
+            "en_reg": 0
+        },
+        "notes": "Adicionado via Calculadora de Stats"
+    }
+]

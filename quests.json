@@ -1,0 +1,134 @@
+{
+  "Charmander": [
+    { "location": "Pallet Town", "npc": "Scientist Joe", "task": "Catch", "quantity": 1, "happiness": 100, "trainer_xp": 50, "money": 5000 }
+  ],
+  "Rattata": [
+    { "location": "Pallet Town", "npc": "Scientist Joe", "task": "Faint", "quantity": 10, "happiness": 50, "trainer_xp": 20, "money": 750 }
+  ],
+  "Pidgey": [
+    { "location": "Pallet Town", "npc": "Scientist Joe", "task": "Faint", "quantity": 10, "happiness": 30, "trainer_xp": 20, "money": 1250 }
+  ],
+  "Bulbasaur": [
+    { "location": "Pallet Town", "npc": "Flora", "task": "Catch", "quantity": 1, "happiness": 100, "trainer_xp": 50, "money": 5000 }
+  ],
+  "Bellsprout": [
+    { "location": "Pallet Town", "npc": "Flora", "task": "Faint", "quantity": 15, "happiness": 75, "trainer_xp": 30, "money": 2500 }
+  ],
+  "Squirtle": [
+    { "location": "Pallet Town", "npc": "Jimmy", "task": "Catch", "quantity": 1, "happiness": 100, "trainer_xp": 50, "money": 5000 },
+    { "location": "Viridian City", "npc": "Fisherman John", "task": "Catch", "quantity": 1, "happiness": 100, "trainer_xp": 50, "money": 5000 }
+  ],
+  "Poliwag": [
+    { "location": "Pallet Town", "npc": "Jimmy", "task": "Faint", "quantity": 20, "happiness": 50, "trainer_xp": 20, "money": 1200 }
+  ],
+  "Krabby": [
+    { "location": "Exploration 1", "npc": "Jimmy", "task": "Faint", "quantity": 20, "happiness": 40, "trainer_xp": 20, "money": 1400 }
+  ],
+  "Eevee": [
+    { "location": "Route 1", "npc": "Red", "task": "Catch", "quantity": 1, "happiness": 750, "trainer_xp": 50, "money": 7500 }
+  ],
+  "Pikachu": [
+    { "location": "Route 1", "npc": "Red", "task": "Faint", "quantity": 10, "happiness": 250, "trainer_xp": 35, "money": 3500 }
+  ],
+  "Oddish": [
+    { "location": "Route 1", "npc": "Leila", "task": "Faint", "quantity": 10, "happiness": 100, "trainer_xp": 20, "money": 2000 }
+  ],
+  "Teddiursa": [
+    { "location": "Exploration 3", "npc": "Ace Trainer Thomas", "task": "Faint", "quantity": 30, "happiness": 60, "trainer_xp": 30, "money": 6000 }
+  ],
+  "Goldeen": [
+    { "location": "Viridian City", "npc": "Fisherman John", "task": "Faint", "quantity": 5, "happiness": 300, "trainer_xp": 30, "money": 5000 }
+  ],
+  "Magikarp": [
+    { "location": "Viridian City", "npc": "Fisherman John", "task": "Faint", "quantity": 25, "happiness": 500, "trainer_xp": 50, "money": 7500 }
+  ],
+  "NidoranF": [
+    { "location": "Exploration 1", "npc": "May", "task": "Faint", "quantity": 20, "happiness": 40, "trainer_xp": 20, "money": 3500 }
+  ],
+  "Diglett": [
+    { "location": "Digletts Cave", "npc": "Hiker Dan", "task": "Faint", "quantity": 50, "happiness": 100, "trainer_xp": 30, "money": 11000 },
+    { "location": "Lost Cavern", "npc": "Explorer Gerald", "task": "Faint", "quantity": 50, "happiness": 100, "trainer_xp": 30, "money": 11000 }
+  ],
+  "Dugtrio": [
+    { "location": "Digletts Cave", "npc": "Hiker Dan", "task": "Faint", "quantity": 10, "happiness": 350, "trainer_xp": 45, "money": 22500 },
+    { "location": "Digletts Cave", "npc": "Explorer Gerald", "task": "Faint", "quantity": 10, "happiness": 350, "trainer_xp": 45, "money": 22500 }
+  ],
+  "NidoranM": [
+    { "location": "Exploration 3", "npc": "Ace Trainer Thomas", "task": "Faint", "quantity": 10, "happiness": 350, "trainer_xp": 60, "money": 9000 }
+  ],
+  "Caterpie": [
+    { "location": "Exploration 1", "npc": "May", "task": "Faint", "quantity": 20, "happiness": 35, "trainer_xp": 20, "money": 4000 }
+  ],
+  "Staryu": [
+    { "location": "Exploration 1", "npc": "Misty", "task": "Faint", "quantity": 5, "happiness": 50, "trainer_xp": 25, "money": 6000 }
+  ],
+  "Psyduck": [
+    { "location": "Exploration 1", "npc": "Misty", "task": "Faint", "quantity": 25, "happiness": 40, "trainer_xp": 20, "money": 4500 }
+  ],
+  "Swinub": [
+    { "location": "Exploration 3", "npc": "Ace Trainer Thomas", "task": "Faint", "quantity": 30, "happiness": 50, "trainer_xp": 35, "money": 6250 }
+  ],
+  "Ursaring": [
+    { "location": "Exploration 3", "npc": "Ace Trainer Thomas", "task": "Faint", "quantity": 10, "happiness": 350, "trainer_xp": 75, "money": 10000 }
+  ],
+  "Piloswine": [
+    { "location": "Exploration 3", "npc": "Ace Trainer Thomas", "task": "Faint", "quantity": 10, "happiness": 300, "trainer_xp": 75, "money": 10000 }
+  ],
+  "Kingler": [
+    { "location": "Training 1", "npc": "Amelia", "task": "Faint", "quantity": 10, "happiness": 140, "trainer_xp": 50, "money": 12500 }
+  ],
+  "Slowpoke": [
+    { "location": "Training 1", "npc": "Amelia", "task": "Faint", "quantity": 30, "happiness": 50, "trainer_xp": 25, "money": 5500 }
+  ],
+  "Spearow": [
+    { "location": "Training 1", "npc": "Black Belt Rikki", "task": "Faint", "quantity": 50, "happiness": 120, "trainer_xp": 25, "money": 7500 }
+  ],
+  "Golbat": [
+    { "location": "Magnet Mines", "npc": "Lt. Surge", "task": "Faint", "quantity": 30, "happiness": 100, "trainer_xp": 30, "money": 12500 }
+  ],
+  "Zubat": [
+    { "location": "Lost Cavern", "npc": "Explorer Toby", "task": "Faint", "quantity": 50, "happiness": 120, "trainer_xp": 25, "money": 10000 }
+  ],
+  "Electabuzz": [
+    { "location": "Magnet Mines", "npc": "Lt. Surge", "task": "Faint", "quantity": 10, "happiness": 325, "trainer_xp": 55, "money": 22500 }
+  ],
+  "Magneton": [
+    { "location": "Magnet Mines", "npc": "Lt. Surge", "task": "Faint", "quantity": 30, "happiness": 150, "trainer_xp": 30, "money": 10000 }
+  ],
+  "Electrode": [
+    { "location": "Magnet Mines", "npc": "Lt. Surge", "task": "Faint", "quantity": 30, "happiness": 120, "trainer_xp": 30, "money": 10000 }
+  ],
+  "Magnemite": [
+    { "location": "Magnet Mines", "npc": "Explorer Watts", "task": "Faint", "quantity": 50, "happiness": 120, "trainer_xp": 25, "money": 10000 }
+  ],
+  "Voltorb": [
+    { "location": "Magnet Mines", "npc": "Explorer Watts", "task": "Faint", "quantity": 50, "happiness": 120, "trainer_xp": 25, "money": 10000 }
+  ],
+  "Houndoom": [
+    { "location": "Mt Ember", "npc": "Grunt Scorch", "task": "Catch", "quantity": 1, "happiness": 1000, "trainer_xp": 30, "money": 12500 }
+  ],
+  "Houndour": [
+    { "location": "Mt Ember", "npc": "Grunt Scorch", "task": "Faint", "quantity": 30, "happiness": 300, "trainer_xp": 70, "money": 40000 }
+  ],
+  "Magcargo": [
+    { "location": "Mt Ember", "npc": "Grunt Scoria", "task": "Catch", "quantity": 1, "happiness": 500, "trainer_xp": 20, "money": 6250 }
+  ],
+  "Slugma": [
+    { "location": "Mt Ember", "npc": "Grunt Scoria", "task": "Faint", "quantity": 30, "happiness": 100, "trainer_xp": 30, "money": 11000 }
+  ],
+  "Donphan": [
+    { "location": "Ice Path", "npc": "Dr.Glacial", "task": "Catch", "quantity": 1, "happiness": 50, "trainer_xp": 25, "money": 10000 }
+  ],
+  "Onix": [
+    { "location": "Ice Path", "npc": "Dr.Glacial", "task": "Faint", "quantity": 20, "happiness": 50, "trainer_xp": 20, "money": 4000 }
+  ],
+  "Jynx": [
+    { "location": "Ice Path", "npc": "Dr.Glacial", "task": "Faint", "quantity": 5, "happiness": 200, "trainer_xp": 35, "money": 6000 }
+  ],
+  "Venomoth": [
+    { "location": "Mystic Cave", "npc": "Hiker Mike", "task": "Faint", "quantity": 50, "happiness": 500, "trainer_xp": 50, "money": 75000 }
+  ],
+  "Parasect": [
+    { "location": "Mystic Cave", "npc": "Hiker Mike", "task": "Faint", "quantity": 50, "happiness": 500, "trainer_xp": 50, "money": 75000 }
+  ]
+}

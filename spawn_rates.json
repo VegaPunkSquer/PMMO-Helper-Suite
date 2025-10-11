@@ -1,0 +1,4204 @@
+{
+  "Bulbasaur": [
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Route 1",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    }
+  ],
+  "Charmander": [
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Route 1",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    }
+  ],
+  "Squirtle": [
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Route 1",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    }
+  ],
+  "Caterpie": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "4-8",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "5-7",
+      "condition": "Zone HP Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 8,
+      "levels": "5-7",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 30,
+      "levels": "5-7",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 2,
+      "levels": "2-7",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 8,
+      "levels": "6-7",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 5,
+      "levels": "6-7",
+      "condition": ""
+    }
+  ],
+  "Metapod": [
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "7-10",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 50,
+      "levels": "7-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 25,
+      "levels": "7-10",
+      "condition": ""
+    }
+  ],
+  "Butterfree": [
+    {
+      "map": "Training 1",
+      "rate": 250,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 1000,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense Low"
+    },
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "10-35",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 250,
+      "levels": "10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 200,
+      "levels": "10-15",
+      "condition": ""
+    }
+  ],
+  "Weedle": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "4-8",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 8,
+      "levels": "5-7",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 30,
+      "levels": "5-7",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 8,
+      "levels": "6-7",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 5,
+      "levels": "6-7",
+      "condition": ""
+    }
+  ],
+  "Kakuna": [
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "7-10",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 50,
+      "levels": "7-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 25,
+      "levels": "7-10",
+      "condition": ""
+    }
+  ],
+  "Beedrill": [
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "10-35",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 250,
+      "levels": "10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 200,
+      "levels": "10-15",
+      "condition": ""
+    }
+  ],
+  "Pidgey": [
+    {
+      "map": "Pallet Town",
+      "rate": 2,
+      "levels": "2-4",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 2,
+      "levels": "2-4",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 5,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 2,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 8,
+      "levels": "12-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 2,
+      "levels": "4-17",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "4-17",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 8,
+      "levels": "15-40",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "15-40",
+      "condition": "Zone Speede Low"
+    },
+    {
+      "map": "Route 1",
+      "rate": 5,
+      "levels": "2-8",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 8,
+      "levels": "6-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 5,
+      "levels": "6-10",
+      "condition": ""
+    }
+  ],
+  "Pidgeotto": [
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "18-21",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-40",
+      "condition": "Zone Speede Low"
+    },
+    {
+      "map": "Route 2",
+      "rate": 500,
+      "levels": "18",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 333,
+      "levels": "18",
+      "condition": ""
+    }
+  ],
+  "Rattata": [
+    {
+      "map": "Pallet Town",
+      "rate": 2,
+      "levels": "2-4",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 2,
+      "levels": "2-4",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 2,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 5,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 8,
+      "levels": "12-15",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "4-17",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 2,
+      "levels": "4-17",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "15-50",
+      "condition": "Zone Speede High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 8,
+      "levels": "15-50",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "15-50",
+      "condition": "Zone Speede Low"
+    },
+    {
+      "map": "Route 1",
+      "rate": 5,
+      "levels": "2-8",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 8,
+      "levels": "6-10",
+      "condition": ""
+    }
+  ],
+  "Raticate": [
+    {
+      "map": "Viridian City",
+      "rate": 250,
+      "levels": "20",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "20-22",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone Speede High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    }
+  ],
+  "Spearow": [
+    {
+      "map": "Pewter City",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "4-8",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "15-50",
+      "condition": "Zone Speede Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "15-50",
+      "condition": "Zone Speede High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 8,
+      "levels": "15-50",
+      "condition": ""
+    },
+    {
+      "map": "Route 1",
+      "rate": 5,
+      "levels": "2-6",
+      "condition": ""
+    }
+  ],
+  "Fearow": [
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone Speede Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone Speede High"
+    }
+  ],
+  "Ekans": [
+    {
+      "map": "Pewter City",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "9-13",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-40",
+      "condition": "Zone Attack Low"
+    },
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-22",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-22",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "20-22",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "20-22",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Arbok": [
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "40-50",
+      "condition": "Zone Attack High"
+    },
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "15-20",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Pikachu": [
+    {
+      "map": "Pallet Town",
+      "rate": 100,
+      "levels": "4-7",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 100,
+      "levels": "4-7",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 100,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Route 1",
+      "rate": 100,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 100,
+      "levels": "25",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 100,
+      "levels": "6-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 100,
+      "levels": "6-10",
+      "condition": ""
+    }
+  ],
+  "Sandshrew": [
+    {
+      "map": "Pewter City",
+      "rate": 8,
+      "levels": "12-15",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "9-13",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Deffense Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Deffense High"
+    }
+  ],
+  "Sandslash": [
+    {
+      "map": "Training 1",
+      "rate": 20,
+      "levels": "40-50",
+      "condition": "Zone Deffense High"
+    }
+  ],
+  "NidoranF": [
+    {
+      "map": "Pewter City",
+      "rate": 10,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 10,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 10,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "4-8",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "16",
+      "condition": "Zone HP Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "16",
+      "condition": "Zone HP High"
+    },
+    {
+      "map": "Route 2",
+      "rate": 20,
+      "levels": "6-10",
+      "condition": ""
+    }
+  ],
+  "Nidorina": [
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone HP High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone HP Low"
+    }
+  ],
+  "NidoranM": [
+    {
+      "map": "Pewter City",
+      "rate": 10,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 10,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 10,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "4-8",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Attack Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Attack High"
+    },
+    {
+      "map": "Route 2",
+      "rate": 20,
+      "levels": "6-10",
+      "condition": ""
+    }
+  ],
+  "Nidorino": [
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone Attack High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone Attack Low"
+    }
+  ],
+  "Clefairy": [
+    {
+      "map": "Pewter City",
+      "rate": 30,
+      "levels": "12-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 30,
+      "levels": "9-17",
+      "condition": ""
+    }
+  ],
+  "Vulpix": [
+    {
+      "map": "Exploration 1",
+      "rate": 20,
+      "levels": "14-17",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "35-40",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 2,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Jigglypuff": [
+    {
+      "map": "Pewter City",
+      "rate": 50,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 50,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 50,
+      "levels": "4-6",
+      "condition": ""
+    }
+  ],
+  "Zubat": [
+    {
+      "map": "Oak Cave",
+      "rate": 2,
+      "levels": "6-8",
+      "condition": ""
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 2,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Digletts Cave",
+      "rate": 10,
+      "levels": "13-18",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "20-22",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "20-22",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Golbat": [
+    {
+      "map": "Lost Cavern",
+      "rate": 50,
+      "levels": "42-52",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 5,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 5,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 8,
+      "levels": "42-55",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "35",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 8,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 9,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Oddish": [
+    {
+      "map": "Viridian City",
+      "rate": 5,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "9-13",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack Low"
+    },
+    {
+      "map": "Route 1",
+      "rate": 10,
+      "levels": "2-8",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-21",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 10,
+      "levels": "6-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 10,
+      "levels": "6-10",
+      "condition": ""
+    }
+  ],
+  "Gloom": [
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack Low"
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "21-35",
+      "condition": ""
+    }
+  ],
+  "Paras": [
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "9-13",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-24",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-24",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-24",
+      "condition": ""
+    }
+  ],
+  "Parasect": [
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "24-35",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "24-35",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "24-35",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 8,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 9,
+      "levels": "55-60",
+      "condition": ""
+    }
+  ],
+  "Venonat": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "18-29",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense Low"
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-31",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "15-31",
+      "condition": ""
+    }
+  ],
+  "Venomoth": [
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "31-50",
+      "condition": "Zone SP.Attack Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "31-50",
+      "condition": "Zone SP.Attack High"
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 9,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 8,
+      "levels": "45-50",
+      "condition": ""
+    }
+  ],
+  "Diglett": [
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "14-17",
+      "condition": ""
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 10,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Digletts Cave",
+      "rate": 1,
+      "levels": "13-18",
+      "condition": ""
+    }
+  ],
+  "Dugtrio": [
+    {
+      "map": "Lost Cavern",
+      "rate": 50,
+      "levels": "42-52",
+      "condition": ""
+    },
+    {
+      "map": "Digletts Cave",
+      "rate": 200,
+      "levels": "26",
+      "condition": ""
+    }
+  ],
+  "Meowth": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "18-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 8,
+      "levels": "15-25",
+      "condition": ""
+    }
+  ],
+  "Psyduck": [
+    {
+      "map": "Viridian City",
+      "rate": 5,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "8-20",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "15-33",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-33",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "25-33",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "15-20",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 8,
+      "levels": "15-20",
+      "condition": ""
+    }
+  ],
+  "Golduck": [
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "33-35",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "33-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "35-40",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 50,
+      "levels": "35-40",
+      "condition": ""
+    }
+  ],
+  "Mankey": [
+    {
+      "map": "Pewter City",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Pewter City",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Route 3",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "9-13",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 2500,
+      "levels": "25-28",
+      "condition": "Always Shiny ★ 2"
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Attack Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Attack High"
+    }
+  ],
+  "Primeape": [
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "40-50",
+      "condition": "Zone Attack High"
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 40,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 40,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 250,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Growlithe": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "18-21",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "35-45",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 2,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Poliwag": [
+    {
+      "map": "Pallet Town",
+      "rate": 2,
+      "levels": "2-4",
+      "condition": ""
+    },
+    {
+      "map": "Pallet Town",
+      "rate": 2,
+      "levels": "2-4",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 2,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "8-20",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "8-20",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "15-32",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-32",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "20-25",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "15-20",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Poliwhirl": [
+    {
+      "map": "Viridian City",
+      "rate": 50,
+      "levels": "25",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "25-35",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 30,
+      "levels": "25-35",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 40,
+      "levels": "25-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Abra": [
+    {
+      "map": "Exploration 1",
+      "rate": 20,
+      "levels": "14-17",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 8,
+      "levels": "15-16",
+      "condition": ""
+    }
+  ],
+  "Kadabra": [
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack Low"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 10,
+      "levels": "20-35",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "55-60",
+      "condition": ""
+    }
+  ],
+  "Machop": [
+    {
+      "map": "Exploration 1",
+      "rate": 20,
+      "levels": "14-17",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Attack Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Attack High"
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 10,
+      "levels": "15-28",
+      "condition": ""
+    }
+  ],
+  "Machoke": [
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "40-50",
+      "condition": "Zone Attack High"
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 100,
+      "levels": "42-52",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 40,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 40,
+      "levels": "45-50",
+      "condition": ""
+    }
+  ],
+  "Bellsprout": [
+    {
+      "map": "Pallet Town",
+      "rate": 10,
+      "levels": "3-5",
+      "condition": ""
+    },
+    {
+      "map": "Viridian City",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "9-13",
+      "condition": ""
+    },
+    {
+      "map": "Route 1",
+      "rate": 10,
+      "levels": "2-8",
+      "condition": ""
+    },
+    {
+      "map": "Route 2",
+      "rate": 10,
+      "levels": "6-10",
+      "condition": ""
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 10,
+      "levels": "6-10",
+      "condition": ""
+    }
+  ],
+  "Tentacool": [
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "15-29",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "25-30",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 2,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Tentacruel": [
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "30-40",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "30-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Geodude": [
+    {
+      "map": "Pewter City",
+      "rate": 8,
+      "levels": "12-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "14-34",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 8,
+      "levels": "30-36",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Deffense High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Deffense Low"
+    },
+    {
+      "map": "Oak Cave",
+      "rate": 2,
+      "levels": "6-8",
+      "condition": ""
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 5,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 8,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 5,
+      "levels": "20-25",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 10,
+      "levels": "20-25",
+      "condition": ""
+    }
+  ],
+  "Graveler": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "32-36",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone Deffense Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "30-50",
+      "condition": "Zone Deffense High"
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 50,
+      "levels": "42-52",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 5,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 2,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 5,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 8,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Golem": [
+    {
+      "map": "Mt Ember",
+      "rate": 100000,
+      "levels": "45-55",
+      "condition": "Always Shiny ★ 10"
+    }
+  ],
+  "Ponyta": [
+    {
+      "map": "Training 1",
+      "rate": 20,
+      "levels": "15-35",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 20,
+      "levels": "15-35",
+      "condition": "Zone Speede Low"
+    },
+    {
+      "map": "One Island",
+      "rate": 10,
+      "levels": "25-40",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "20-35",
+      "condition": ""
+    }
+  ],
+  "Rapidash": [
+    {
+      "map": "Birthday Island",
+      "rate": 250,
+      "levels": "40-50",
+      "condition": ""
+    }
+  ],
+  "Slowpoke": [
+    {
+      "map": "Viridian City",
+      "rate": 20,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 20,
+      "levels": "8-20",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-35",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 5,
+      "levels": "35-37",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "30-37",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "20-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Slowbro": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "40",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "37-40",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 50,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 40,
+      "levels": "37-40",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Magnemite": [
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "28-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "30-40",
+      "condition": "Zone SP.Attack Low"
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 10,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Magneton": [
+    {
+      "map": "Exploration 1",
+      "rate": 1000,
+      "levels": "30-40",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "40-50",
+      "condition": "Zone SP.Attack High"
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 8,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "45-50",
+      "condition": ""
+    }
+  ],
+  "Farfetchd": [
+    {
+      "map": "Exploration 1",
+      "rate": 20,
+      "levels": "18-21",
+      "condition": ""
+    }
+  ],
+  "Doduo": [
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "18-21",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 10,
+      "levels": "25-30",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 2,
+      "levels": "25-31",
+      "condition": ""
+    }
+  ],
+  "Dodrio": [
+    {
+      "map": "Training 1",
+      "rate": 20,
+      "levels": "31-40",
+      "condition": "Zone Attack Low"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "31-35",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "45-50",
+      "condition": ""
+    }
+  ],
+  "Seel": [
+    {
+      "map": "Exploration 3",
+      "rate": 10,
+      "levels": "20-30",
+      "condition": ""
+    }
+  ],
+  "Grimer": [
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "28-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "40-50",
+      "condition": "Zone HP High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 10,
+      "levels": "30-38",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Muk": [
+    {
+      "map": "Exploration 1",
+      "rate": 1000,
+      "levels": "38-40",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "40-50",
+      "condition": "Zone HP High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 250,
+      "levels": "38-40",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 200,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Shellder": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "8-20",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-40",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "25-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 2,
+      "levels": "35",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Gastly": [
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "25",
+      "condition": "Boss Rank 2"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 2,
+      "levels": "20-25",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "20-25",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Haunter": [
+    {
+      "map": "Birthday Island",
+      "rate": 10,
+      "levels": "25-35",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 50,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 50,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Gengar": [
+    {
+      "map": "Halloween Island",
+      "rate": 1000,
+      "levels": "50",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Onix": [
+    {
+      "map": "Pewter City",
+      "rate": 20,
+      "levels": "12-15",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 30,
+      "levels": "22-29",
+      "condition": ""
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 20,
+      "levels": "42-52",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 20,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 100000,
+      "levels": "70",
+      "condition": "Always Shiny ★ 10"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "35-40",
+      "condition": ""
+    }
+  ],
+  "Drowzee": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "18-21",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 2,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense Low"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 8,
+      "levels": "15-26",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "20-25",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Hypno": [
+    {
+      "map": "Training 1",
+      "rate": 200,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 200,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 200,
+      "levels": "26",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 200,
+      "levels": "30-40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Krabby": [
+    {
+      "map": "Pallet Town",
+      "rate": 2,
+      "levels": "2-4",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "8-20",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-28",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "20-28",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "15-20",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 8,
+      "levels": "15-20",
+      "condition": ""
+    }
+  ],
+  "Kingler": [
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "28-35",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "28-35",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 40,
+      "levels": "30-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "30-40",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 50,
+      "levels": "30-40",
+      "condition": ""
+    }
+  ],
+  "Voltorb": [
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "28-34",
+      "condition": ""
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 10,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Electrode": [
+    {
+      "map": "Exploration 1",
+      "rate": 1000,
+      "levels": "30-40",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "40-50",
+      "condition": "Zone Speede High"
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 8,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "55-60",
+      "condition": ""
+    }
+  ],
+  "Exeggcute": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "18-29",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 10,
+      "levels": "15-35",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 2,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Cubone": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "18-21",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 8,
+      "levels": "30-34",
+      "condition": ""
+    }
+  ],
+  "Marowak": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "32-35",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 20,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 10,
+      "levels": "55-60",
+      "condition": ""
+    }
+  ],
+  "Lickitung": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "26-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 20,
+      "levels": "30-50",
+      "condition": "Zone HP Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 20,
+      "levels": "30-50",
+      "condition": "Zone HP High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Koffing": [
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "28-34",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 10,
+      "levels": "30-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Weezing": [
+    {
+      "map": "Exploration 1",
+      "rate": 1000,
+      "levels": "35-40",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 200,
+      "levels": "35-40",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 200,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Rhyhorn": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "26-34",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 8,
+      "levels": "30-35",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Deffense Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Deffense High"
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 5,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 8,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 20,
+      "levels": "35-42",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 5,
+      "levels": "35-42",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 5,
+      "levels": "35-42",
+      "condition": ""
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 8,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Rhydon": [
+    {
+      "map": "Training 1",
+      "rate": 200,
+      "levels": "42-50",
+      "condition": "Zone Deffense High"
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 50,
+      "levels": "42-52",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 50,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 250,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 50,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 50,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 100,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 100,
+      "levels": "45-50",
+      "condition": ""
+    }
+  ],
+  "Chansey": [
+    {
+      "map": "Birthday Island",
+      "rate": 200,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Tangela": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "22-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 5,
+      "levels": "30-50",
+      "condition": "Zone Deffense Low"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 20,
+      "levels": "30-35",
+      "condition": ""
+    }
+  ],
+  "Kangaskhan": [
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "22-29",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "30-50",
+      "condition": "Zone HP Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "30-50",
+      "condition": "Zone HP High"
+    }
+  ],
+  "Horsea": [
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "15-27",
+      "condition": "Southern Ocean"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "25-30",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 20,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Seadra": [
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "27-40",
+      "condition": "Southern Ocean"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "32-35",
+      "condition": ""
+    }
+  ],
+  "Goldeen": [
+    {
+      "map": "Viridian City",
+      "rate": 50,
+      "levels": "10-15",
+      "condition": ""
+    }
+  ],
+  "Staryu": [
+    {
+      "map": "Pallet Town",
+      "rate": 200,
+      "levels": "2-5",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "10-20",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "15-35",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 50,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "35-40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Mr.Mime": [
+    {
+      "map": "Exploration 1",
+      "rate": 20,
+      "levels": "26-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense Low"
+    },
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "30-50",
+      "condition": "Zone SP.Deffense High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 250,
+      "levels": "40",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 100,
+      "levels": "55-60",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 100,
+      "levels": "45-50",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 100,
+      "levels": "30-35",
+      "condition": ""
+    }
+  ],
+  "Scyther": [
+    {
+      "map": "Exploration 1",
+      "rate": 20,
+      "levels": "26-34",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-21",
+      "condition": ""
+    }
+  ],
+  "Jynx": [
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "22-29",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "33-36",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 100,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 100,
+      "levels": "30-35",
+      "condition": ""
+    }
+  ],
+  "Electabuzz": [
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "30-35",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 200,
+      "levels": "40-50",
+      "condition": "Zone Speede High"
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 100,
+      "levels": "45-55",
+      "condition": ""
+    }
+  ],
+  "Magmar": [
+    {
+      "map": "Exploration 1",
+      "rate": 40,
+      "levels": "26-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 200,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack High"
+    },
+    {
+      "map": "Training 1",
+      "rate": 200,
+      "levels": "30-50",
+      "condition": "Zone SP.Attack Low"
+    },
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 70,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 100,
+      "levels": "45-55",
+      "condition": ""
+    }
+  ],
+  "Pinsir": [
+    {
+      "map": "Exploration 1",
+      "rate": 40,
+      "levels": "24-32",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 20,
+      "levels": "40-50",
+      "condition": "Zone Attack High"
+    },
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "15-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 20,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Tauros": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "22-34",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 10,
+      "levels": "40-50",
+      "condition": "Zone Attack High"
+    }
+  ],
+  "Magikarp": [
+    {
+      "map": "Viridian City",
+      "rate": 3,
+      "levels": "5-10",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 5,
+      "levels": "5-20",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 5,
+      "levels": "15-20",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "15-20",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 8,
+      "levels": "15-20",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 8,
+      "levels": "15-20",
+      "condition": ""
+    }
+  ],
+  "Gyarados": [
+    {
+      "map": "Training 1",
+      "rate": 10000,
+      "levels": "40-50",
+      "condition": "Always Shiny ★ 1"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "50",
+      "condition": "Boss Rank 2"
+    }
+  ],
+  "Lapras": [
+    {
+      "map": "Exploration 3",
+      "rate": 1000,
+      "levels": "40",
+      "condition": "Boss Rank 4"
+    },
+    {
+      "map": "One Island",
+      "rate": 1000,
+      "levels": "50",
+      "condition": "Boss Rank 6"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "50",
+      "condition": "Boss Rank 2"
+    }
+  ],
+  "Eevee": [
+    {
+      "map": "Route 1",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 500,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 500,
+      "levels": "5",
+      "condition": ""
+    }
+  ],
+  "Omanyte": [
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "15",
+      "condition": ""
+    }
+  ],
+  "Kabuto": [
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "15",
+      "condition": ""
+    }
+  ],
+  "Snorlax": [
+    {
+      "map": "Exploration 1",
+      "rate": 1000,
+      "levels": "22-29",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 1000,
+      "levels": "40-50",
+      "condition": "Zone HP High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 500,
+      "levels": "35",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 500,
+      "levels": "30-40",
+      "condition": ""
+    }
+  ],
+  "Articuno": [
+    {
+      "map": "Exploration 3",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 7"
+    }
+  ],
+  "Zapdos": [
+    {
+      "map": "Exploration 1",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 7"
+    }
+  ],
+  "Moltres": [
+    {
+      "map": "One Island",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 7"
+    }
+  ],
+  "Dratini": [
+    {
+      "map": "Exploration 3",
+      "rate": 500000,
+      "levels": "25",
+      "condition": "Always Shiny ★ 3"
+    },
+    {
+      "map": "One Island",
+      "rate": 2000,
+      "levels": "15-20",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 500000,
+      "levels": "15-20",
+      "condition": "Always Shiny ★ 3"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 500,
+      "levels": "25",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 1000,
+      "levels": "15-20",
+      "condition": ""
+    }
+  ],
+  "Mewtwo": [
+    {
+      "map": "Mystic Cave",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 10"
+    }
+  ],
+  "Mew": [
+    {
+      "map": "Pallet Town",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Viridian City",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Pewter City",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Route 3",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Exploration 1",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Training 1",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Route 1",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "One Island",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Oak Cave",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Lost Cavern",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Ice Path",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Magnet Mines",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Route 2",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Digletts Cave",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    }
+  ],
+  "Chikorita": [
+    {
+      "map": "One Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    }
+  ],
+  "Cyndaquil": [
+    {
+      "map": "One Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    }
+  ],
+  "Totodile": [
+    {
+      "map": "One Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": "Closest To Pokecenter"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 1000,
+      "levels": "5",
+      "condition": ""
+    }
+  ],
+  "Sentret": [
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "12-14",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 8,
+      "levels": "15",
+      "condition": ""
+    }
+  ],
+  "Furret": [
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "30-35",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 50,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 20,
+      "levels": "20-35",
+      "condition": ""
+    }
+  ],
+  "Hoothoot": [
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "15-20",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "20",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Noctowl": [
+    {
+      "map": "Birthday Island",
+      "rate": 10,
+      "levels": "20-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 40,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Ledyba": [
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-34",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "15-34",
+      "condition": ""
+    }
+  ],
+  "Ledian": [
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "18-40",
+      "condition": ""
+    }
+  ],
+  "Spinarak": [
+    {
+      "map": "One Island",
+      "rate": 8,
+      "levels": "15-38",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 2,
+      "levels": "15-38",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "20",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Ariados": [
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "22-42",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "25-30",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Chinchou": [
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "15-27",
+      "condition": "Northern Ocean"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "20-25",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 10,
+      "levels": "20-25",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Lanturn": [
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "27-40",
+      "condition": "Northern Ocean"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "27-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 100,
+      "levels": "30-35",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Natu": [
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "20-25",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "20-25",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Mareep": [
+    {
+      "map": "Exploration 1",
+      "rate": 8,
+      "levels": "10-15",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 5,
+      "levels": "10-15",
+      "condition": ""
+    }
+  ],
+  "Marill": [
+    {
+      "map": "Exploration 3",
+      "rate": 20,
+      "levels": "15-18",
+      "condition": ""
+    },
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "10-18",
+      "condition": "Volcano Lake"
+    },
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "10-18",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 50,
+      "levels": "10-18",
+      "condition": ""
+    }
+  ],
+  "Sudowoodo": [
+    {
+      "map": "One Island",
+      "rate": 500,
+      "levels": "40",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 125,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 125,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Hoppip": [
+    {
+      "map": "One Island",
+      "rate": 30,
+      "levels": "15-28",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 20,
+      "levels": "10-18",
+      "condition": ""
+    }
+  ],
+  "Aipom": [
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Sunkern": [
+    {
+      "map": "One Island",
+      "rate": 20,
+      "levels": "15-20",
+      "condition": ""
+    }
+  ],
+  "Yanma": [
+    {
+      "map": "One Island",
+      "rate": 500,
+      "levels": "30",
+      "condition": "Boss Rank 3"
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 250,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Wooper": [
+    {
+      "map": "Exploration 1",
+      "rate": 10,
+      "levels": "14-17",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 20,
+      "levels": "15-20",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 50,
+      "levels": "15-20",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 20,
+      "levels": "15-20",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Quagsire": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "20-30",
+      "condition": ""
+    }
+  ],
+  "Murkrow": [
+    {
+      "map": "Birthday Island",
+      "rate": 200,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 100,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Misdreavus": [
+    {
+      "map": "Birthday Island",
+      "rate": 50,
+      "levels": "20-30",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 100,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Girafarig": [
+    {
+      "map": "One Island",
+      "rate": 200,
+      "levels": "15-35",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Pineco": [
+    {
+      "map": "Exploration 3",
+      "rate": 30,
+      "levels": "15-30",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 10,
+      "levels": "25-30",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 2,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Forretress": [
+    {
+      "map": "Exploration 3",
+      "rate": 250,
+      "levels": "35-40",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 100,
+      "levels": "35-40",
+      "condition": ""
+    }
+  ],
+  "Dunsparce": [
+    {
+      "map": "Lost Cavern",
+      "rate": 500,
+      "levels": "15-25",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 250,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Gligar": [
+    {
+      "map": "One Island",
+      "rate": 50,
+      "levels": "15-37",
+      "condition": ""
+    }
+  ],
+  "Snubbull": [
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "10",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 50,
+      "levels": "20-32",
+      "condition": ""
+    }
+  ],
+  "Qwilfish": [
+    {
+      "map": "Halloween Island",
+      "rate": 500,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Shuckle": [
+    {
+      "map": "Pallet Town",
+      "rate": 5000,
+      "levels": "20",
+      "condition": "Boss Rank 4"
+    },
+    {
+      "map": "One Island",
+      "rate": 4000,
+      "levels": "40",
+      "condition": "Boss Rank 2"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 500,
+      "levels": "40",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 1000,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 1000,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Heracross": [
+    {
+      "map": "One Island",
+      "rate": 200,
+      "levels": "15-38",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Sneasel": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "30-32",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 100,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 100,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Teddiursa": [
+    {
+      "map": "Exploration 3",
+      "rate": 25000,
+      "levels": "30-32",
+      "condition": "Always Shiny ★ 3"
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 8,
+      "levels": "28-32",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 8,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Ursaring": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "33-36",
+      "condition": ""
+    },
+    {
+      "map": "Exploration 3",
+      "rate": 25000,
+      "levels": "33-35",
+      "condition": "Always Shiny ★ 3"
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 200,
+      "levels": "40-45",
+      "condition": ""
+    }
+  ],
+  "Slugma": [
+    {
+      "map": "Mt Ember",
+      "rate": 2,
+      "levels": "20-38",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 5,
+      "levels": "20-38",
+      "condition": ""
+    }
+  ],
+  "Magcargo": [
+    {
+      "map": "Mt Ember",
+      "rate": 100,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 50,
+      "levels": "45-55",
+      "condition": ""
+    }
+  ],
+  "Swinub": [
+    {
+      "map": "Exploration 3",
+      "rate": 8,
+      "levels": "28-31",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 2,
+      "levels": "25-30",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 8,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Piloswine": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "32-35",
+      "condition": ""
+    },
+    {
+      "map": "Ice Path",
+      "rate": 20,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 20,
+      "levels": "35-40",
+      "condition": ""
+    }
+  ],
+  "Corsola": [
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "15-40",
+      "condition": ""
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 50,
+      "levels": "20-35",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 20,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Remoraid": [
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "15-25",
+      "condition": "Northern Ocean"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 70,
+      "levels": "20-25",
+      "condition": ""
+    },
+    {
+      "map": "Halloween Island",
+      "rate": 50,
+      "levels": "20-25",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Delibird": [
+    {
+      "map": "Christmas Island",
+      "rate": 200,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Mantine": [
+    {
+      "map": "One Island",
+      "rate": 100,
+      "levels": "25-40",
+      "condition": "Southern Ocean"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 70,
+      "levels": "25-30",
+      "condition": ""
+    }
+  ],
+  "Skarmory": [
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "40-50",
+      "condition": "Zone Deffense High"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 40,
+      "levels": "35-40",
+      "condition": ""
+    }
+  ],
+  "Houndour": [
+    {
+      "map": "Mt Ember",
+      "rate": 20,
+      "levels": "20-24",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 5,
+      "levels": "20-24",
+      "condition": ""
+    }
+  ],
+  "Houndoom": [
+    {
+      "map": "Mt Ember",
+      "rate": 250,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Mt Ember",
+      "rate": 200,
+      "levels": "45-55",
+      "condition": ""
+    }
+  ],
+  "Phanpy": [
+    {
+      "map": "Exploration 3",
+      "rate": 20,
+      "levels": "15",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 8,
+      "levels": "20-25",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 2,
+      "levels": "20-25",
+      "condition": ""
+    }
+  ],
+  "Donphan": [
+    {
+      "map": "Ice Path",
+      "rate": 50,
+      "levels": "45-55",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 50,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Stantler": [
+    {
+      "map": "Exploration 3",
+      "rate": 100,
+      "levels": "30",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 100,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Smoochum": [
+    {
+      "map": "Christmas Island",
+      "rate": 500,
+      "levels": "40",
+      "condition": ""
+    }
+  ],
+  "Elekid": [
+    {
+      "map": "Birthday Island",
+      "rate": 500,
+      "levels": "5",
+      "condition": "Spawns in ALL grass Zones"
+    }
+  ],
+  "Magby": [
+    {
+      "map": "Halloween Island",
+      "rate": 500,
+      "levels": "40",
+      "condition": "Limited Time Only"
+    }
+  ],
+  "Miltank": [
+    {
+      "map": "Exploration 1",
+      "rate": 100,
+      "levels": "20",
+      "condition": ""
+    },
+    {
+      "map": "Training 1",
+      "rate": 100,
+      "levels": "30-40",
+      "condition": "Zone Deffense Low"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 100,
+      "levels": "25-35",
+      "condition": ""
+    }
+  ],
+  "Raikou": [
+    {
+      "map": "Magnet Mines",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 7"
+    }
+  ],
+  "Entei": [
+    {
+      "map": "Mt Ember",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 7"
+    }
+  ],
+  "Suicune": [
+    {
+      "map": "Ice Path",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 7"
+    }
+  ],
+  "Larvitar": [
+    {
+      "map": "Training 1",
+      "rate": 2000,
+      "levels": "5",
+      "condition": "Zone HP Low"
+    },
+    {
+      "map": "Birthday Island",
+      "rate": 500,
+      "levels": "15",
+      "condition": ""
+    },
+    {
+      "map": "Mystic Cave",
+      "rate": 2000,
+      "levels": "15",
+      "condition": ""
+    },
+    {
+      "map": "Christmas Island",
+      "rate": 1000,
+      "levels": "15-20",
+      "condition": ""
+    }
+  ],
+  "Lugia": [
+    {
+      "map": "Birthday Island",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 9"
+    }
+  ],
+  "Ho-Oh": [
+    {
+      "map": "Birthday Island",
+      "rate": 1,
+      "levels": "70",
+      "condition": "Boss Rank 9"
+    }
+  ],
+  "Celebi": [
+    {
+      "map": "Birthday Island",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    },
+    {
+      "map": "Viridian Forest",
+      "rate": 1000000,
+      "levels": "???",
+      "condition": "Anywhere"
+    }
+  ]
+}

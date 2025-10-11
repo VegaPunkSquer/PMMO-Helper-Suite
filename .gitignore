@@ -1,0 +1,48 @@
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+
+# Ambiente Virtual (se você usa um, o que é recomendado)
+venv/
+.venv/
+env/
+.env/
+
+# Pastas geradas pelo PyInstaller (NUNCA suba isso!)
+dist/
+build/
+
+# Patas de dados do app
+data/
+
+# Arquivo executável gerado pelo PyInstaller
+*.exe
+
+# Script do Inno Setup
+*.iss
+
+# Arquivo de especificações do PyInstaller
+*.spec
+
+# Arquivos de configuração de IDEs (exemplo para VSCode)
+.vscode/
+
+# Arquivos .tcl
+*.tcl
+
+# Builds do PyInstaller
+*.manifest, *.bat
+
+# Arquivos de imagens
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.bmp
+
+# Arquivos de times e configurações do usuário
+config.json
+teams.json
+my_pokemon.json
+shiny_hunt.json

@@ -1,0 +1,137 @@
+Notas do Patch v0.1 - v2.0.0 - The Silph Scope
+Aqui estão os detalhes técnicos para Treinadores curiosos:
+Olá, Treinadores!
+
+Bem-vindos à versão definitiva do The Silph Scope! Meu nome é Vega, e este projeto é a minha paixão por Pokémon e pelo MMO 3D Pokémon transformado em um conjunto completo de ferramentas.
+
+Para comemorar este lançamento, preparei um resumo da "evolução" do aplicativo, detalhando a jornada técnica que nos trouxe até aqui.
+
+v0.1 - The Foundation
+NOVO
+
+Gerenciador de Coleção: O núcleo do aplicativo. Um sistema para adicionar, editar e salvar Pokémon com dados essenciais (nível, natureza, IVs, EVs, notas).
+
+v0.3 - The Dawn of Strategy
+NOVO
+
+Analisador de Equipe (Básico): Uma ferramenta inicial para montar uma equipe de até 6 Pokémon e gerar uma análise detalhada de suas fraquezas e resistências defensivas.
+
+v0.5 - Simulando Combate
+NOVO
+
+Planejador de Batalha (Beta): Primeira implementação de uma simulação de batalha contra chefes, calculando contadores básicos com base puramente na vantagem de tipo.
+
+v0.8 - Ferramentas do Mestre
+NOVO
+
+Guia de Treinamento de EVs: Um banco de dados integrado que sugere os melhores locais e Pokémon para treinar EVs específicos, incluindo mapas de localização.
+
+NOVO
+
+Rastreador de Caça Brilhante: Um módulo com cronômetro e contador de encontros para ajudar a organizar e manter registros de suas caçadas.
+
+v1.0 - A Grande Reformulação da Lógica
+ATUALIZAÇÃO
+
+Planejador de Batalha 2.0: O sistema saiu do Beta. A lógica da simulação foi reconstruída do zero para incluir uma análise mais aprofundada de estatísticas base, dano e tempo de sobrevivência, resultando em um "Índice de Batalha" muito mais preciso.
+
+ATUALIZAÇÃO
+
+Banco de Dados: Adicionados dados de movimentos, novos Pokémon e chefes para potencializar a nova lógica de batalha.
+
+v1.1 - O Olho da Máquina
+NOVO
+
+Calculadora de Estatísticas (OCR): Implementação de um sistema de Reconhecimento Óptico de Caracteres. Ao pressionar F10, o aplicativo captura uma região da tela e extrai estatísticas automaticamente para adicioná-las rapidamente à coleção.
+
+v1.2 - Refinamento e Qualidade de Vida
+NOVO
+
+Temas e Idiomas: Adicionado suporte para vários temas (Escuro, Claro, Pokémon) e idiomas (pt-br, en-us), selecionáveis ​​na nova aba Configurações.
+
+NOVO
+
+Ordenação Global: Implementada uma opção nas Configurações para definir a ordem de classificação padrão (Alfabética ou Pokédex), que agora é respeitada em todas as listas de Pokémon no aplicativo.
+
+CORREÇÃO
+
+Várias correções na lógica do OCR e na estabilidade geral do aplicativo.
+
+v1.3 - A Interface Viva
+Qualidade de Vida
+
+Tabela Visual: A tabela principal da aba Coleção foi redesenhada para incluir uma coluna com a imagem de cada Pokémon.
+
+Qualidade de Vida
+
+Melhoria geral na interface do usuário em todas as abas para uma experiência mais fluida.
+
+v1.3.8 - O Fator "UAU"
+NOVO
+
+Sistema de Animação de Evolução: A evolução agora desencadeia um espetáculo visual! O sistema foi construído do zero para ser modular e impactante.
+
+NOVO
+
+Sistema de Som Generativo: Os efeitos sonoros para a evolução são gerados proceduralmente pelo aplicativo, eliminando a necessidade de arquivos de áudio externos.
+
+NOVO
+
+Suporte a Multievolução: Pokémon com evoluções ramificadas (por exemplo, Eevee) agora abrem uma caixa de diálogo para o usuário escolher o caminho desejado.
+
+Qualidade de Vida
+
+Personalização Total: Adicionadas opções nas Configurações para o usuário escolher seu estilo de animação de evolução e efeito sonoro preferidos.
+
+v2.0.0 - A Central de Conhecimento Definitiva (Versão Atual)
+NOVO
+
+A Pokédex: Uma aba Pokédex totalmente interativa e novinha em folha, projetada para imitar a sensação clássica do dispositivo da série. Não é apenas uma lista; É um centro de informações completo.
+
+Informações detalhadas sobre Pokémon: Inclui estatísticas base, confrontos de tipos (ofensivos e defensivos), ganhos de EV, possíveis drops e missões relacionadas.
+
+Barras de Estatísticas Dinâmicas: Um sistema visual exclusivo que mostra a força das estatísticas base de um Pokémon em relação a todos os outros Pokémon do jogo.
+
+Explorador de Tipos: Uma ferramenta completa para analisar os pontos fortes e fracos de cada combinação de tipos.
+
+Análise de Chefes e Cobertura Defensiva: Ferramentas integradas ao Pokédex para verificar os melhores tipos contra qualquer chefe ou para ver como sua coleção se sai contra um tipo de ataque específico.
+
+Explorador de Mapas: Navegue por todos os mapas do jogo e veja quais Pokémon aparecem em cada um.
+
+Análise Comparativa: Uma ferramenta poderosa para comparar Pokémon da sua coleção lado a lado, projetando suas estatísticas finais no nível 125 para determinar o melhor "Tanque", "Atacante" ou "Versátil".
+
+Registros de Jogo: Uma seção divertida para descobrir registros de jogo, como os Pokémon com as estatísticas base mais altas, as missões mais lucrativas e os spawns mais raros.
+
+Pontos de EV: Calcula e classifica automaticamente os melhores locais para treinar cada estatística de EV específica, combinando taxas de spawn e rendimentos de EV.
+
+ATUALIZAÇÃO
+
+Carregamento Remoto de Dados: O aplicativo agora tenta buscar os dados mais recentes do jogo (estatísticas de Pokémon, taxas de spawn, etc.) diretamente do repositório GitHub do projeto ao iniciar, garantindo que você sempre tenha as informações mais atualizadas sem precisar baixar uma nova versão do aplicativo.
+
+Qualidade de Vida
+
+Internacionalização Completa: Cada texto do aplicativo agora está totalmente traduzido para português do Brasil e inglês, proporcionando uma experiência nativa para todos os usuários.
+
+CORREÇÃO
+
+Inúmeras correções de bugs e melhorias de estabilidade em todos os recursos, especialmente nas ferramentas Pokédex e Análise Comparativa, para garantir uma experiência fluida e sem travamentos.
+
+Próximos Passos
+A jornada está apenas começando! Com os recursos principais agora estáveis ​​e robustos, o foco mudará para novas funcionalidades e solicitações da comunidade. Fique de olho nas atualizações futuras, que podem incluir:
+
+Suporte a Itens: Simulação de batalha que leva em consideração poções e outros itens.
+
+Análise de Movimentos: Detalhes sobre ataques de Chefes e sugestões de Pokémon com movimentos supereficazes.
+
+Calculadora de Danos: Uma ferramenta para prever o dano de ataques específicos.
+
+E muito mais, com base no feedback da comunidade e nas atualizações do jogo!
+
+❤️ Um Projeto Feito por um Fã para um Fã
+O Silph Scope é um projeto apaixonado, desenvolvido por um único Treinador (eu, Vega!) em meu tempo livre, com o único objetivo de ajudar nossa comunidade. O aplicativo é e sempre será 100% gratuito.
+
+Se esta ferramenta ajudou você em sua jornada, considere me apoiar. Qualquer doação, não importa o valor, me dá um grande incentivo para continuar desenvolvendo, corrigindo bugs e adicionando novos recursos para todos nós.
+
+Confira a aba "Suporte" no aplicativo para mais detalhes.
+
+Muito obrigado e boa caçada! Que seus próximos encontros sejam "shiny"! ✨
