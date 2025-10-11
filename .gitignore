@@ -47,3 +47,6 @@ config.json
 teams.json
 my_pokemon.json
 shiny_hunt.json
+
+# Pasta output do Innosetup
+Output/
