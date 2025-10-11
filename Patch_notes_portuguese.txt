@@ -1,4 +1,4 @@
-Notas do Patch v0.1 - v2.0.0 - The Silph Scope
+Notas do Patch v0.1 - v2.0.1 - The Silph Scope
 Aqui estão os detalhes técnicos para Treinadores curiosos:
 Olá, Treinadores!
 
@@ -83,7 +83,7 @@ Qualidade de Vida
 
 Personalização Total: Adicionadas opções nas Configurações para o usuário escolher seu estilo de animação de evolução e efeito sonoro preferidos.
 
-v2.0.0 - A Central de Conhecimento Definitiva (Versão Atual)
+v2.0.1 - A Central de Conhecimento Definitiva (Versão Atual)
 NOVO
 
 A Pokédex: Uma aba Pokédex totalmente interativa e novinha em folha, projetada para imitar a sensação clássica do dispositivo da série. Não é apenas uma lista; É um centro de informações completo.

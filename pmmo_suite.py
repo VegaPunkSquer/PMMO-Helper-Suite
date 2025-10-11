@@ -2942,8 +2942,13 @@ class PokedexTab(QWidget):
     def __init__(self, parent_window):
         super().__init__()
         self.parent_window = parent_window
+
+        self.POKEDEX_BASE_WIDTH = 1131
+        self.POKEDEX_BASE_HEIGHT = 758
+        self.overlay_widgets_rects = {}
+        self.overlay_widget = None
         
-        self.MODO_DEBUG = False
+        self.MODO_DEBUG = True
         self.power_state = "DESLIGADA"
         self.pokedex_list = self.parent_window.get_pokedex_list()
         self.current_pokemon_index = 0
@@ -2989,52 +2994,96 @@ class PokedexTab(QWidget):
         self.init_ui()
         self._load_animation_frames()
 
+    def resizeEvent(self, event: QResizeEvent):
+        """
+        Este método é chamado automaticamente sempre que a janela é redimensionada.
+        Ele garante que a posição dos botões e telas seja recalculada.
+        """
+        super().resizeEvent(event)
+        
+        if self.overlay_widget:
+            self.overlay_widget.resize(self.pokedex_bg.size())
+
+        self._update_overlay_positions()
+
+    def _update_overlay_positions(self):
+        """
+        Calcula a nova posição de todos os elementos da interface com base na
+        posição atual da imagem de fundo da Pokédex.
+        """
+        if not hasattr(self, 'pokedex_bg') or not self.pokedex_bg.pixmap() or self.pokedex_bg.pixmap().isNull():
+            return
+
+        label_size = self.pokedex_bg.size()
+        pixmap_size = self.pokedex_bg.pixmap().size()
+        
+        offset_x = (label_size.width() - pixmap_size.width()) // 2
+        offset_y = (label_size.height() - pixmap_size.height()) // 2
+
+        for widget, original_rect in self.overlay_widgets_rects.items():
+            if widget:
+                new_rect = original_rect.translated(offset_x, offset_y)
+                widget.setGeometry(new_rect)
+
     def init_ui(self):
+        # --- SUBSTITUA O CONTEÚDO DESTE MÉTODO PELO CÓDIGO ABAIXO ---
         main_layout = QHBoxLayout(self)
-        pokedex_container = QWidget()
-        pokedex_layout = QGridLayout(pokedex_container)
-        pokedex_layout.setContentsMargins(0, 0, 0, 0)
-        main_layout.addWidget(pokedex_container, 1)
+        main_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.pokedex_bg = QLabel()
-        pokedex_layout.addWidget(self.pokedex_bg, 0, 0)
-
-        overlay_widget = QWidget()
-        overlay_widget.setStyleSheet("background-color: transparent;")
-        pokedex_layout.addWidget(overlay_widget, 0, 0)
+        self.pokedex_bg.setScaledContents(False)
+        self.pokedex_bg.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        main_layout.addWidget(self.pokedex_bg)
+        
+        self.overlay_widget = QWidget(self.pokedex_bg)
+        self.overlay_widget.setStyleSheet("background-color: transparent;")
+        self.overlay_widget.setGeometry(self.pokedex_bg.rect())
 
         self.base_list_style = """ QListWidget { border: none; background-color: transparent; color: #3c3c3c; font-weight: bold; } QListWidget::item { padding: 1px; } QListWidget::item:selected { background-color: #3c3c3c; color: white; border-radius: 3px; } """
 
-        self.main_screen = QStackedWidget(overlay_widget)
-        self.main_screen.setGeometry(155,275, 270, 148)
+        self.power_button = QPushButton(self.pokedex_bg)
+
+        self.main_screen = QStackedWidget(self.overlay_widget)
         self.main_screen.setStyleSheet("background-color: transparent; border: none; color: #3c3c3c; font-weight: bold;")
 
-        self.info_screen_container = QFrame(overlay_widget)
-        # CORREÇÃO VISUAL: A tela de informações volta ao seu tamanho original.
-        self.info_screen_container.setGeometry(632, 230, 340, 99)
+        self.info_screen_container = QFrame(self.overlay_widget)
         self.info_screen_container.setStyleSheet("QFrame { background-color: transparent; border: 2px solid #3c3c3c; border-radius: 5px; }")
 
         self.info_screen = QStackedWidget(self.info_screen_container)
         self.info_screen.setStyleSheet("QStackedWidget { background-color: transparent; border: none; padding: 5px; color: white; font-weight: bold; }")
-
+        
         container_layout = QVBoxLayout(self.info_screen_container)
         container_layout.setContentsMargins(0, 0, 0, 0)
         container_layout.addWidget(self.info_screen)
+        
+        self.aux_screen_1 = QLabel("N/A", self.overlay_widget); self.aux_screen_1.setAlignment(Qt.AlignmentFlag.AlignCenter); self.aux_screen_1.setStyleSheet("background-color: transparent; padding: 5px; color: white; font-weight: bold;")
+        self.aux_screen_2 = QLabel("N/A", self.overlay_widget); self.aux_screen_2.setAlignment(Qt.AlignmentFlag.AlignCenter); self.aux_screen_2.setStyleSheet("background-color: transparent; padding: 5px; color: white; font-weight: bold;")
+        self.aux_screen_3 = QWidget(self.overlay_widget); self.aux_screen_3_layout = QHBoxLayout(self.aux_screen_3); self.aux_screen_3.setStyleSheet("background-color: transparent; padding: 5px; color: white; font-weight: bold;")
+        
+        self.dpad_up = QPushButton(self.overlay_widget)
+        self.dpad_down = QPushButton(self.overlay_widget)
+        self.dpad_left = QPushButton(self.overlay_widget)
+        self.dpad_right = QPushButton(self.overlay_widget)
+        self.enter_button = QPushButton(self.overlay_widget)
+        self.back_button = QPushButton(self.overlay_widget)
 
-        self.aux_screen_1 = QLabel("N/A", overlay_widget); self.aux_screen_1.setGeometry(198, 606, 108, 50); self.aux_screen_1.setAlignment(Qt.AlignmentFlag.AlignCenter); self.aux_screen_1.setStyleSheet("background-color: transparent; padding: 5px; color: white; font-weight: bold;")
-        self.aux_screen_2 = QLabel("N/A", overlay_widget); self.aux_screen_2.setGeometry(632, 610, 155, 52); self.aux_screen_2.setAlignment(Qt.AlignmentFlag.AlignCenter); self.aux_screen_2.setStyleSheet("background-color: transparent; padding: 5px; color: white; font-weight: bold;")
-        self.aux_screen_3 = QWidget(overlay_widget); self.aux_screen_3.setGeometry(820, 610, 155,52); self.aux_screen_3_layout = QHBoxLayout(self.aux_screen_3); self.aux_screen_3.setStyleSheet("background-color: transparent; padding: 5px; color: white; font-weight: bold;")
-
-        self.power_button = QPushButton(overlay_widget); self.power_button.setGeometry(115, 502, 50, 50)
-        self.dpad_up = QPushButton(overlay_widget); self.dpad_up.setGeometry(395, 565, 40, 35)
-        self.dpad_down = QPushButton(overlay_widget); self.dpad_down.setGeometry(395, 640, 40, 35)
-        self.dpad_left = QPushButton(overlay_widget); self.dpad_left.setGeometry(358, 603, 40, 35)
-        self.dpad_right = QPushButton(overlay_widget); self.dpad_right.setGeometry(434, 603, 40, 35)
-        self.enter_button = QPushButton(overlay_widget); self.enter_button.setGeometry(265, 502, 55, 18)
-        self.back_button = QPushButton(overlay_widget); self.back_button.setGeometry(185, 502, 55, 18)
+        self.overlay_widgets_rects = {
+            self.main_screen: QRect(160, 275, 290, 148), # x = posição canto superior esquerdo, y = extremidade de cima, width, height / (170, 275, 270, 148) original
+            self.info_screen_container: QRect(664, 225, 352, 99),
+            self.aux_screen_1: QRect(208, 616, 108, 50),
+            self.aux_screen_2: QRect(665, 620, 155, 52),
+            self.aux_screen_3: QRect(862, 620, 155, 52),
+            self.power_button: QRect(115, 508, 56, 50),
+            self.dpad_up: QRect(413, 577, 40, 35),
+            self.dpad_down: QRect(413, 652, 40, 35),
+            self.dpad_left: QRect(376, 615, 40, 35),
+            self.dpad_right: QRect(452, 615, 40, 35),
+            self.enter_button: QRect(275, 509, 55, 18), # (265, 502, 55, 18) original
+            self.back_button: QRect(195, 509, 55, 18), # = (185, 502, 55, 18) original
+        }
 
         release_style = "QPushButton { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(200, 200, 200, 0.3); border-radius: 8px; } QPushButton:hover { background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.7); } QPushButton:pressed { background-color: rgba(200, 200, 200, 0.2); }"
-        self.power_button.setStyleSheet("background-color: transparent; border: 1px solid rgba(200, 200, 200, 0.3);"); self.power_button.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.power_button.setStyleSheet("background-color: transparent; border: 1px solid rgba(200, 200, 200, 0.3); border-radius: 25px;"); self.power_button.setCursor(Qt.CursorShape.PointingHandCursor)
         for btn in [self.dpad_up, self.dpad_down, self.dpad_left, self.dpad_right, self.enter_button, self.back_button]: btn.setStyleSheet(release_style); btn.setCursor(Qt.CursorShape.PointingHandCursor)
 
         self.page_menu = QWidget(); self.page_menu_layout = QVBoxLayout(self.page_menu)
@@ -3072,6 +3121,7 @@ class PokedexTab(QWidget):
             self.info_screen.addWidget(page)
         
         self.power_button.clicked.connect(self._toggle_power); self.dpad_up.clicked.connect(lambda: self._navigate_content("up")); self.dpad_down.clicked.connect(lambda: self._navigate_content("down")); self.dpad_left.clicked.connect(lambda: self._navigate_content("left")); self.dpad_right.clicked.connect(lambda: self._navigate_content("right")); self.enter_button.clicked.connect(self._select_item); self.back_button.clicked.connect(self._go_back)
+        
         self._set_ui_visibility(False)
 
     def _load_animation_frames(self):
@@ -3079,14 +3129,23 @@ class PokedexTab(QWidget):
         i = 1
         while True:
             frame_path = resource_path(f"Images/Pokedex/{i:04d}.png")
-            if os.path.exists(frame_path): self.pokedex_frames.append(frame_path); i += 1
+            if os.path.exists(frame_path): 
+                pixmap = QPixmap(frame_path)
+                if not pixmap.isNull():
+                    self.pokedex_frames.append(pixmap)
+                i += 1
             else: break
-        if self.pokedex_frames: self.pokedex_bg.setPixmap(QPixmap(self.pokedex_frames[0]))
+        if self.pokedex_frames: 
+            first_frame = self.pokedex_frames[0]
+            self.pokedex_bg.setPixmap(first_frame.scaled(
+                self.POKEDEX_BASE_WIDTH, self.POKEDEX_BASE_HEIGHT,
+                Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+            ))
         else: print("AVISO: Sequência de animação da Pokédex não encontrada em 'Images/Pokedex/'.")
 
     def _set_ui_visibility(self, is_visible):
-        for widget in [self.main_screen, self.info_screen_container, self.aux_screen_1, self.aux_screen_2, self.aux_screen_3, self.dpad_up, self.dpad_down, self.dpad_left, self.dpad_right, self.enter_button, self.back_button]:
-            widget.setVisible(is_visible)
+        if self.overlay_widget:
+            self.overlay_widget.setVisible(is_visible)
 
     def _play_sound(self, sound_name, volume=1.0):
         sound_path = resource_path(f"Images/Pokedex/sounds/{sound_name}")
@@ -3099,13 +3158,36 @@ class PokedexTab(QWidget):
         elif self.power_state == "DESLIGADA": self.power_state = "LIGANDO"; self.animation_direction = 1; self.current_frame = 1; self._play_sound("ligar.mp3"); self.animation_timer.start(40)
 
     def _update_pokedex_animation(self):
-        if 0 <= self.current_frame < len(self.pokedex_frames): self.pokedex_bg.setPixmap(QPixmap(self.pokedex_frames[self.current_frame]))
+        if 0 <= self.current_frame < len(self.pokedex_frames):
+            scaled_frame = self.pokedex_frames[self.current_frame].scaled(
+                self.POKEDEX_BASE_WIDTH, self.POKEDEX_BASE_HEIGHT,
+                Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+            )
+            self.pokedex_bg.setPixmap(scaled_frame)
+        
         self.current_frame += self.animation_direction
+
         if self.animation_direction == 1 and self.current_frame >= len(self.pokedex_frames):
-            self.animation_timer.stop(); self.power_state = "LIGADA"; self.current_frame = len(self.pokedex_frames) - 1
-            self.pokedex_bg.setPixmap(QPixmap(self.pokedex_frames[self.current_frame])); self._set_ui_visibility(True); self._populate_menu_page(reset_index=True)
+            self.animation_timer.stop()
+            self.power_state = "LIGADA"
+            self.current_frame = len(self.pokedex_frames) - 1
+            scaled_frame = self.pokedex_frames[self.current_frame].scaled(
+                self.POKEDEX_BASE_WIDTH, self.POKEDEX_BASE_HEIGHT,
+                Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+            )
+            self.pokedex_bg.setPixmap(scaled_frame)
+            self._set_ui_visibility(True)
+            self._populate_menu_page(reset_index=True)
+            self._update_overlay_positions()
         elif self.animation_direction == -1 and self.current_frame < 0:
-            self.animation_timer.stop(); self.power_state = "DESLIGADA"; self.current_frame = 0; self.pokedex_bg.setPixmap(QPixmap(self.pokedex_frames[self.current_frame]))
+            self.animation_timer.stop()
+            self.power_state = "DESLIGADA"
+            self.current_frame = 0
+            scaled_frame = self.pokedex_frames[self.current_frame].scaled(
+                self.POKEDEX_BASE_WIDTH, self.POKEDEX_BASE_HEIGHT,
+                Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation
+            )
+            self.pokedex_bg.setPixmap(scaled_frame)
             
     def _clear_layout(self, layout):
         if layout is None: return
@@ -4378,7 +4460,7 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         # --- CONTROLE DE VERSÃO E UPDATER ---
-        self.__version__ = "2.0.0" # <<-- MUDE AQUI A CADA NOVA VERSÃO
+        self.__version__ = "2.0.1" # <<-- MUDE AQUI A CADA NOVA VERSÃO
         self.github_repo = "VegaPunkSquer/PMMO-Helper-Suite" # <<-- MUDE PARA O SEU REPOSITÓRIO REAL
         # ------------------------------------
 
@@ -4856,7 +4938,7 @@ class MainWindow(QMainWindow):
 
     def setup_ui(self, retranslating=False):
         if not retranslating:
-            self.setWindowTitle(self.get_string("app_title") + " V2.0.0" + " by Vega")
+            self.setWindowTitle(self.get_string("app_title") + " V2.0.1" + " by Vega")
             self.setGeometry(100, 100, 1200, 800)
             icon_path = resource_path('icon.ico')
             if os.path.exists(icon_path): self.setWindowIcon(QIcon(icon_path))
@@ -5008,7 +5090,7 @@ class MainWindow(QMainWindow):
         self.config = load_json("config.json", {"theme": "dark", "language": "pt-br"}, is_user_data=True)
         self.translations = load_json("translations.json")
 
-        self.setWindowTitle(self.get_string("app_title") + " V2.0.0" + " by Vega")
+        self.setWindowTitle(self.get_string("app_title") + " V2.0.1" + " by Vega")
 
         # Recria as abas complexas para garantir a tradução
         # Salva a aba que estava ativa

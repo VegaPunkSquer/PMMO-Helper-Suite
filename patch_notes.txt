@@ -1,4 +1,4 @@
-Patch Notes v0.1 - v2.0.0 - The Silph Scope
+Patch Notes v0.1 - v2.0.1 - The Silph Scope
 Here are the technical details for curious Trainers:
 Hello, Trainers!
 
@@ -83,7 +83,7 @@ QoL
 
 Total Customization: Added options in Settings for the user to choose their preferred evolution animation style and sound effect.
 
-v2.0.0 - The Ultimate Knowledge Hub (Current Version)
+v2.0.1 - The Ultimate Knowledge Hub (Current Version)
 NEW
 
 The Pokédex: A brand-new, fully interactive Pokédex tab, designed to mimic the classic feel of the device from the series. It's not just a list; it's a complete information hub.
