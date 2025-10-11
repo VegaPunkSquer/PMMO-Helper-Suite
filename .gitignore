@@ -31,7 +31,8 @@ data/
 *.tcl
 
 # Builds do PyInstaller
-*.manifest, *.bat
+*.manifest
+*.bat
 
 # Arquivos de imagens
 *.png
