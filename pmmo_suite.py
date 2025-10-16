@@ -4896,23 +4896,93 @@ class MainWindow(QMainWindow):
 
     def _calculate_final_stat(self, stat_name, base, level, iv, ev, nature):
         """
-        Calcula os stats finais usando as FÓRMULAS FINAIS E DEFINITIVAS do Pokemon MMO 3D.
+        Calcula os stats finais usando a LÓGICA DE SIMULAÇÃO DE LEVEL UP do Pokemon MMO 3D.
+        Esta é a versão definitiva, que implementa os "Perfis de Crescimento" (com e sem nerf,
+        rítmicos e lineares) descobertos e validados por Vega.
         """
         nature_mod = 1.0
         if nature_info := NATURES.get(nature):
             if nature_info.get('increase') == stat_name: nature_mod = 1.1
             elif nature_info.get('decrease') == stat_name: nature_mod = 0.9
 
-        # --- FÓRMULAS FINAIS ---
+        if stat_name == 'energy':
+            base_energy_calc = (base * 2) + 50
+            return math.floor(base_energy_calc + iv + (ev / 10))
 
-        if stat_name == 'hp':
-            # Fórmula de HP 100% decifrada e validada.
-            base_level_part = ((30 * base + 1500) * (level / 100.0)) + 75
-            iv_part = iv * 15
-            ev_part = ev * 1.5
-            # HP não é afetado por Nature
-            return math.floor(base_level_part + iv_part + ev_part)
+        elif stat_name == 'hp':
+            # --- PARTE 1: NÍVEIS ALTOS (>= 50) - FÓRMULA CORRIGIDA ---
+            if level >= 50:
+                base_calc = ((30 * base + 1500) * (level / 100.0)) + 75
+                # CORREÇÃO: O bônus real começa a partir do IV 2.
+                iv_calc = (iv - 1) * (0.15 * level) if iv > 0 else 0
+                # CORREÇÃO: A fórmula de EV é mais simples.
+                ev_calc = ev * (0.015 * level)
+                return math.floor(base_calc + iv_calc + ev_calc)
+            
+            # --- PARTE 2: NÍVEIS BAIXOS (< 50) - SIMULAÇÃO COM REGRA UNIVERSAL ---
+            else:
+                current_hp = 0
+                if base >= 250: current_hp = 165
+                elif base >= 115: current_hp = 135
+                elif base >= 100: current_hp = 120
+                elif base >= 50: current_hp = 105
+                else: current_hp = 90
+                
+                if level > 1:
+                    profile = "DEFAULT"
+                    if base < 50: profile = "BEGINNER_NERFED"
+                    elif base == 60: profile = "RHYTHMIC_5"
+                    elif base == 80: profile = "RHYTHMIC_COMPLEX"
+                    elif base == 115: profile = "RHYTHMIC_3"
+                    elif base == 160: profile = "RHYTHMIC_5_HEAVY"
+                    elif base in [50, 250]: profile = "LINEAR"
+                    
+                    for i in range(2, level + 1):
+                        growth_packet = 30 
+                        if profile == "LINEAR":
+                            if base == 50: growth_packet = 30
+                            if base == 250: growth_packet = 90
+                        elif profile == "RHYTHMIC_5":
+                            growth_packet = 30
+                            if i % 5 == 0: growth_packet = 45
+                        elif profile == "RHYTHMIC_3":
+                            cycle = (i - 2) % 3
+                            growth_packet = 60 if cycle >= 2 else 45
+                        elif profile == "RHYTHMIC_5_HEAVY":
+                            growth_packet = 60
+                            if i % 5 == 0: growth_packet = 75
+                        elif profile == "RHYTHMIC_COMPLEX":
+                            cycle = (i-2) % 4
+                            growth_packet = 30 if cycle == 1 else 45
+                        else: # DEFAULT e BEGINNER_NERFED
+                            growth_packet = 45 if base >= 80 else 30
+                        
+                        # NOVO: REGRA UNIVERSAL DE NERF
+                        if i in [11, 21, 31, 41]:
+                            growth_packet -= 15
 
+                        # Anomalias
+                        if base == 35 and i == 4: growth_packet = 15 
+
+                        current_hp += growth_packet
+
+                iv_multiplier = 0
+                if 1 <= level <= 3: iv_multiplier = 0.5
+                elif 4 <= level <= 6: iv_multiplier = 1.0
+                elif 7 <= level <= 10: iv_multiplier = 1.5
+                elif 11 <= level <= 49: iv_multiplier = 2.0
+                iv_calc = iv * iv_multiplier
+                
+                ev_calc = 0
+                if level == 7 or (11 <= level <= 49):
+                    ev_calc = ev * 0.5
+
+                return math.floor(current_hp + iv_calc + ev_calc)
+
+        elif stat_name in ['attack', 'defense', 'special-attack', 'special-defense', 'speed']:
+            val = ((((2 * base) + iv + (ev / 10)) * level) / 100) + 5
+            return math.floor(val * nature_mod)
+            
         elif stat_name == 'hp_reg':
             ev_gain = (ev / 20) * 0.001
             return round((base / 100) + (iv / 1000) + ev_gain, 4)
@@ -4920,19 +4990,6 @@ class MainWindow(QMainWindow):
         elif stat_name == 'en_reg':
             ev_gain = (ev / 20) * 0.001
             return round((base / 10) + (iv / 100) + ev_gain, 4)
-
-        # Fórmula geral para Attack, Defense, Speed (CONFIRMADA)
-        elif stat_name in ['attack', 'defense', 'special-attack', 'special-defense', 'speed']:
-            val = ((((2 * base) + iv + (ev / 10)) * level) / 100) + 5
-            return math.floor(val * nature_mod)
-
-        # Fórmula FINAL e PERFEITA para Energia
-        elif stat_name == 'energy':
-            general_part = ((((2 * base) + iv + (ev / 10)) * level) / 100) + 5
-            level_bonus = level * 0.75
-            calibration_factor = -30
-            # Energia não é afetada por Nature
-            return math.floor(general_part + level_bonus + calibration_factor)
             
         return base
 
