@@ -19,7 +19,7 @@ from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QTabWidget, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QTableWidget, QTableWidgetItem, QComboBox,
     QSpinBox, QFormLayout, QMessageBox, QHeaderView, QTextEdit, QFrame, QCompleter,
-    QScrollArea, QDialog, QGridLayout, QToolButton, QSizePolicy, QStackedWidget, QListWidget, QListWidgetItem, QScrollArea
+    QScrollArea, QDialog, QGridLayout, QToolButton, QSizePolicy, QStackedWidget, QListWidget, QListWidgetItem, QScrollArea, QCheckBox
 )
 from PyQt6.QtGui import QIcon, QPixmap, QImage, QColor, QResizeEvent, QPainter, QFont, QCursor
 from PyQt6.QtCore import Qt, pyqtSignal, QTimer, QSize, QRect, QBuffer, QByteArray, QEvent, QPoint,QEasingCurve, QPropertyAnimation, QUrl
@@ -1627,27 +1627,56 @@ class EVTrainingTab(QWidget):
     def suggest_ev_training(self):
         selected_name = self.my_pokemon_select.currentText()
         if selected_name == self.parent_window.get_string("ev_yield.select_pokemon"): return
+        
         pokemon_info = next((p for p in self.collection if (p.get("nickname") or p["species"]) == selected_name), None)
         if not pokemon_info: return
-        base_stats = self.parent_window.pokemon_data.get(pokemon_info['species'], {}).get('base_stats', {}) #muda aqui
+        
+        base_stats = self.parent_window.pokemon_data.get(pokemon_info['species'], {}).get('base_stats', {})
         if not base_stats:
             QMessageBox.warning(self, self.parent_window.get_string("globals.error"), self.parent_window.get_string("ev_yield.error_base_stats_not_found"))
             return
+
+        # Mapeia os stats treináveis para as chaves internas
         trainable_stats = {
-            self.parent_window.get_string('stats.attack'): base_stats.get("attack", 0), 
-            self.parent_window.get_string('stats.defense'): base_stats.get("defense", 0),
-            self.parent_window.get_string('stats.special-attack'): base_stats.get("special-attack", 0), 
-            self.parent_window.get_string('stats.special-defense'): base_stats.get("special-defense", 0),
-            self.parent_window.get_string('stats.speed'): base_stats.get("speed", 0)
+            'attack': base_stats.get("attack", 0), 
+            'defense': base_stats.get("defense", 0),
+            'special-attack': base_stats.get("special-attack", 0), 
+            'special-defense': base_stats.get("special-defense", 0),
+            'speed': base_stats.get("speed", 0)
         }
+        
         sorted_stats = sorted(trainable_stats.items(), key=lambda item: item[1], reverse=True)
-        top_two_stats = [stat[0] for stat in sorted_stats[:2]]
+        # Pega as chaves internas (ex: 'special-attack')
+        top_two_stat_keys = [stat[0] for stat in sorted_stats[:2]] 
+        
         pokemon_to_display = []
+        
+        # --- CORREÇÃO (LÓGICA V4) ---
         for pokemon, data in self.parent_window.ev_data.items():
-            if data.get("ev_stat") in top_two_stats and data.get("ev_value", 0) > 0:
-                pokemon_to_display.append((pokemon, data))
-        pokemon_to_display.sort(key=lambda x: (x[1]['ev_stat'], x[0]))
-        self.add_pokemon_to_ev_table(pokemon_to_display)
+            
+            # Helper "blindado" para pegar o valor do stat (seja int ou str)
+            def get_ev_val(stat_name):
+                val = data.get(stat_name, 0)
+                try:
+                    return int(val)
+                except (ValueError, TypeError):
+                    return 0
+
+            val_stat_1 = get_ev_val(top_two_stat_keys[0])
+            val_stat_2 = get_ev_val(top_two_stat_keys[1])
+
+            # Verifica se o poke dá EV em qualquer um dos top 2 stats
+            if val_stat_1 > 0 or val_stat_2 > 0:
+                pokemon_to_display.append((pokemon, data, val_stat_1 + val_stat_2))
+        
+        # Ordena por quem dá mais dos stats desejados (usando o total que calculamos)
+        pokemon_to_display.sort(key=lambda x: x[2], reverse=True)
+        
+        # Removendo o 3º item (score) antes de passar para a função de tabela
+        final_list_for_table = [(p, d) for p, d, score in pokemon_to_display]
+        
+        self.add_pokemon_to_ev_table(final_list_for_table)
+        # --- FIM DA CORREÇÃO ---
         
     def update_results(self):
         selection = self.default_search_combo.currentText()
@@ -2638,7 +2667,8 @@ class IdealTeamsDialog(QDialog):
                         member_button.setIconSize(QSize(64, 64))
 
                 name_label_text = p_info.get('nickname') or species_name
-                member_button.setText(f"{name_label_text}\n(Lvl {p_info.get('level', '?')})") # Mostra o nível
+                level_str = self.parent_window.get_string("globals.level", "Nível")
+                member_button.setText(f"{name_label_text}\n({level_str} {p_info.get('level', '?')})") # Mostra o nível
                 font = member_button.font()
                 font.setBold(True)
                 member_button.setFont(font)
@@ -2662,7 +2692,8 @@ class IdealTeamsDialog(QDialog):
                 moveset = result.get('used_moveset', ['?']*6)
                 
                 # Coluna de Golpes 1-3
-                moves_str_1 = "<b>Golpes:</b><br>" + "<br>".join([f"• {m}" for m in moveset[:3]])
+                moves_label_str = self.parent_window.get_string("bosses.attacks_label") # Já existe
+                moves_str_1 = f"<b>{moves_label_str}:</b><br>" + "<br>".join([f"• {m}" for m in moveset[:3]])
                 moves_label_1 = QLabel(moves_str_1)
                 moves_label_1.setWordWrap(True)
                 moves_label_1.setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -2727,7 +2758,13 @@ class IdealTeamsDialog(QDialog):
             avg_time = (total_time / team_wins) if team_wins > 0 else 0
             
             level_str = self.parent_window.get_string('bosses.team_level_analysis')
-            results_text += f"<li><b>{level_str.format(level=level)}:</b> {team_wins} / {len(team)} vitórias (Média: {avg_time:.1f}s)</li>"
+            level_analysis_str = self.parent_window.get_string('bosses.team_level_analysis').format(level=level)
+            result_str = self.parent_window.get_string('bosses.sim_level_result', "{wins} / {total} vitórias (Média: {time}s)").format(
+                wins=team_wins,
+                total=len(team),
+                time=f"{avg_time:.1f}"
+            )
+            results_text += f"<li><b>{level_analysis_str}:</b> {result_str}</li>"
 
         results_label = QLabel(f"<ul>{results_text}</ul>")
         results_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -2869,6 +2906,34 @@ class SimulationDialog(QDialog):
 
         controls_layout.addWidget(QLabel(self.parent_window.get_string("teams.load_placeholder")))
         controls_layout.addWidget(self.saved_teams_combo)
+        self.potion_checkbox = QCheckBox(self.parent_window.get_string("bosses.use_potions", "Usar Poções?"))
+        self.potion_checkbox.setStyleSheet("""
+            QCheckBox {
+                border: 1px solid #000008; /* A borda azul que você gostou */
+                border-radius: 4px;
+                padding: 2px;
+            }
+            QCheckBox::indicator {
+                background-color: #ffffff; /* Fundo do quadradinho branco */
+                border: 3px solid #000008; /* Borda do quadradinho azul */
+                width: 13px;
+                height: 13px;
+            }
+            QCheckBox::indicator:checked {
+                background-color: #3b5ca8; /* Fundo do quadradinho azul quando marcado */
+            }
+        """)
+        self.potion_spinbox = QSpinBox()
+        self.potion_spinbox.setRange(1, 99)
+        self.potion_spinbox.setValue(3) # Um valor padrão razoável
+        self.potion_spinbox.setPrefix(self.parent_window.get_string("bosses.potion_quantity", "Qtd: "))
+        self.potion_spinbox.setVisible(False) # Começa escondido
+
+        # Conecta o checkbox para mostrar/esconder o spinbox
+        self.potion_checkbox.toggled.connect(self.potion_spinbox.setVisible)
+
+        controls_layout.addWidget(self.potion_checkbox)
+        controls_layout.addWidget(self.potion_spinbox)
         controls_layout.addWidget(self.level_spinbox)
         self.layout.addLayout(controls_layout)
 
@@ -3024,6 +3089,9 @@ class SimulationDialog(QDialog):
         e exibe os resultados no log.
         """
         self.results_log.clear()
+
+        use_pots = self.potion_checkbox.isChecked()
+        pot_count = self.potion_spinbox.value()
         
         team_to_simulate = []
         manual_movesets = []
@@ -3047,7 +3115,9 @@ class SimulationDialog(QDialog):
                 selected_moves = list(set(selected_moves)) 
                 
                 if not selected_moves:
-                    QMessageBox.warning(self, "Erro", f"Selecione pelo menos um golpe para {poke_name}.")
+                    QMessageBox.warning(self, self.parent_window.get_string("globals.error"), 
+                                        self.parent_window.get_string("bosses.error_select_move", 
+                                        "Selecione pelo menos um golpe para {poke_name}.").format(poke_name=poke_name))
                     return
 
                 team_to_simulate.append(found_pokemon)
@@ -3073,8 +3143,9 @@ class SimulationDialog(QDialog):
             result = self.battle_logic.run_simulation(
                 sim_pokemon, 
                 self.boss_name, 
-                use_potions=False, # (Podemos adicionar uma checkbox para isso depois)
-                manual_moveset=p_moveset
+                use_potions=use_pots, # (Podemos adicionar uma checkbox para isso depois)
+                manual_moveset=p_moveset,
+                potion_quantity=pot_count
             )
             
             # 3. Exibe o resultado
@@ -3083,15 +3154,23 @@ class SimulationDialog(QDialog):
             
             if winner == 'player':
                 total_wins += 1
-                full_log += f"--- {sim_pokemon['nickname'] or sim_pokemon['species']} (Lvl {simulation_level}) vs {self.boss_name} ---\n"
-                full_log += f"Resultado: VITÓRIA ({time_str})\n"
+                pots_status = f"{self.parent_window.get_string('bosses.potions', 'Poções')}: {pot_count}" if use_pots else f"{self.parent_window.get_string('bosses.potions', 'Poções')}: {self.parent_window.get_string('globals.none', 'Nenhuma')}"
+                full_log += f"--- {sim_pokemon['nickname'] or sim_pokemon['species']} (Lvl {simulation_level}) vs {self.boss_name} ({pots_status}) ---\n"
+                result_header = self.parent_window.get_string("bosses.sim_result_header", "Resultado")
+                result_outcome = self.parent_window.get_string("bosses.sim_result_victory", "VITÓRIA")
+                full_log += f"{result_header}: {result_outcome} ({time_str})\n"
                 full_log += "\n".join(result.get('log', []))
                 full_log += "\n\n"
             else:
                 full_log += f"--- {sim_pokemon['nickname'] or sim_pokemon['species']} (Lvl {simulation_level}) vs {self.boss_name} ---\n"
-                full_log += f"Resultado: DERROTA ({time_str})\n\n"
+                result_header = self.parent_window.get_string("bosses.sim_result_header", "Resultado")
+                result_outcome = self.parent_window.get_string("bosses.sim_result_defeat", "DERROTA")
+                full_log += f"{result_header}: {result_outcome} ({time_str})\n\n"
 
-        self.results_log.setText(f"### RESULTADO DA SIMULAÇÃO: {total_wins} / {len(team_to_simulate)} VITÓRIAS ###\n\n{full_log}")
+        summary_str = self.parent_window.get_string("bosses.sim_final_summary", 
+            "### RESULTADO DA SIMULAÇÃO: {wins} / {total} VITÓRIAS ###\n\n{log}"
+        ).format(wins=total_wins, total=len(team_to_simulate), log=full_log)
+        self.results_log.setText(summary_str)
 
 class PokedexDialog(QDialog):
     """

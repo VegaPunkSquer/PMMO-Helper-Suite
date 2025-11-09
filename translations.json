@@ -187,7 +187,16 @@
             "level_hard": " (Difícil)",
             "select_to_see_results": "Selecione um chefe para ver o resultado...",
             "map_not_found_generic": "Mapa não disponível.",
-            "simulation_level_prefix": "Simular no Nível: "
+            "simulation_level_prefix": "Simular no Nível: ",
+            "use_potions": "Usar Poções?",
+            "potion_quantity": "Qtd: ",
+            "potions": "Poções",
+            "error_select_move": "Selecione pelo menos um golpe para {poke_name}.",
+            "sim_result_header": "Resultado",
+            "sim_result_victory": "VITÓRIA",
+            "sim_result_defeat": "DERROTA",
+            "sim_final_summary": "### RESULTADO DA SIMULAÇÃO: {wins} / {total} VITÓRIAS ###\n\n{log}",
+            "sim_level_result": "{wins} / {total} vitórias (Média: {time}s)"
         },
         "shiny_hunt": {
             "beta_warning": "AVISO: Esta ferramenta está em fase BETA e deve ser usada apenas como um simples histórico.",
@@ -606,7 +615,16 @@
             "level_hard": " (Hard)",
             "select_to_see_results": "Select a boss to see the results...",
             "simulation_level_prefix": "Simulate at Level: ",
-            "recommendation_individual_winners": "These Pokémon from your collection have a high chance of defeating {boss} individually:"
+            "recommendation_individual_winners": "These Pokémon from your collection have a high chance of defeating {boss} individually:",
+            "use_potions": "Use Potions?",
+            "potion_quantity": "Qty: ",
+            "potions": "Potions",
+            "error_select_move": "Select at least one move for {poke_name}.",
+            "sim_result_header": "Result",
+            "sim_result_victory": "VICTORY",
+            "sim_result_defeat": "DEFEAT",
+            "sim_final_summary": "### SIMULATION RESULT: {wins} / {total} VICTORIES ###\n\n{log}",
+            "sim_level_result": "{wins} / {total} victories (Avg: {time}s)"
         },
         "pokedex": {
             "menu_pokemon": "Pokémon",

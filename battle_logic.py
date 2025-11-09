@@ -223,7 +223,7 @@ class BattleLogic:
         
         return optimal_moveset
 
-    def _get_initial_state(self, entity_data, level, ivs, evs, nature, rank=None, moveset=[]):
+    def _get_initial_state(self, entity_data, level, ivs, evs, nature, rank=None, moveset=[], potion_quantity=0):
         """(V4) Cria o objeto de estado 'vivo'."""
         
         species = entity_data["species"]
@@ -242,6 +242,7 @@ class BattleLogic:
             ])),
             'moveset': moveset, 
             'level': level,
+            'potion_count': potion_quantity,
             # --- ATUALIZADO (V4) ---
             # Os buffs agora são valores, não "estágios"
             'buffs': { 
@@ -318,7 +319,7 @@ class BattleLogic:
         """
         
         # 1. PRIORIDADE MÁXIMA: CURA
-        if use_potions_logic and 'potion' not in attacker['cooldowns']:
+        if use_potions_logic and attacker['potion_count'] > 0 and 'potion' not in attacker['cooldowns']:
             hp_percent = (attacker['current_hp'] / attacker['initial_stats']['hp']) * 100
             if hp_percent < 30.0:
                 return 'use_potion', None
@@ -380,7 +381,8 @@ class BattleLogic:
                 attacker_state['current_hp'] + self.POTION_HEAL_AMOUNT
             )
             attacker_state['cooldowns']['potion'] = self.POTION_COOLDOWN
-            log_callback(f"{attacker_state['name']} usou Potion e curou {self.POTION_HEAL_AMOUNT} HP.")
+            attacker_state['potion_count'] -= 1 # <-- ADICIONE ESTA LINHA
+            log_callback(f"{attacker_state['name']} usou Potion. Restam {attacker_state['potion_count']}.") # <-- LINHA ATUALIZADA
             return
 
         if action_type == 'use_move':
@@ -536,7 +538,7 @@ class BattleLogic:
                 return
 
     # --- FUNÇÃO ATUALIZADA (V4) ---
-    def run_simulation(self, p_user_data, boss_name, use_potions, manual_moveset=None):
+    def run_simulation(self, p_user_data, boss_name, use_potions, manual_moveset=None, potion_quantity=0):
         """
         Executa a simulação (V4).
         Se 'manual_moveset' for fornecido, usa ele.
@@ -584,7 +586,8 @@ class BattleLogic:
             ivs=p_user_data['ivs'],
             evs=p_user_data['evs'],
             nature=p_user_data['nature'],
-            moveset=p_moves
+            moveset=p_moves,
+            potion_quantity=potion_quantity
         )
         
         boss_state = self._get_initial_state(
