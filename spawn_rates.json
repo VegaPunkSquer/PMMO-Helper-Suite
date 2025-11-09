@@ -4200,5 +4200,45 @@
       "levels": "???",
       "condition": "Anywhere"
     }
+  ],
+  "Treecko": [
+    {
+      "map": "Birthday Island",
+      "rate": 10000,
+      "levels": "5",
+      "condition": "This Pokémon only spawns during the Starter Hour fragment event"
+    }
+  ],
+  "Torchic": [
+    {
+      "map": "Birthday Island",
+      "rate": 10000,
+      "levels": "5",
+      "condition": "This Pokémon only spawns during the Starter Hour fragment event"
+    }
+  ],
+  "Mudkip": [
+    {
+      "map": "Birthday Island",
+      "rate": 10000,
+      "levels": "5",
+      "condition": "This Pokémon only spawns during the Starter Hour fragment event"
+    }
+  ],
+  "Sableye": [
+    {
+      "map": "Halloween Island",
+      "rate": 666,
+      "levels": "50",
+      "condition": "Halloween Event Spawn"
+    }
+  ],
+  "Absol ": [
+    {
+      "map": "Halloween Island",
+      "rate": 666,
+      "levels": "50",
+      "condition": "Halloween Event Spawn"
+    }
   ]
 }

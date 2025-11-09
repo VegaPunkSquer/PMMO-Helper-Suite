@@ -3631,7 +3631,8 @@ class PokedexTab(QWidget):
         
         def add_wrapped_row(target_layout, label_key, value_list): target_layout.addRow(f"<b>{self.parent_window.get_string(label_key)}:</b>", QLabel(", ".join(value_list))); 
         matchups = self.parent_window._get_type_matchups(pokemon_name=pokemon_name); add_wrapped_row(form_layout, 'pokedex.advantages_atk', matchups.get('advantages', [])); add_wrapped_row(form_layout, 'pokedex.weaknesses_def', matchups.get('weaknesses', [])); add_wrapped_row(form_layout, 'pokedex.resistances_def', matchups.get('resistances', [])); add_wrapped_row(form_layout, 'pokedex.immunities_def', matchups.get('immunities', []))
-        if ev_yield := self.parent_window.ev_data.get(pokemon_name): add_wrapped_row(form_layout, 'pokedex.ev_yield', [f"{ev_yield.get('ev_value')} {ev_yield.get('ev_stat')}"])
+        if ev_yield_str := self.parent_window._get_ev_yield_string(pokemon_name):
+            add_wrapped_row(form_layout, 'pokedex.ev_yield', [ev_yield_str])
         if loot := self.parent_window.loots_data.get(pokemon_name): add_wrapped_row(form_layout, 'pokedex.drop', [f"{loot.get('item')} (${loot.get('price')})"])
         layout.addLayout(form_layout)
 
@@ -4834,47 +4835,47 @@ class MainWindow(QMainWindow):
         self.check_for_updates()
 
     def _calculate_ev_hotspots(self):
-        """Pré-calcula os melhores locais de treino de EV para cada stat."""
+        """Pré-calcula os melhores locais de treino de EV para cada stat (V4)."""
         self.ev_hotspots_ranking = {}
-        # CORREÇÃO: Usa chaves internas (lowercase) para consistência
-        stats_to_rank = ['hp', 'attack', 'defense', 'special-attack', 'special-defense', 'speed']
-
-        # Mapeia as chaves internas para as chaves encontradas no ev_yield_data.json
-        ev_data_key_map = {
-            'hp': 'HP', 'attack': 'Attack', 'defense': 'Defense', 
-            'special-attack': 'Special-Attack', 'special-defense': 'Special-Defense', 
-            'speed': 'Speed'
-        }
+        
+        # As 9 chaves de stat que o seu novo JSON usa
+        stats_to_rank = ['hp', 'attack', 'defense', 'special-attack', 'special-defense', 'speed', 'energy', 'hp_reg', 'en_reg']
 
         for stat_key in stats_to_rank:
             hotspots_for_stat = []
-            ev_data_stat_name = ev_data_key_map[stat_key]
             
             for poke_name, ev_info in self.ev_data.items():
-                if ev_info.get("ev_stat") == ev_data_stat_name and ev_info.get("ev_value", 0) > 0:
-                    ev_value = ev_info["ev_value"]
+                # Verifica se este Pokémon dá EV para o stat que estamos procurando
+                ev_value = ev_info.get(stat_key, 0)
+                if ev_value <= 0:
+                    continue # Próximo Pokémon
                     
-                    if spawn_list := self.spawn_rates.get(poke_name):
-                        map_probabilities = {}
-                        for spawn_data in spawn_list:
-                            rate = spawn_data.get("rate", 0)
-                            map_name = spawn_data.get("map")
-                            if rate > 0 and "Boss Rank" not in spawn_data.get("condition", ""):
-                                probability = 1 / rate
-                                map_probabilities[map_name] = map_probabilities.get(map_name, 0) + probability
-                        
-                        for map_name, total_prob in map_probabilities.items():
-                            score = ev_value * total_prob
-                            hotspots_for_stat.append({
-                                'pokemon': poke_name,
-                                'map': map_name,
-                                'score': score,
-                                'ev_yield': f"+{ev_value} {ev_data_stat_name}",
-                                'rate': 1 / total_prob if total_prob > 0 else float('inf')
-                            })
+                # Se ele dá o EV, vamos encontrar seus mapas/taxas
+                if spawn_list := self.spawn_rates.get(poke_name):
+                    map_probabilities = {}
+                    for spawn_data in spawn_list:
+                        rate = spawn_data.get("rate", 0)
+                        map_name = spawn_data.get("map")
+                        # Filtra bosses e spawns com taxa 0
+                        if rate > 0 and "Boss Rank" not in spawn_data.get("condition", ""):
+                            probability = 1 / rate
+                            map_probabilities[map_name] = map_probabilities.get(map_name, 0) + probability
+                    
+                    # Agora, calcula o "score" para cada mapa
+                    for map_name, total_prob in map_probabilities.items():
+                        # Score = (Valor do EV) x (Chance de achar ele nesse mapa)
+                        score = ev_value * total_prob
+                        hotspots_for_stat.append({
+                            'pokemon': poke_name,
+                            'map': map_name,
+                            'score': score,
+                            # Pega a string completa (ex: +1 Atk, +1 Energy)
+                            'ev_yield_str': self._get_ev_yield_string(poke_name), 
+                            'rate': 1 / total_prob if total_prob > 0 else float('inf')
+                        })
 
+            # Ordena os hotspots para este stat (ex: 'attack')
             sorted_hotspots = sorted(hotspots_for_stat, key=lambda x: x['score'], reverse=True)
-            # CORREÇÃO: Salva usando a chave interna (minúscula)
             self.ev_hotspots_ranking[stat_key] = sorted_hotspots[:10]
         
 
@@ -5275,6 +5276,39 @@ class MainWindow(QMainWindow):
             return round((base / 10) + (iv / 100) + ev_gain, 4)
             
         return base
+    
+    def _get_ev_yield_string(self, pokemon_name):
+        """
+        Lê o novo ev_data (V4) e retorna uma string formatada.
+        """
+        ev_data = self.ev_data.get(pokemon_name)
+        if not ev_data:
+            return self.get_string("globals.not_available", "N/A")
+
+        # Mapeia as chaves internas para as chaves traduzidas da UI
+        stat_label_map = {
+            "hp": self.get_string('stats.hp'),
+            "attack": self.get_string('stats.attack'),
+            "defense": self.get_string('stats.defense'),
+            "special-attack": self.get_string('stats.special-attack'),
+            "special-defense": self.get_string('stats.special-defense'),
+            "speed": self.get_string('stats.speed'),
+            "energy": "EN", # O seu exemplo usa "EN", vamos manter
+            "hp_reg": "HP Reg",
+            "en_reg": "EN Reg"
+        }
+        
+        parts = []
+        for stat_key, value in ev_data.items():
+            if value > 0:
+                # Usa o mapa para obter o nome traduzido/curto
+                stat_name = stat_label_map.get(stat_key, stat_key)
+                parts.append(f"+{value} {stat_name}")
+                
+        if not parts:
+            return self.get_string("globals.none", "Nenhum")
+            
+        return ", ".join(parts)
 
     def setup_ui(self, retranslating=False):
         if not retranslating:

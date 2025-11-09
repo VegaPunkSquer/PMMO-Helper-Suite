@@ -1,1192 +1,731 @@
 {
-    "Bulbasaur": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Pallet Town, Route 1, Viridian Forest, Birthday Island"
-    },
-    "Ivysaur": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Venosaur": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Charmander": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Pallet Town, Route 1, Mt Ember, Birthday Island"
-    },
-    "Charmeleon": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Charizard": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Squirtle": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Pallet Town, Viridian City, Birthday Island"
-    },
-    "Wartortle": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Blastoise": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Caterpie": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Route 2, Viridian Forest, Exploration 1, Training 1, One Island, Birthday Island"
-    },
-    "Metapod": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Route 2, Viridian Forest, One Island"
-    },
-    "Butterfree": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Route 2, Viridian Forest, Training 1, One Island, Birthday Island"
-    },
-    "Weedle": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Route 2, Viridian Forest, Exploration 1, Training 1, One Island"
-    },
-    "Kakuna": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Route 2, Viridian Forest, One Island"
-    },
-    "Beedrill": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Route 2, Viridian Forest, One Island"
-    },
-    "Pidgey": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Pallet Town, Route 1, Viridian City, Route 2, Pewter City, Route 3, Exploration 1, Training 1"
-    },
-    "Pidgeotto": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Route 2, Viridian Forest, Exploration 1, Training 1"
-    },
-    "Pidgeot": {
-        "ev_stat": "Speed",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Rattata": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Pallet Town, Route 1, Viridian City, Route 2, Pewter City, Route 3, Exploration 1, Training 1"
-    },
-    "Raticate": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Viridian City, Exploration 1, Training 1, Birthday Island"
-    },
-    "Spearow": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Route 1, Pewter City, Route 3, Training 1"
-    },
-    "Fearow": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Training 1"
-    },
-    "Ekans": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Pewter City, Route 3, Exploration 1, Halloween Island, One Island"
-    },
-    "Arbok": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Mystic Cave, Halloween Island"
-    },
-    "Pikachu": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Pallet Town, Route 1, Viridian City, Route 2, Viridian Forest, Magnet Mines"
-    },
-    "Raichu": {
-        "ev_stat": "Speed",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Sandshrew": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Pewter City, Route 3, Exploration 1"
-    },
-    "Sandslash": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Training 1"
-    },
-    "Nidoran-f": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Route 2, Pewter City, Route 3, Exploration 1, Training 1"
-    },
-    "Nidorina": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Training 1"
-    },
-    "Nidoqueen": {
-        "ev_stat": "HP",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Nidoran-m": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Route 2, Pewter City, Route 3, Exploration 1, Training 1"
-    },
-    "Nidorino": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Training 1"
-    },
-    "Nidoking": {
-        "ev_stat": "Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Clefairy": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Pewter City, Exploration 1"
-    },
-    "Clefable": {
-        "ev_stat": "HP",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Vulpix": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Exploration 1, One Island, Birthday Island"
-    },
-    "Ninetales": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Jigglypuff": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Route 2, Pewter City, Route 3"
-    },
-    "Wigglytuff": {
-        "ev_stat": "HP",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Zubat": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Oak Cave, Digletts Cave, Lost Cavern, Halloween Island"
-    },
-    "Golbat": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Lost Cavern, Ice Path, Mystic Cave, Halloween Island, Birthday Island"
-    },
-    "Oddish": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Route 1, Viridian City, Route 2, Viridian Forest, Exploration 1, One Island"
-    },
-    "Gloom": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Training 1, One Island"
-    },
-    "Vileplume": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Paras": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, One Island"
-    },
-    "Parasect": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Mystic Cave"
-    },
-    "Venonat": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Birthday Island, One Island"
-    },
-    "Venomoth": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Mystic Cave"
-    },
-    "Diglett": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Digletts Cave, Exploration 1, Lost Cavern"
-    },
-    "Dugtrio": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Digletts Cave, Lost Cavern"
-    },
-    "Meowth": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Exploration 1"
-    },
-    "Persian": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Psyduck": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Viridian City, Exploration 1, Exploration 3, Halloween Island, Christmas Island, Birthday Island, One Island"
-    },
-    "Golduck": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "One Island, Halloween Island, Christmas Island"
-    },
-    "Mankey": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Pewter City, Route 3, Exploration 1, Training 1"
-    },
-    "Primeape": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Mystic Cave, Christmas Island"
-    },
-    "Growlithe": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Birthday Island, One Island"
-    },
-    "Arcanine": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Poliwag": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Pallet Town, Viridian City, Exploration 1, Training 1, Halloween Island, Birthday Island, One Island"
-    },
-    "Poliwhirl": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Viridian City, Training 1, Halloween Island, Birthday Island, One Island"
-    },
-    "Poliwrath": {
-        "ev_stat": "Defense",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Abra": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Birthday Island"
-    },
-    "Kadabra": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Mystic Cave, Training 1, Birthday Island"
-    },
-    "Alakazam": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Machop": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Lost Cavern, Training 1"
-    },
-    "Machoke": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Lost Cavern, Mystic Cave, Training 1"
-    },
-    "Machamp": {
-        "ev_stat": "Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Bellsprout": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Route 1, Viridian City, Route 2, Viridian Forest"
-    },
-    "Weepinbell": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Victreebel": {
-        "ev_stat": "Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Tentacool": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island, One Island"
-    },
-    "Tentacruel": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "Halloween Island, Birthday Island, One Island"
-    },
-    "Geodude": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Oak Cave, Pewter City, Exploration 1, Lost Cavern, Exploration 3, Mt Ember"
-    },
-    "Graveler": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Lost Cavern, Exploration 3, Mt Ember, Ice Path, Birthday Island"
-    },
-    "Golem": {
-        "ev_stat": "Defense",
-        "ev_value": 3,
-        "location": "Mt Ember"
-    },
-    "Ponyta": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Training 1, Birthday Island, One Island"
-    },
-    "Rapidash": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Birthday Island"
-    },
-    "Slowpoke": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Viridian City, Exploration 1, Exploration 3, Ice Path, Halloween Island, Birthday Island, One Island"
-    },
-    "Slowbro": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Exploration 3, Ice Path, Halloween Island, Birthday Island, One Island"
-    },
-    "Magnemite": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Magnet Mines, Training 1"
-    },
-    "Magneton": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Exploration 1, Magnet Mines, Mystic Cave, Training 1"
-    },
-    "Farfetch'd": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 1"
-    },
-    "Doduo": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Birthday Island, One Island"
-    },
-    "Dodrio": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Mystic Cave, Birthday Island"
-    },
-    "Seel": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Exploration 3"
-    },
-    "Dewgong": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Grimer": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Exploration 1, Halloween Island, Birthday Island"
-    },
-    "Muk": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Exploration 1, Halloween Island, Birthday Island"
-    },
-    "Shellder": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Exploration 3, Halloween Island, Birthday Island, One Island"
-    },
-    "Cloyster": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Gastly": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island"
-    },
-    "Haunter": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Mystic Cave, Halloween Island, Birthday Island"
-    },
-    "Gengar": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Halloween Island"
-    },
-    "Onix": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Pewter City, Exploration 1, Lost Cavern, Ice Path, Birthday Island"
-    },
-    "Drowzee": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Halloween Island, Birthday Island"
-    },
-    "Hypno": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "Halloween Island, Birthday Island, Training 1"
-    },
-    "Krabby": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Pallet Town, Exploration 1, Training 1, Halloween Island, Christmas Island, Birthday Island, One Island"
-    },
-    "Kingler": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Halloween Island, Christmas Island"
-    },
-    "Voltorb": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Exploration 1, Magnet Mines"
-    },
-    "Electrode": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Exploration 1, Magnet Mines, Mystic Cave, Training 1"
-    },
-    "Exeggcute": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Birthday Island, One Island"
-    },
-    "Exeggutor": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Cubone": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Exploration 3"
-    },
-    "Marowak": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Exploration 3, Ice Path, Mystic Cave"
-    },
-    "Hitmonlee": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Hitmonchan": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Lickitung": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Exploration 1, Training 1, Birthday Island"
-    },
-    "Koffing": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Halloween Island, Birthday Island"
-    },
-    "Weezing": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Exploration 1, Halloween Island, Birthday Island"
-    },
-    "Rhyhorn": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Lost Cavern, Ice Path, Magnet Mines, Mt Ember"
-    },
-    "Rhydon": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Lost Cavern, Ice Path, Magnet Mines, Mystic Cave, Training 1"
-    },
-    "Chansey": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Birthday Island"
-    },
-    "Tangela": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Exploration 1, Christmas Island"
-    },
-    "Kangaskhan": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Exploration 1, Training 1"
-    },
-    "Horsea": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island, One Island"
-    },
-    "Seadra": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "One Island, Birthday Island"
-    },
-    "Goldeen": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Viridian City"
-    },
-    "Seaking": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Staryu": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Pallet Town, Exploration 1, Halloween Island, Birthday Island"
-    },
-    "Starmie": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Mr. Mime": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "Exploration 1, Mystic Cave, Christmas Island, Birthday Island"
-    },
-    "Jynx": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Exploration 1, Exploration 3, Christmas Island"
-    },
-    "Electabuzz": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Exploration 1, Magnet Mines, Training 1"
-    },
-    "Magmar": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Exploration 1, Mt Ember, Training 1, One Island"
-    },
-    "Pinsir": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Exploration 1, Halloween Island, Training 1, One Island"
-    },
-    "Tauros": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Training 1"
-    },
-    "Magikarp": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Viridian City, Exploration 1, Halloween Island, Christmas Island, Birthday Island, One Island"
-    },
-    "Gyarados": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Training 1, Birthday Island"
-    },
-    "Lapras": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Exploration 3, Birthday Island"
-    },
-    "Eevee": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Route 1, Christmas Island, Birthday Island"
-    },
-    "Vaporeon": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Jolteon": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Flareon": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Omanyte": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Birthday Island"
-    },
-    "Omastar": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Kabuto": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Birthday Island"
-    },
-    "Kabutops": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Aerodactyl": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Snorlax": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Exploration 1, Training 1, Christmas Island, Birthday Island"
-    },
-    "Articuno": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 3,
-        "location": "Exploration 3"
-    },
-    "Zapdos": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Exploration 1"
-    },
-    "Moltres": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "One Island"
-    },
-    "Dratini": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 3, Ice Path, Christmas Island, Birthday Island, One Island"
-    },
-    "Dragonair": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Dragonite": {
-        "ev_stat": "Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Mewtwo": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Mystic Cave"
-    },
-    "Mew": {
-        "ev_stat": "HP",
-        "ev_value": 3,
-        "location": "Anywhere"
-    },
-    "Chikorita": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "One Island, Birthday Island"
-    },
-    "Bayleef": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Meganium": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Cyndaquil": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "One Island, Birthday Island"
-    },
-    "Quilava": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Typhlosion": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Totodile": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "One Island, Birthday Island"
-    },
-    "Croconaw": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Feraligatr": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Sentret": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "One Island, Christmas Island, Birthday Island"
-    },
-    "Furret": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "One Island, Christmas Island"
-    },
-    "Hoothoot": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island"
-    },
-    "Noctowl": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Halloween Island, Birthday Island"
-    },
-    "Ledyba": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "One Island"
-    },
-    "Ledian": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "One Island"
-    },
-    "Spinarak": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Halloween Island, One Island"
-    },
-    "Ariados": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "One Island"
-    },
-    "Crobat": {
-        "ev_stat": "Speed",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Chinchou": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island, One Island"
-    },
-    "Lanturn": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Halloween Island, Birthday Island, One Island"
-    },
-    "Pichu": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Cleffa": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Igglybuff": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Natu": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island"
-    },
-    "Xatu": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Mareep": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Birthday Island"
-    },
-    "Flaaffy": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Ampharos": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Bellossom": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Marill": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Exploration 3, Birthday Island"
-    },
-    "Azumarill": {
-        "ev_stat": "HP",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Sudowoodo": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Halloween Island, Christmas Island"
-    },
-    "Politoed": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Hoppip": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Birthday Island, One Island"
-    },
-    "Skiploom": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Jumpluff": {
-        "ev_stat": "Speed",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Aipom": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "One Island"
-    },
-    "Sunkern": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "One Island"
-    },
-    "Sunflora": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Yanma": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Halloween Island"
-    },
-    "Wooper": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Exploration 1, Exploration 3, Halloween Island, Birthday Island"
-    },
-    "Quagsire": {
-        "ev_stat": "HP",
-        "ev_value": 2,
-        "location": "Exploration 3"
-    },
-    "Espeon": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Umbreon": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Murkrow": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island"
-    },
-    "Slowking": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Misdreavus": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 1,
-        "location": "Halloween Island, Birthday Island"
-    },
-    "Girafarig": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "One Island, Birthday Island"
-    },
-    "Pineco": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Exploration 3, Christmas Island"
-    },
-    "Forretress": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Exploration 3, Christmas Island"
-    },
-    "Dunsparce": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Lost Cavern, Christmas Island"
-    },
-    "Gligar": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "One Island"
-    },
-    "Steelix": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Snubbull": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 1, Christmas Island"
-    },
-    "Granbull": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Qwilfish": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Halloween Island"
-    },
-    "Shuckle": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "Pallet Town, One Island, Birthday Island, Halloween Island, Christmas Island"
-    },
-    "Heracross": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "One Island, Birthday Island"
-    },
-    "Sneasel": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Exploration 3, Ice Path, Christmas Island"
-    },
-    "Teddiursa": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 3, Christmas Island"
-    },
-    "Ursaring": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Exploration 3, Christmas Island"
-    },
-    "Slugma": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Mt Ember"
-    },
-    "Magcargo": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Mt Ember"
-    },
-    "Swinub": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 3, Christmas Island"
-    },
-    "Piloswine": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Exploration 3, Christmas Island"
-    },
-    "Corsola": {
-        "ev_stat": "Defense",
-        "ev_value": 1,
-        "location": "One Island, Birthday Island, Halloween Island"
-    },
-    "Remoraid": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "One Island, Halloween Island, Birthday Island"
-    },
-    "Octillery": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Delibird": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Christmas Island"
-    },
-    "Mantine": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "One Island, Birthday Island"
-    },
-    "Skarmory": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Training 1, Birthday Island"
-    },
-    "Houndour": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Mt Ember"
-    },
-    "Houndoom": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 2,
-        "location": "Mt Ember"
-    },
-    "Kingdra": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Evolução / Especial"
-    },
-    "Donphan": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Ice Path, Christmas Island"
-    },
-    "Stantler": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Exploration 3, Christmas Island"
-    },
-    "Smoochum": {
-        "ev_stat": "Special-Attack",
-        "ev_value": 1,
-        "location": "Christmas Island"
-    },
-    "Elekid": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Birthday Island"
-    },
-    "Magby": {
-        "ev_stat": "Speed",
-        "ev_value": 1,
-        "location": "Halloween Island"
-    },
-    "Miltank": {
-        "ev_stat": "Defense",
-        "ev_value": 2,
-        "location": "Exploration 1, Training 1, Birthday Island"
-    },
-    "Blissey": {
-        "ev_stat": "HP",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Raikou": {
-        "ev_stat": "Speed",
-        "ev_value": 2,
-        "location": "Magnet Mines"
-    },
-    "Entei": {
-        "ev_stat": "HP",
-        "ev_value": 1,
-        "location": "Mt Ember"
-    },
-    "Suicune": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 2,
-        "location": "Ice Path"
-    },
-    "Larvitar": {
-        "ev_stat": "Attack",
-        "ev_value": 1,
-        "location": "Training 1, Mystic Cave, Christmas Island, Birthday Island"
-    },
-    "Pupitar": {
-        "ev_stat": "Attack",
-        "ev_value": 2,
-        "location": "Evolução / Especial"
-    },
-    "Tyranitar": {
-        "ev_stat": "Attack",
-        "ev_value": 3,
-        "location": "Evolução / Especial"
-    },
-    "Lugia": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 3,
-        "location": "Birthday Island"
-    },
-    "Ho-Oh": {
-        "ev_stat": "Special-Defense",
-        "ev_value": 3,
-        "location": "Birthday Island"
-    },
-    "Celebi": {
-        "ev_stat": "HP",
-        "ev_value": 3,
-        "location": "Anywhere"
-    }
+  "Bulbasaur": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Ivysaur": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 1, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Venusaur": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 1, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 1
+  },
+  "Charmander": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Charmeleon": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Charizard": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Squirtle": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Wartortle": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Blastoise": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 3, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 2
+  },
+  "Caterpie": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Metapod": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Butterfree": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 1, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Weedle": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Kakuna": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Beedrill": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Pidgey": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Pidgeotto": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Pidgeot": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 3, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Rattata": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Raticate": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Spearow": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Fearow": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Ekans": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Arbok": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Pikachu": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Raichu": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 3, "energy": 0, "hp_reg": 0, "en_reg": 0
+  },
+  "Sandshrew": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Sandslash": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "NidoranF": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Nidorina": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Nidoqueen": {
+    "hp": 3, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "NidoranM": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Nidorino": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Nidoking": {
+    "hp": 0, "attack": 3, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Clefairy": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Clefable": {
+    "hp": 3, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Vulpix": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Ninetales": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 0
+  },
+  "Jigglypuff": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Wigglytuff": {
+    "hp": 3, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Zubat": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Golbat": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Oddish": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Gloom": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Vileplume": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Paras": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Parasect": {
+    "hp": 0, "attack": 2, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Venonat": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Venomoth": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Diglett": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Dugtrio": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Meowth": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Persian": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Psyduck": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Golduck": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Mankey": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Primeape": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Growlithe": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Arcanine": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Poliwag": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Poliwhirl": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Poliwrath": {
+    "hp": 0, "attack": 0, "defense": 3, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Abra": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Kadabra": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Alakazam": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 1
+  },
+  "Machop": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Machoke": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "Machamp": {
+    "hp": 0, "attack": 3, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Bellsprout": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Weepinbell": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "Victreebel": {
+    "hp": 0, "attack": 3, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Tentacool": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Tentacruel": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "Geodude": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Graveler": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Golem": {
+    "hp": 0, "attack": 0, "defense": 3, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Ponyta": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Rapidash": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Slowpoke": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Slowbro": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Magnemite": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Magneton": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Farfetchd": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Doduo": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Dodrio": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 1
+  },
+  "Seel": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Dewgong": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "Grimer": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Muk": {
+    "hp": 1, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Shellder": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Cloyster": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Gastly": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Haunter": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Gengar": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 2
+  },
+  "Onix": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Drowzee": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Hypno": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Krabby": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Kingler": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Voltorb": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Electrode": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 2
+  },
+  "Exeggcute": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Exeggutor": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Cubone": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Marowak": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Hitmonlee": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Hitmonchan": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Lickitung": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Koffing": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Weezing": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Rhyhorn": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Rhydon": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 2
+  },
+  "Chansey": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 5, "en_reg": 2
+  },
+  "Tangela": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Kangaskhan": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Horsea": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Seadra": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Goldeen": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Seaking": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Staryu": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Starmie": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Mr.Mime": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Scyther": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Jynx": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Electabuzz": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Magmar": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Pinsir": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Tauros": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "Magikarp": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 0
+  },
+  "Gyarados": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Lapras": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Eevee": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "Vaporeon": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Jolteon": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Flareon": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Omanyte": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Omastar": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Kabuto": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Kabutops": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Aerodactyl": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Snorlax": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 5, "en_reg": 0
+  },
+  "Articuno": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 3, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Zapdos": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Moltres": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Dratini": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Dragonair": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Dragonite": {
+    "hp": 0, "attack": 3, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 1, "en_reg": 0
+  },
+  "Mewtwo": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 3, "en_reg": 0
+  },
+  "Mew": {
+    "hp": 3, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 3, "hp_reg": 0, "en_reg": 0
+  },
+  "Chikorita": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Bayleef": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Meganium": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Cyndaquil": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Quilava": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Typhlosion": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Totodile": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Croconaw": {
+    "hp": 0, "attack": 1, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Feraligatr": {
+    "hp": 0, "attack": 2, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 2, "en_reg": 0
+  },
+  "Sentret": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Furret": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Hoothoot": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Noctowl": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Ledyba": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Ledian": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Spinarak": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Ariados": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Crobat": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 3, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Chinchou": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Lanturn": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Pichu": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Cleffa": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Igglybuff": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Natu": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Xatu": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Mareep": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Flaaffy": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Ampharos": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 3, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Bellossom": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 3, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Marill": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Azumarill": {
+    "hp": 3, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Sudowoodo": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Politoed": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 3, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Hoppip": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Skiploom": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Jumpluff": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 3, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Aipom": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Sunkern": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Sunflora": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Yanma": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Wooper": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Quagsire": {
+    "hp": 2, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 1
+  },
+  "Espeon": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Umbreon": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Murkrow": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Slowking": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 3, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Misdreavus": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Girafarig": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Pineco": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Forretress": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Dunsparce": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Gligar": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 0
+  },
+  "Steelix": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Snubbull": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Granbull": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Qwilfish": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Scizor": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Shuckle": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 1, "hp_reg": 2, "en_reg": 1
+  },
+  "Heracross": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 2, "en_reg": 1
+  },
+  "Sneasel": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Teddiursa": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Ursaring": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 3, "en_reg": 0
+  },
+  "Slugma": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Magcargo": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 2
+  },
+  "Swinub": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Piloswine": {
+    "hp": 1, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 2, "en_reg": 0
+  },
+  "Corsola": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 1, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 1
+  },
+  "Remoraid": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Octillery": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Delibird": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 5, "en_reg": 2
+  },
+  "Mantine": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Skarmory": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 2, "en_reg": 1
+  },
+  "Houndour": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Houndoom": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 2, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 2, "en_reg": 0
+  },
+  "Kingdra": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 1, "special-defense": 1, "speed": 0, "energy": 1, "hp_reg": 0, "en_reg": 0
+  },
+  "Phanpy": {
+    "hp": 1, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Donphan": {
+    "hp": 0, "attack": 1, "defense": 1, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 1
+  },
+  "Stantler": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Tyrogue": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Hitmontop": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 0, "hp_reg": 2, "en_reg": 0
+  },
+  "Smoochum": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 1, "en_reg": 0
+  },
+  "Elekid": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Magby": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 1, "energy": 0, "hp_reg": 0, "en_reg": 1
+  },
+  "Miltank": {
+    "hp": 0, "attack": 0, "defense": 2, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 0, "hp_reg": 3, "en_reg": 0
+  },
+  "Blissey": {
+    "hp": 3, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 5, "en_reg": 2
+  },
+  "Raikou": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 1, "special-defense": 0, "speed": 2, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Entei": {
+    "hp": 1, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Suicune": {
+    "hp": 0, "attack": 0, "defense": 1, "special-attack": 0, "special-defense": 2, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Larvitar": {
+    "hp": 0, "attack": 1, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 0, "en_reg": 0
+  },
+  "Pupitar": {
+    "hp": 0, "attack": 2, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 2, "en_reg": 0
+  },
+  "Tyranitar": {
+    "hp": 0, "attack": 3, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 2, "hp_reg": 2, "en_reg": 2
+  },
+  "Lugia": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 3, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Ho-Oh": {
+    "hp": 0, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 3, "speed": 0, "energy": 1, "hp_reg": 1, "en_reg": 1
+  },
+  "Celebi": {
+    "hp": 3, "attack": 0, "defense": 0, "special-attack": 0, "special-defense": 0, "speed": 0, "energy": 1, "hp_reg": 3, "en_reg": 1
+  }
 }
