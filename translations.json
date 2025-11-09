@@ -124,7 +124,9 @@
             "special_evolution": "Este Pokémon é obtido por meios especiais (evolução, etc.).",
             "anywhere": "Este Pokémon pode ser encontrado em qualquer mapa.",
             "map_not_found": "Nenhum mapa encontrado para:\n{loc}",
-            "error_base_stats_not_found": "Stats base não encontrados para esta espécie."
+            "error_base_stats_not_found": "Stats base não encontrados para esta espécie.",
+            "location_special": "Evolução / Especial",
+            "location_anywhere": "Qualquer Lugar"
         },
         "teams": {
             "team_name_placeholder": "Nome do Time",
@@ -552,7 +554,9 @@
             "special_evolution": "This Pokémon is obtained by special means (evolution, etc.).",
             "anywhere": "This Pokémon can be found on any map.",
             "map_not_found": "No map found for:\n{loc}",
-            "error_base_stats_not_found": "Base stats not found for this species."
+            "error_base_stats_not_found": "Base stats not found for this species.",
+            "location_special": "Evolution / Special Method",
+            "location_anywhere": "Anywhere"
         },
         "teams": {
             "team_name_placeholder": "Team Name",

@@ -1760,28 +1760,58 @@ class EVTrainingTab(QWidget):
             self.results_table.setItem(row_pos, 2, QTableWidgetItem(ev_text))
 
             # 2. Puxa a localização do novo JSON
-            location_str = data.get("location", "N/A")
-            self.results_table.setItem(row_pos, 3, QTableWidgetItem(location_str))
+            location_str_raw = data.get("location", "N/A")
+            location_str_final = "" # String final que será exibida
+            self.results_table.setItem(row_pos, 3, QTableWidgetItem(location_str_raw))
+            # --- FIM DA CORREÇÃO ---
+
+            # --- CORREÇÃO DE TRADUÇÃO (Versão Curta) ---
+            if "Evolução / Especial" in location_str_raw:
+                # Usa a nova chave CURTA
+                location_str_final = self.parent_window.get_string("ev_yield.location_special")
+            elif "Anywhere" in location_str_raw:
+                # Usa a nova chave CURTA
+                location_str_final = self.parent_window.get_string("ev_yield.location_anywhere")
+            else:
+                # Se não for especial, usa o texto como está (ex: "Route 1, Pallet Town")
+                location_str_final = location_str_raw
+
+            self.results_table.setItem(row_pos, 3, QTableWidgetItem(location_str_final))
             # --- FIM DA CORREÇÃO ---
 
     def display_selected_map(self):
+        # 1. Limpa o layout antigo
         while self.map_layout.count():
             if child := self.map_layout.takeAt(0):
                 if child.widget(): child.widget().deleteLater()
+
+        # 2. Verifica se algo está selecionado
         selected_items = self.results_table.selectedItems()
         if not selected_items:
             self.map_layout.addWidget(QLabel(self.parent_window.get_string("ev_yield.select_to_see_map")))
             return
-        location_item = self.results_table.item(selected_items[0].row(), 3)
-        if not location_item: return
-        location_name = location_item.text().strip()
-        if location_name.lower() == 'anywhere':
+
+        # 3. Pega o NOME do Pokémon (da Coluna 1), que é a fonte segura
+        pokemon_name_item = self.results_table.item(selected_items[0].row(), 1)
+        if not pokemon_name_item: return
+        pokemon_name = pokemon_name_item.text().strip()
+
+        # 4. Busca o dado ORIGINAL (não traduzido) do ev_data
+        ev_data = self.parent_window.ev_data.get(pokemon_name)
+        if not ev_data: return
+        location_name_raw = ev_data.get("location", "N/A") # Ex: "Evolução / Especial" ou "Route 1, Pallet Town"
+
+        # 5. Lida com os casos de TEXTO (Anywhere, Especial)
+        if "Anywhere" in location_name_raw:
             self.map_layout.addWidget(QLabel(self.parent_window.get_string("ev_yield.anywhere")))
             return
-        if any(term in location_name.lower() for term in ["evolução", "especial", "evolution", "special"]):
+        if "Evolução / Especial" in location_name_raw:
             self.map_layout.addWidget(QLabel(self.parent_window.get_string("ev_yield.special_evolution")))
             return
-        locations = [loc.strip() for loc in location_name.split(',')]
+
+        # 6. (A PARTE QUE EU ESQUECI DE INCLUIR ANTES)
+        # Se chegou aqui, é uma lista de mapas para carregar imagens
+        locations = [loc.strip() for loc in location_name_raw.split(',')]
         found_map = False
         for loc in locations:
             if map_path := get_map_image_path(loc):
@@ -1790,8 +1820,11 @@ class EVTrainingTab(QWidget):
                     map_label.setPixmap(pixmap)
                     self.map_layout.addWidget(map_label)
                     found_map = True
+        
+        # 7. (A PARTE QUE EU ESQUECI DE INCLUIR ANTES)
+        # Fallback se nenhuma imagem de mapa for encontrada
         if not found_map:
-            self.map_layout.addWidget(QLabel(self.parent_window.get_string("ev_yield.map_not_found").format(loc=location_name)))
+            self.map_layout.addWidget(QLabel(self.parent_window.get_string("ev_yield.map_not_found").format(loc=location_name_raw)))
 
 # -----------------------------------------------------------------
 # --- CLASSE CORRIGIDA: TeamAnalyzerTab ---
@@ -2758,13 +2791,7 @@ class IdealTeamsDialog(QDialog):
             avg_time = (total_time / team_wins) if team_wins > 0 else 0
             
             level_str = self.parent_window.get_string('bosses.team_level_analysis')
-            level_analysis_str = self.parent_window.get_string('bosses.team_level_analysis').format(level=level)
-            result_str = self.parent_window.get_string('bosses.sim_level_result', "{wins} / {total} vitórias (Média: {time}s)").format(
-                wins=team_wins,
-                total=len(team),
-                time=f"{avg_time:.1f}"
-            )
-            results_text += f"<li><b>{level_analysis_str}:</b> {result_str}</li>"
+            results_text += f"<li><b>{level_str.format(level=level)}:</b> {team_wins} / {len(team)} vitórias (Média: {avg_time:.1f}s)</li>"
 
         results_label = QLabel(f"<ul>{results_text}</ul>")
         results_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
