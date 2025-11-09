@@ -26,6 +26,14 @@ from PyQt6.QtCore import Qt, pyqtSignal, QTimer, QSize, QRect, QBuffer, QByteArr
 from animations.factory import get_animation_class, get_available_animations
 from PyQt6.QtMultimedia import QMediaPlayer, QAudioOutput
 
+class HorizontalLine(QFrame):
+    """Uma linha divisória horizontal simples."""
+    def __init__(self):
+        super().__init__()
+        self.setFrameShape(QFrame.Shape.HLine)
+        self.setFrameShadow(QFrame.Shadow.Sunken)
+        self.setStyleSheet("color: #555;") # Cor cinza
+
 # --- Bloco de Dependências e Configuração ---
 try:
     from PIL import Image, ImageGrab
@@ -113,8 +121,8 @@ EVOLUTIONS = {
     "Flaaffy": "Ampharos", "Marill": "Azumarill", "Hoppip": "Skiploom", "Skiploom": "Jumpluff",
     "Sunkern": "Sunflora", "Wooper": "Quagsire", "Pineco": "Forretress", "Snubbull": "Granbull",
     "Teddiursa": "Ursaring", "Slugma": "Magcargo", "Swinub": "Piloswine", "Remoraid": "Octillery",
-    "Houndour": "Houndoom", "Phanpy": "Donphan", "Smoochum": "Jynx", "Elekid": "Electabuzz",
-    "Magby": "Magmar", "Larvitar": "Pupitar", "Pupitar": "Tyranitar",
+    "Houndour": "Houndoom", "Phanpy": "Donphan", "Smoochum": "Jynx", "Elekid": "Electabuzz", "Electabuzz": "Electivire",
+    "Magby": "Magmar", "Larvitar": "Pupitar", "Pupitar": "Tyranitar", "Mudkip": "Marshtomp", "Marshtomp": "Swampert", "Treeko": "Grovyle", "Grovyle": "Sceptile", "Torchic": "Combusken", "Combusken": "Blaziken",
     # Exemplo de multi-evolução
     "Tyrogue": ["Hitmonlee", "Hitmonchan", "Hitmontop"],
     "Eevee": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon",],
@@ -2067,12 +2075,29 @@ class BattlePlannerTab(QWidget):
                 pokemon_data=self.parent_window.pokemon_data,
                 boss_data=self.parent_window.boss_data,
                 type_chart=self.parent_window.type_chart,
-                moves_data=self.parent_window.moves_data
+                moves_data=self.parent_window.moves_data,
+                learnsets_data=self.parent_window.learnsets_data
             )
         else:
             self.battle_logic = None
         self.collection = []
         self.init_ui()
+
+    def _get_battle_score(self, result):
+        """
+        Calcula um "score" para a V4, já que 'battle_index' não existe mais.
+        Vitórias rápidas = score alto. Derrotas = score baixo.
+        """
+        if result.get('winner') == 'player':
+            # Score alto, mas subtrai o tempo (vitórias rápidas são melhores)
+            return (1000 - result.get('time_elapsed', 300))
+        elif result.get('winner') == 'timeout':
+            # Empate
+            return 0
+        else:
+            # Derrota (boss venceu)
+            # Score negativo, baseado em quanto HP o boss sobrou
+            return -1000 - result.get('boss_final_hp_percent', 100)
 
     def retranslate_ui(self):
         # Guarda o estado atual se necessário
@@ -2251,43 +2276,47 @@ class BattlePlannerTab(QWidget):
                              <b>{attacks_str}:</b> {', '.join(boss.get('moveset', []))}</p>"""
         self.boss_info_label.setHtml(info_text)
         
-        # --- CIRURGIA 3: CORRIGIR MENSAGEM MEW/CELEBI ---
-        # Substitua o bloco if/elif/else do mapa por este novo
         location_name = boss.get('location', '')
-
-        # Limpa o estado anterior
         self.map_image_label.setPixmap(QPixmap())
-        self.map_image_label.setText("") # Garante que o texto comece vazio
+        self.map_image_label.setText("") 
 
-        # 1. Checa se é um Mítico
         if boss_name in ["Mew", "Celebi"]:
             self.map_image_label.setText(self.parent_window.get_string("bosses.mythical_location_text"))
-        # 2. Se não, checa se tem um mapa válido
         elif location_name and (map_path := get_map_image_path(location_name)):
             if pixmap := load_pixmap_robustly(map_path, self.map_image_label.width(), self.map_image_label.height()):
                 self.map_image_label.setPixmap(pixmap)
             else:
                 self.map_image_label.setText(self.parent_window.get_string("ev_yield.map_not_found").format(loc=location_name))
-        # 3. Se não for nenhum dos acima, mostra mensagem genérica
         else:
             self.map_image_label.setText(self.parent_window.get_string("bosses.map_not_found_generic", "Mapa não disponível."))
-        # --- FIM DA CIRURGIA 3 ---
-
         
+        # --- AQUI COMEÇA A LÓGICA V4 CORRIGIDA ---
         if self.collection:
             battle_results = []
             for p_user in self.collection:
-                result = self.battle_logic.simulate_battle(p_user, boss_name)
+                # 1. Roda a simulação V4 (modo Estrategista)
+                result = self.battle_logic.run_simulation(p_user, boss_name, use_potions=False, manual_moveset=None)
                 if result:
+                    # 2. Anexa o Pokémon ao resultado, para não perdê-lo
+                    result['pokemon'] = p_user 
                     battle_results.append(result)
             
             if battle_results:
-                battle_results.sort(key=lambda x: x['battle_index'], reverse=True)
+                # 3. Ordena os resultados usando a nova função de score
+                battle_results.sort(key=self._get_battle_score, reverse=True)
                 
+                # 4. Pega os 6 melhores
                 recommended_team_results = battle_results[:6]
-                team_indices = [r['battle_index'] for r in recommended_team_results]
-                win_prob = self.battle_logic.calculate_team_win_probability(team_indices)
                 
+                # 5. Calcula a nova "win_prob" (não existe mais 'calculate_team_win_probability')
+                total_wins = 0
+                for res in recommended_team_results:
+                    if res.get('winner') == 'player':
+                        total_wins += 1
+                
+                win_prob = (total_wins / 6) * 100 # Simples % de vitórias do time
+
+                # 6. Exibe o sumário (o código antigo aqui estava certo)
                 if win_prob >= 50:
                     outcome = self.parent_window.get_string("bosses.outcome_victory")
                     color = "green"
@@ -2302,33 +2331,30 @@ class BattlePlannerTab(QWidget):
 
                 resultado_texto = f"""
                 {self.parent_window.get_string('bosses.simulation_result_label')}: <b style='color:{color};'>{outcome}</b><br>
-                {self.parent_window.get_string('bosses.simulation_victory_prob')}: <b>{win_prob:.1f}%</b><br>
+                {self.parent_window.get_string('bosses.simulation_victory_prob')}: <b>{win_prob:.1f}%</b> ({total_wins}/6 vitórias)<br> 
                 <i>{advice}</i>
                 """
                 self.team_sim_results_label.setText(resultado_texto)
                 self.team_sim_results_widget.show()
+                
+                # 7. Chama a função de exibição V4
+                self.update_user_recommendations(boss_name, recommended_team_results)
         
-        self.update_user_recommendations(boss_name)
+        else: # Se não tem coleção
+            self.team_display_layout.addWidget(QLabel(self.parent_window.get_string("bosses.no_suitable_pokemon")))
 
-    def update_user_recommendations(self, boss_name):
-        battle_results = []
-        for p_user in self.collection:
-            result = self.battle_logic.simulate_battle(p_user, boss_name)
-            if result:
-                battle_results.append(result)
-
-        if not battle_results:
+    def update_user_recommendations(self, boss_name, recommended_team_results):
+        # Esta função agora é mais "burra". Ela só exibe os resultados
+        # que o plan_battle já calculou.
+        if not recommended_team_results:
             self.team_display_layout.addWidget(QLabel(self.parent_window.get_string("bosses.no_suitable_pokemon")))
             return
 
-        battle_results.sort(key=lambda x: x['battle_index'], reverse=True)
-
         self.team_display_layout.addWidget(QLabel(f"<b>{self.parent_window.get_string('bosses.recommended_team_title')}</b>"))
 
-        recommended_team_results = battle_results[:6]
-        
-        team_indices = [r['battle_index'] for r in recommended_team_results]
-        win_prob = self.battle_logic.calculate_team_win_probability(team_indices)
+        # Re-calcula a win_prob só para a mensagem
+        total_wins = sum(1 for res in recommended_team_results if res.get('winner') == 'player')
+        win_prob = (total_wins / 6) * 100
 
         if win_prob >= 50:
             message = self.parent_window.get_string("bosses.recommendation_strong_team").format(boss=boss_name)
@@ -2337,16 +2363,23 @@ class BattlePlannerTab(QWidget):
         
         self.team_display_layout.addWidget(QLabel(message))
         for result in recommended_team_results:
-            self.add_pokemon_to_recommendation_ui(result)
+            self.add_pokemon_to_recommendation_ui(result) # Chama a V4
         
         disclaimer = QLabel(f"<i>{self.parent_window.get_string('bosses.disclaimer')}</i>")
         disclaimer.setWordWrap(True)
         self.team_display_layout.addWidget(disclaimer)
 
     def add_pokemon_to_recommendation_ui(self, result):
-        p = result['pokemon']
-        member_widget = QWidget()
-        member_layout = QHBoxLayout(member_widget)
+        p = result['pokemon'] 
+        
+        # --- O "CARD" DO POKÉMON ---
+        card_frame = QFrame()
+        card_frame.setFrameShape(QFrame.Shape.StyledPanel)
+        card_layout = QVBoxLayout(card_frame)
+        card_layout.setSpacing(6)
+
+        # --- Topo do Card (Info) ---
+        top_layout = QHBoxLayout()
         
         image_label = QLabel("?")
         image_label.setFixedSize(64, 64)
@@ -2356,34 +2389,106 @@ class BattlePlannerTab(QWidget):
                 image_label.setText("")
         
         level_str = self.parent_window.get_string('bosses.level_label')
-        index_str = self.parent_window.get_string('bosses.battle_index_label')
-        survival_time_str = self.parent_window.get_string('bosses.survival_time')
+        score_str = self.parent_window.get_string('bosses.battle_index_label', 'Score')
+        time_str = self.parent_window.get_string('bosses.survival_time', 'Tempo')
+        score = int(self._get_battle_score(result))
+        tempo = format_time(result.get('time_elapsed', 0))
 
-        text_label = QLabel(f"<b>{p.get('nickname') or p['species']}</b> ({level_str} {p['level']})<br>"
-                               f"<b>{index_str}: {result['battle_index']:.2f}</b><br>"
-                               f"{survival_time_str}: {format_time(result['ttf'])}")
+        info_label = QLabel(f"<b>{p.get('nickname') or p['species']}</b> ({level_str} {p['level']})<br>"
+                            f"<b>{score_str}: {score}</b> | {time_str}: {tempo}")
+        info_label.setWordWrap(True)
+
+        top_layout.addWidget(image_label)
+        top_layout.addWidget(info_label, 1) # Adiciona stretch=1
         
-        member_layout.addWidget(image_label)
-        member_layout.addWidget(text_label)
-        member_layout.addStretch()
-        self.team_display_layout.addWidget(member_widget)
+        # --- Base do Card (Golpes) ---
+        moves_layout = QHBoxLayout()
+        moveset = result.get('used_moveset', ['?']*6)
+        
+        # Coluna de Golpes 1-3
+        moves_str_1 = "<b>Golpes:</b><br>" + "<br>".join([f"• {m}" for m in moveset[:3]])
+        moves_label_1 = QLabel(moves_str_1)
+        moves_label_1.setWordWrap(True)
+        moves_label_1.setAlignment(Qt.AlignmentFlag.AlignTop)
+        
+        # Coluna de Golpes 4-6
+        moves_str_2 = "<br>" + "<br>".join([f"• {m}" for m in moveset[3:6] if m])
+        moves_label_2 = QLabel(moves_str_2)
+        moves_label_2.setWordWrap(True)
+        moves_label_2.setAlignment(Qt.AlignmentFlag.AlignTop)
+
+        moves_layout.addWidget(moves_label_1, 1) # stretch 1
+        moves_layout.addWidget(moves_label_2, 1) # stretch 1
+
+        # Adiciona tudo ao card
+        card_layout.addLayout(top_layout)
+        card_layout.addWidget(HorizontalLine()) # Linha divisória
+        card_layout.addLayout(moves_layout)
+        
+        # Adiciona o card ao layout vertical
+        self.team_display_layout.addWidget(card_frame)
 
     def show_ideal_teams_dialog(self):
         boss_name = self.boss_select.currentText()
         if not boss_name: return
 
-        my_best_team = []
+        # --- LÓGICA V4.1: CALCULANDO "MEU MELHOR TIME" (DA COLEÇÃO) ---
+        my_best_team_results = []
         if self.collection:
             battle_results = []
             for p_user in self.collection:
-                result = self.battle_logic.simulate_battle(p_user, boss_name, p_level=125)
+                # Simula o Pokémon real no nível máximo para comparação justa
+                sim_pokemon = p_user.copy()
+                sim_pokemon['level'] = 125 
+                
+                result = self.battle_logic.run_simulation(sim_pokemon, boss_name, use_potions=False, manual_moveset=None)
                 if result:
+                    result['pokemon'] = p_user # Anexa o pokemon original
                     battle_results.append(result)
-            battle_results.sort(key=lambda x: x['battle_index'], reverse=True)
+            
+            battle_results.sort(key=self._get_battle_score, reverse=True)
             my_best_team_results = battle_results[:6]
-            my_best_team = [res['pokemon'] for res in my_best_team_results]
 
-        dialog = IdealTeamsDialog(boss_name, self, my_best_team)
+        # --- LÓGICA V4.1: CALCULANDO O "TIME PERFEITO" (DO JOGO TODO) ---
+        # (A lógica que eu tinha esquecido de adicionar de volta)
+        perfect_team_results = []
+        all_pokemon_data = self.parent_window.pokemon_data
+        
+        # Filtra a lista para tirar pré-evoluções (qualquer poke que exista em EVOLUTIONS)
+        # e bosses (qualquer poke que exista em boss_data)
+        final_forms = [name for name, data in all_pokemon_data.items() 
+                       if name not in EVOLUTIONS and name not in self.battle_logic.boss_data]
+
+        perfect_battle_results = []
+        for species_name in final_forms:
+            # Cria um Pokémon "perfeito" para simulação
+            p_data = all_pokemon_data[species_name]
+            base_stats = p_data.get("base_stats", {})
+            
+            # Pula pokes fracos que não são forma final (ex: Unown)
+            if sum(base_stats.values()) < 480: # Chute de "Stats Totais"
+                continue
+
+            mock_pokemon = {
+                "species": species_name,
+                "level": 125,
+                "nature": "Hardy", # Nature neutra para a simulação
+                "ivs": {stat: 31 for stat in base_stats},
+                "evs": {stat: 2500 for stat in base_stats}, # EV máximo (chute)
+                "nickname": species_name # Usa o nome da espécie
+            }
+            
+            result = self.battle_logic.run_simulation(mock_pokemon, boss_name, use_potions=False, manual_moveset=None)
+            if result:
+                result['pokemon'] = mock_pokemon # Anexa o mock
+                perfect_battle_results.append(result)
+
+        perfect_battle_results.sort(key=self._get_battle_score, reverse=True)
+        perfect_team_results = perfect_battle_results[:6]
+        # --- FIM DA LÓGICA V4.1 ---
+
+        # Agora passamos os DOIS times para o Dialog
+        dialog = IdealTeamsDialog(boss_name, self, perfect_team_results, my_best_team_results)
         dialog.exec()
 
     def show_simulation_dialog(self):
@@ -2398,89 +2503,146 @@ class BattlePlannerTab(QWidget):
         dialog.exec()
 
 class IdealTeamsDialog(QDialog):
-    def __init__(self, boss_name, battle_planner_tab, my_best_team):
+    def __init__(self, boss_name, battle_planner_tab, perfect_team, my_best_team):
         super().__init__(battle_planner_tab.parent_window)
         self.parent_window = battle_planner_tab.parent_window
         self.battle_planner = battle_planner_tab
         self.battle_logic = battle_planner_tab.battle_logic
         self.boss_name = boss_name
-        self.my_best_team = my_best_team
+        self.perfect_team = perfect_team # Lista de Resultados do Time Perfeito
+        self.my_best_team = my_best_team # Lista de Resultados do Meu Time
 
         self.setWindowTitle(self.parent_window.get_string("bosses.ideal_teams_title").format(boss=boss_name))
-        self.setMinimumSize(900, 600)
+        # Aumentei o tamanho para caber os cards
+        self.setMinimumSize(1200, 800) 
         
         self.layout = QVBoxLayout(self)
         
-        perfect_team = self.generate_perfect_team()
-        
         main_hbox = QHBoxLayout()
 
+        # --- Coluna 1: Time Perfeito (do Jogo) ---
         team1_vbox = QVBoxLayout()
-        team1_vbox.addWidget(self.create_team_widget(self.parent_window.get_string("bosses.perfect_team_title"), perfect_team, is_perfect_team=True))
-        if perfect_team:
-            team1_vbox.addWidget(self.create_team_analysis_widget(perfect_team, is_perfect_team=True))
+        team1_vbox.addWidget(QLabel(f"<b>{self.parent_window.get_string('bosses.perfect_team_title')}</b>"))
         
+        # Área de Rolagem para o Time 1
+        scroll1 = QScrollArea()
+        scroll1.setWidgetResizable(True)
+        scroll1.setFrameShape(QFrame.Shape.StyledPanel)
+        team1_widget = self.create_team_widget(self.perfect_team) # Chama o novo layout de "Card"
+        scroll1.setWidget(team1_widget)
+        team1_vbox.addWidget(scroll1)
+        
+        if self.perfect_team:
+            # Chama a análise de performance V3
+            team1_vbox.addWidget(self.create_team_analysis_widget(self.perfect_team, is_perfect_team=True))
+
+        # --- Coluna 2: Seu Melhor Time (da Coleção) ---
         team2_vbox = QVBoxLayout()
-        team2_vbox.addWidget(self.create_team_widget(self.parent_window.get_string("bosses.your_best_team_title"), self.my_best_team, is_perfect_team=False))
+        team2_vbox.addWidget(QLabel(f"<b>{self.parent_window.get_string('bosses.your_best_team_title')}</b>"))
+
+        # Área de Rolagem para o Time 2
+        scroll2 = QScrollArea()
+        scroll2.setWidgetResizable(True)
+        scroll2.setFrameShape(QFrame.Shape.StyledPanel)
+        team2_widget = self.create_team_widget(self.my_best_team) # Chama o novo layout de "Card"
+        scroll2.setWidget(team2_widget)
+        team2_vbox.addWidget(scroll2)
+
         if self.my_best_team:
+            # Chama a análise de performance V3
             team2_vbox.addWidget(self.create_team_analysis_widget(self.my_best_team, is_perfect_team=False))
 
-        main_hbox.addLayout(team1_vbox)
-        main_hbox.addLayout(team2_vbox)
+        main_hbox.addLayout(team1_vbox, 1) # stretch 1
+        main_hbox.addLayout(team2_vbox, 1) # stretch 1
         self.layout.addLayout(main_hbox)
 
     def _show_pokedex(self, pokemon_name):
-        """Apenas avisa a MainWindow para abrir a Pokédex."""
         self.parent_window.show_pokedex_for(pokemon_name)
 
+    def create_team_widget(self, team_results):
+        # O container principal é vertical (QVBoxLayout)
+        container_widget = QWidget()
+        team_layout = QVBoxLayout(container_widget)
+        team_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        team_layout.setSpacing(10) # Espaço entre os "cards"
 
-    def create_team_widget(self, title, team, is_perfect_team):
-        group_box = QFrame()
-        group_box.setFrameShape(QFrame.Shape.StyledPanel)
-        group_layout = QVBoxLayout(group_box)
-        title_label = QLabel(f"<b>{title}</b>")
-        title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        group_layout.addWidget(title_label)
-
-        team_layout = QHBoxLayout()
-        if not team:
+        if not team_results:
             team_layout.addWidget(QLabel(self.parent_window.get_string('globals.not_available', 'N/A')))
         else:
-            for p_info in team:
-                species_name = p_info['species'] if not is_perfect_team else p_info['name']
+            for i, result in enumerate(team_results):
+                p_info = result['pokemon'] # Pega o dict do Pokémon
+                species_name = p_info['species']
                 
-                # --- USANDO QToolButton, A FERRAMENTA CERTA! ---
+                # --- O "CARD" DO POKÉMON ---
+                card_frame = QFrame()
+                card_frame.setFrameShape(QFrame.Shape.StyledPanel)
+                card_layout = QVBoxLayout(card_frame)
+                card_layout.setSpacing(6)
+
+                # --- Topo do Card (Info) ---
+                top_layout = QHBoxLayout()
+                
                 member_button = QToolButton()
                 member_button.setCursor(Qt.CursorShape.PointingHandCursor)
                 member_button.setFixedSize(100, 100)
-                member_button.setStyleSheet("QToolButton { border: none; }") # Remove a borda
-
-                # Define o estilo para ÍCONE ACIMA DO TEXTO
+                member_button.setStyleSheet("QToolButton { border: none; }")
                 member_button.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
 
-                # Define o Ícone (imagem)
                 if img_path := get_pokemon_image_path(species_name):
                     if pixmap := load_pixmap_robustly(img_path, 64):
                         member_button.setIcon(QIcon(pixmap))
                         member_button.setIconSize(QSize(64, 64))
 
-                # Define o Texto (nome)
                 name_label_text = p_info.get('nickname') or species_name
-                member_button.setText(name_label_text)
-                # Define a fonte como negrito
+                member_button.setText(f"{name_label_text}\n(Lvl {p_info.get('level', '?')})") # Mostra o nível
                 font = member_button.font()
                 font.setBold(True)
                 member_button.setFont(font)
-                
-                # Conecta o clique
                 member_button.clicked.connect(lambda _, name=species_name: self._show_pokedex(name))
 
-                team_layout.addWidget(member_button)
+                # Info de Score/Tempo
+                score_str = self.parent_window.get_string('bosses.battle_index_label', 'Score')
+                time_str = self.parent_window.get_string('bosses.survival_time', 'Tempo')
+                score = int(self.battle_planner._get_battle_score(result))
+                tempo = format_time(result.get('time_elapsed', 0))
+                
+                score_label = QLabel(f"<b>{score_str}: {score}</b><br>{time_str}: {tempo}")
+                score_label.setAlignment(Qt.AlignmentFlag.AlignTop | Qt.AlignmentFlag.AlignRight)
 
-        group_layout.addLayout(team_layout)
-        return group_box
+                top_layout.addWidget(member_button)
+                top_layout.addStretch()
+                top_layout.addWidget(score_label)
+                
+                # --- Base do Card (Golpes) ---
+                moves_layout = QHBoxLayout()
+                moveset = result.get('used_moveset', ['?']*6)
+                
+                # Coluna de Golpes 1-3
+                moves_str_1 = "<b>Golpes:</b><br>" + "<br>".join([f"• {m}" for m in moveset[:3]])
+                moves_label_1 = QLabel(moves_str_1)
+                moves_label_1.setWordWrap(True)
+                moves_label_1.setAlignment(Qt.AlignmentFlag.AlignTop)
+                
+                # Coluna de Golpes 4-6 (com padding para alinhar)
+                moves_str_2 = "<br>" + "<br>".join([f"• {m}" for m in moveset[3:6] if m])
+                moves_label_2 = QLabel(moves_str_2)
+                moves_label_2.setWordWrap(True)
+                moves_label_2.setAlignment(Qt.AlignmentFlag.AlignTop)
 
-    def create_team_analysis_widget(self, team, is_perfect_team):
+                moves_layout.addWidget(moves_label_1, 1) # stretch 1
+                moves_layout.addWidget(moves_label_2, 1) # stretch 1
+
+                # Adiciona tudo ao card
+                card_layout.addLayout(top_layout)
+                card_layout.addWidget(HorizontalLine()) # Linha divisória
+                card_layout.addLayout(moves_layout)
+                
+                # Adiciona o card ao layout vertical
+                team_layout.addWidget(card_frame)
+
+        return container_widget
+
+    def create_team_analysis_widget(self, team_results, is_perfect_team):
         analysis_box = QFrame()
         analysis_box.setFrameShape(QFrame.Shape.StyledPanel)
         analysis_layout = QVBoxLayout(analysis_box)
@@ -2490,27 +2652,37 @@ class IdealTeamsDialog(QDialog):
         analysis_layout.addWidget(title)
         
         results_text = ""
-        level_benchmarks = [105, 110, 115, 120, 125]
+        
+        # --- LÓGICA DE NÍVEL V3 (Corrigido) ---
+        # "tem que mostrar desde o lvl 100"
+        if is_perfect_team:
+            level_benchmarks = [100, 105, 110, 115, 120, 125]
+        else: # Seu time (usa os níveis da sua coleção)
+            level_benchmarks = [105, 110, 115, 120, 125] # (O benchmark antigo)
+        # --- FIM DA LÓGICA V3 ---
+        
+        team = [res['pokemon'] for res in team_results] # Extrai os pokes
 
         for level in level_benchmarks:
-            battle_indices = []
-            for member in team:
-                if is_perfect_team:
-                    mock_pokemon = {"species": member['name']}
-                    ivs = {stat: 31 for stat in self.battle_logic.pokemon_data[member['name']]["base_stats"]}
-                    evs = {stat: 2500 for stat in self.battle_logic.pokemon_data[member['name']]["base_stats"]}
-                    nature = self.get_recommended_nature(member['name'])
-                    result = self.battle_logic.simulate_battle(mock_pokemon, self.boss_name, p_level=level, p_ivs=ivs, p_evs=evs, p_nature=nature)
-                else:
-                    result = self.battle_logic.simulate_battle(member, self.boss_name, p_level=level)
-                
-                if result:
-                    battle_indices.append(result['battle_index'])
+            team_wins = 0
+            total_time = 0
             
-            win_prob = self.battle_logic.calculate_team_win_probability(battle_indices)
+            for member in team:
+                sim_pokemon = member.copy()
+                sim_pokemon['level'] = level
+                
+                result = self.battle_logic.run_simulation(
+                    sim_pokemon, self.boss_name, use_potions=False, manual_moveset=None
+                )
+                
+                if result.get('winner') == 'player':
+                    team_wins += 1
+                    total_time += result.get('time_elapsed', 0)
+            
+            avg_time = (total_time / team_wins) if team_wins > 0 else 0
+            
             level_str = self.parent_window.get_string('bosses.team_level_analysis')
-            prob_str = self.parent_window.get_string('bosses.simulation_victory_prob')
-            results_text += f"<li><b>{level_str.format(level=level)}:</b> {prob_str}: <b>{win_prob:.1f}%</b></li>"
+            results_text += f"<li><b>{level_str.format(level=level)}:</b> {team_wins} / {len(team)} vitórias (Média: {avg_time:.1f}s)</li>"
 
         results_label = QLabel(f"<ul>{results_text}</ul>")
         results_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -2553,7 +2725,7 @@ class IdealTeamsDialog(QDialog):
         nature = self.get_recommended_nature(pokemon_name)
 
         for level in range(boss_level, 126):
-            result = self.battle_logic.simulate_battle(mock_pokemon, self.boss_name, p_level=level, p_ivs=ivs, p_evs=evs, p_nature=nature)
+            result = self.battle_logic.run_simulation(mock_pokemon, self.boss_name, p_level=level, p_ivs=ivs, p_evs=evs, p_nature=nature)
             if result and result['battle_index'] >= 1.0:
                 return level
         
@@ -2631,11 +2803,14 @@ class SimulationDialog(QDialog):
         self.collection = collection
 
         self.setWindowTitle(self.parent_window.get_string("bosses.simulation_title").format(boss=boss_name))
-        self.setMinimumSize(800, 400)
+        self.setMinimumSize(800, 600) # Aumenta a altura para caber os golpes
 
         self.layout = QVBoxLayout(self)
         self.team_selectors = []
         self.team_image_labels = []
+        
+        # --- NOVO (V4): Lista para guardar os 6 QComboBox de golpes ---
+        self.team_move_selectors = []
 
         controls_layout = QHBoxLayout()
         self.saved_teams_combo = QComboBox()
@@ -2654,37 +2829,62 @@ class SimulationDialog(QDialog):
 
         team_selection_layout = QHBoxLayout()
 
-        # --- CORREÇÃO: Usar a mesma lógica de ordenação do config ---
         sort_mode = self.parent_window.config.get("sort_order", "Ordem Alfabética")
         if sort_mode == "Ordem da Pokédex":
             sorted_collection = sorted(self.collection, key=lambda p: self.parent_window.pokedex_order.get(p["species"], 9999))
-        else: # Alfabética como padrão
+        else:
             sorted_collection = sorted(self.collection, key=lambda p: (p.get("nickname") or p["species"]).lower())
         pokemon_options = [self.parent_window.get_string("globals.none")] + [(p.get("nickname") or p["species"]) for p in sorted_collection]
         
         for i in range(6):
             member_layout = QVBoxLayout()
-            member_layout = QVBoxLayout()
             image_label = QLabel("?")
             image_label.setFixedSize(80, 80)
             image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            
+            # 1. Seletor de Pokémon
             selector = QComboBox()
             selector.addItems(pokemon_options)
-            selector.currentIndexChanged.connect(lambda _, index=i: self.update_selector_image(index))
+            # --- MUDANÇA (V4): Conecta ao novo slot ---
+            selector.currentIndexChanged.connect(lambda _, index=i: self.update_member_info(index))
+            
             member_layout.addWidget(image_label, alignment=Qt.AlignmentFlag.AlignCenter)
             member_layout.addWidget(selector)
+            
+            # --- NOVO (V4): Adiciona os 6 seletores de golpe ---
+            move_selector_group = QWidget()
+            move_layout = QVBoxLayout(move_selector_group)
+            move_layout.setContentsMargins(0, 0, 0, 0)
+            
+            # Criamos 6 caixas por Pokémon, mas só mostraremos as necessárias
+            poke_move_selectors = []
+            for j in range(6):
+                move_selector = QComboBox()
+                move_selector.setEnabled(False)
+                move_layout.addWidget(move_selector)
+                poke_move_selectors.append(move_selector)
+            
+            self.team_move_selectors.append(poke_move_selectors) # Lista de listas
+            member_layout.addWidget(move_selector_group)
+            # --- FIM DA MUDANÇA ---
+            
             self.team_selectors.append(selector)
             self.team_image_labels.append(image_label)
             team_selection_layout.addLayout(member_layout)
+            
         self.layout.addLayout(team_selection_layout)
 
         self.simulate_btn = QPushButton(self.parent_window.get_string("bosses.simulation_run_button"))
         self.simulate_btn.clicked.connect(self.run_simulation)
         self.layout.addWidget(self.simulate_btn)
 
-        self.results_label = QLabel(self.parent_window.get_string("bosses.simulation_waiting"))
-        self.results_label.setWordWrap(True)
-        self.layout.addWidget(self.results_label)
+        # --- NOVO (V4): Área de Log ---
+        self.results_log = QTextEdit()
+        self.results_log.setReadOnly(True)
+        self.results_log.setPlaceholderText(self.parent_window.get_string("bosses.simulation_waiting"))
+        self.results_log.setFixedHeight(200) # Altura fixa para o log
+        self.layout.addWidget(self.results_log)
+        # --- FIM DA MUDANÇA ---
 
         disclaimer = QLabel(f"<i>{self.parent_window.get_string('bosses.disclaimer')}</i>")
         disclaimer.setWordWrap(True)
@@ -2709,64 +2909,144 @@ class SimulationDialog(QDialog):
                         selector.setCurrentIndex(0)
                 else:
                     selector.setCurrentIndex(0)
+        else:
+             for i, selector in enumerate(self.team_selectors):
+                 selector.setCurrentIndex(0)
 
-    def update_selector_image(self, selector_index):
+    # --- FUNÇÃO ATUALIZADA (V4) ---
+    def update_member_info(self, selector_index):
+        """
+        Esta função agora atualiza a IMAGEM e os GOLPES
+        baseado no Pokémon selecionado e seu nível.
+        """
         selector = self.team_selectors[selector_index]
         image_label = self.team_image_labels[selector_index]
+        move_selectors = self.team_move_selectors[selector_index] # Pega a *lista* de 6 QComboBox
+        
         pokemon_name = selector.currentText()
 
+        # 1. Limpa tudo
         image_label.setPixmap(QPixmap())
         image_label.setText("?")
-        
-        if pokemon_name != self.parent_window.get_string("globals.none"):
-            found_pokemon = next((p for p in self.collection if (p.get("nickname") or p["species"]) == pokemon_name), None)
-            if found_pokemon:
-                if image_path := get_pokemon_image_path(found_pokemon['species']):
-                    if pixmap := load_pixmap_robustly(image_path, 80):
-                        image_label.setPixmap(pixmap)
-                        image_label.setText("")
+        for move_selector in move_selectors:
+            move_selector.clear()
+            move_selector.setEnabled(False)
 
+        if pokemon_name == self.parent_window.get_string("globals.none"):
+            return
+
+        # 2. Encontra o Pokémon na coleção
+        found_pokemon = next((p for p in self.collection if (p.get("nickname") or p["species"]) == pokemon_name), None)
+        if not found_pokemon:
+            return
+
+        # 3. Atualiza a Imagem
+        if image_path := get_pokemon_image_path(found_pokemon['species']):
+            if pixmap := load_pixmap_robustly(image_path, 80):
+                image_label.setPixmap(pixmap)
+                image_label.setText("")
+
+        # 4. Filtra o "Grimório" (pokemon_learnsets.json)
+        level = found_pokemon['level']
+        species = found_pokemon['species']
+        
+        learnset_data = self.battle_logic.learnsets_data.get(species, [])
+        
+        # Pega todos os golpes que ele aprende ATÉ o nível dele
+        available_moves = [
+            move_dict["move"] for move_dict in learnset_data 
+            if move_dict["level"] <= level
+        ]
+        
+        # Filtra duplicatas e ordena
+        available_moves = sorted(list(set(available_moves)))
+
+        # 5. Popula as 6 caixas de golpe
+        if available_moves:
+            for i in range(6):
+                move_selector = move_selectors[i]
+                move_selector.setEnabled(True)
+                move_selector.addItems([self.parent_window.get_string("globals.none")] + available_moves)
+        else:
+            # Se o poke não tiver golpes no Grimório
+            move_selectors[0].setEnabled(True)
+            move_selectors[0].addItem("ERRO: Grimório vazio")
+
+    # --- FUNÇÃO ATUALIZADA (V4) ---
     def run_simulation(self):
-        selected_pokemon_names = [s.currentText() for s in self.team_selectors if s.currentText() != self.parent_window.get_string("globals.none")]
-        if not selected_pokemon_names:
+        """
+        Roda a simulação V4 usando o moveset manual
+        e exibe os resultados no log.
+        """
+        self.results_log.clear()
+        
+        team_to_simulate = []
+        manual_movesets = []
+        
+        # 1. Monta os times e os movesets manuais
+        for i in range(6):
+            poke_name = self.team_selectors[i].currentText()
+            if poke_name == self.parent_window.get_string("globals.none"):
+                continue
+                
+            found_pokemon = next((p for p in self.collection if (p.get("nickname") or p["species"]) == poke_name), None)
+            if found_pokemon:
+                # Pega os 6 golpes que o usuário selecionou para este Pokémon
+                selected_moves = []
+                for move_selector in self.team_move_selectors[i]:
+                    move = move_selector.currentText()
+                    if move != self.parent_window.get_string("globals.none"):
+                        selected_moves.append(move)
+                
+                # Remove duplicatas se o usuário selecionar o mesmo golpe 6x
+                selected_moves = list(set(selected_moves)) 
+                
+                if not selected_moves:
+                    QMessageBox.warning(self, "Erro", f"Selecione pelo menos um golpe para {poke_name}.")
+                    return
+
+                team_to_simulate.append(found_pokemon)
+                manual_movesets.append(selected_moves)
+
+        if not team_to_simulate:
             QMessageBox.warning(self, self.parent_window.get_string("globals.error"), self.parent_window.get_string("teams.error_select_pokemon"))
             return
 
-        team_to_simulate = []
-        for name in selected_pokemon_names:
-            found_pokemon = next((p for p in self.collection if (p.get("nickname") or p["species"]) == name), None)
-            if found_pokemon:
-                team_to_simulate.append(found_pokemon)
-        
         simulation_level = self.level_spinbox.value()
         
-        battle_indices = []
-        for p_user in team_to_simulate:
-            result = self.battle_logic.simulate_battle(p_user, self.boss_name, p_level=simulation_level)
-            if result:
-                battle_indices.append(result['battle_index'])
+        full_log = ""
+        total_wins = 0
         
-        win_prob = self.battle_logic.calculate_team_win_probability(battle_indices)
-
-        if win_prob >= 50:
-            outcome = self.parent_window.get_string("bosses.outcome_victory")
-            color = "green"
-            advice = self.parent_window.get_string("bosses.advice_good")
-        else:
-            outcome = self.parent_window.get_string("bosses.outcome_defeat")
-            color = "red"
-            if win_prob > 30:
-                advice = self.parent_window.get_string("bosses.advice_medium")
+        # 2. Roda a simulação 1-vs-1 para cada Pokémon
+        for i, p_user in enumerate(team_to_simulate):
+            # Cria uma cópia para simular no nível escolhido
+            sim_pokemon = p_user.copy()
+            sim_pokemon['level'] = simulation_level
+            
+            p_moveset = manual_movesets[i]
+            
+            result = self.battle_logic.run_simulation(
+                sim_pokemon, 
+                self.boss_name, 
+                use_potions=False, # (Podemos adicionar uma checkbox para isso depois)
+                manual_moveset=p_moveset
+            )
+            
+            # 3. Exibe o resultado
+            winner = result.get('winner', 'error')
+            time_str = f"{result.get('time_elapsed', 0):.1f}s"
+            
+            if winner == 'player':
+                total_wins += 1
+                full_log += f"--- {sim_pokemon['nickname'] or sim_pokemon['species']} (Lvl {simulation_level}) vs {self.boss_name} ---\n"
+                full_log += f"Resultado: VITÓRIA ({time_str})\n"
+                full_log += "\n".join(result.get('log', []))
+                full_log += "\n\n"
             else:
-                advice = self.parent_window.get_string("bosses.advice_bad")
+                full_log += f"--- {sim_pokemon['nickname'] or sim_pokemon['species']} (Lvl {simulation_level}) vs {self.boss_name} ---\n"
+                full_log += f"Resultado: DERROTA ({time_str})\n\n"
 
-        result_text = f"""
-        <h3>{self.parent_window.get_string('bosses.simulation_results_title')}</h3>
-        <p><b>{self.parent_window.get_string('bosses.simulation_result_label')}:</b> <font size='+2' color='{color}'>{outcome}</font></p>
-        <p><b>{self.parent_window.get_string('bosses.simulation_victory_prob')}:</b> {win_prob:.1f}%</p>
-        <p><i>({advice})</i></p>
-        """
-        self.results_label.setText(result_text)
+        self.results_log.setText(f"### RESULTADO DA SIMULAÇÃO: {total_wins} / {len(team_to_simulate)} VITÓRIAS ###\n\n{full_log}")
 
 class PokedexDialog(QDialog):
     """
@@ -4478,6 +4758,7 @@ class MainWindow(QMainWindow):
         self.loots_data = self._load_app_data_from_remote("loots_and_drops.json")
         self.quests_data = self._load_app_data_from_remote("quests.json")
         self.shiny_data = self._load_app_data_from_remote("shiny_variants.json")
+        self.learnsets_data = self._load_app_data_from_remote("pokemon_learnsets.json")
         # battle_logic.py e outros JSONs que você usa também podem ser carregados aqui
         # --- FIM DA CENTRALIZAÇÃO ---
 
