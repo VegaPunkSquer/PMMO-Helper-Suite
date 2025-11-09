@@ -7557,7 +7557,7 @@
   ],
   "Electivire": [
     {
-      "Level": 34,
+      "level": 34,
       "move": "Discharge"
     },
     {

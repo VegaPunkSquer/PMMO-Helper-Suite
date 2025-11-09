@@ -1655,15 +1655,55 @@ class EVTrainingTab(QWidget):
         if not selection: 
             self.results_table.setRowCount(0)
             return
+        
         pokemon_to_display = []
+        
         if mode == self.parent_window.get_string("ev_yield.search_by_stat"):
+            # Converte o nome traduzido (ex: "Ataque") de volta para a chave (ex: "attack")
+            stat_key = "attack" # fallback
+            stat_label_map = {
+                self.parent_window.get_string('stats.hp'): 'hp',
+                self.parent_window.get_string('stats.attack'): 'attack',
+                self.parent_window.get_string('stats.defense'): 'defense',
+                self.parent_window.get_string('stats.special-attack'): 'special-attack',
+                self.parent_window.get_string('stats.special-defense'): 'special-defense',
+                self.parent_window.get_string('stats.speed'): 'speed'
+                # (Não incluímos EN/REG na busca principal)
+            }
+            stat_key = stat_label_map.get(selection, 'attack') # stat_key ESTÁ DEFINIDO AQUI
+
+            # --- CORREÇÃO 1: LOOP "BLINDADO" ---
             for pokemon, data in self.parent_window.ev_data.items():
-                if data.get("ev_stat") == selection and data.get("ev_value", 0) > 0:
+                ev_value_str_or_int = data.get(stat_key, 0)
+                ev_value_numeric = 0
+                try:
+                    # Força a conversão para int
+                    ev_value_numeric = int(ev_value_str_or_int)
+                except (ValueError, TypeError):
+                    continue # Ignora se não for um número (ex: a chave "location")
+
+                # Agora a comparação é segura
+                if ev_value_numeric > 0:
                     pokemon_to_display.append((pokemon, data))
-            pokemon_to_display.sort(key=lambda x: x[0])
+            
+            # --- CORREÇÃO 2: SORT "BLINDADO" ---
+            # Precisamos de uma função helper para garantir que o sort também compare NÚMEROS
+            def get_sort_val(item_tuple):
+                pokemon, data = item_tuple
+                val_str_or_int = data.get(stat_key, 0)
+                try:
+                    # Tenta converter o valor para int para ordenar
+                    return int(val_str_or_int)
+                except (ValueError, TypeError):
+                    return 0 # Se falhar (ex: "location"), trata como 0
+            
+            pokemon_to_display.sort(key=get_sort_val, reverse=True)
+
         elif mode == self.parent_window.get_string("ev_yield.search_by_pokemon"):
+            # Este modo não precisa de 'stat_key', então está seguro
             if data := self.parent_window.ev_data.get(selection):
                 pokemon_to_display.append((selection, data))
+                
         self.add_pokemon_to_ev_table(pokemon_to_display)
 
     def add_pokemon_to_ev_table(self, pokemon_list):
@@ -1685,12 +1725,15 @@ class EVTrainingTab(QWidget):
             
             self.results_table.setItem(row_pos, 1, QTableWidgetItem(pokemon))
             
-            ev_value = data.get('ev_value', 0)
-            ev_stat = data.get('ev_stat', '')
-            ev_text = f"{ev_value:02d} {ev_stat}" 
+            # --- CORREÇÃO (LÓGICA V4) ---
+            # 1. Puxa a string de EV formatada (ex: "+1 Atk, +1 EN")
+            ev_text = self.parent_window._get_ev_yield_string(pokemon)
             self.results_table.setItem(row_pos, 2, QTableWidgetItem(ev_text))
 
-            self.results_table.setItem(row_pos, 3, QTableWidgetItem(data.get("location", "N/A")))
+            # 2. Puxa a localização do novo JSON
+            location_str = data.get("location", "N/A")
+            self.results_table.setItem(row_pos, 3, QTableWidgetItem(location_str))
+            # --- FIM DA CORREÇÃO ---
 
     def display_selected_map(self):
         while self.map_layout.count():
@@ -4001,7 +4044,7 @@ class PokedexTab(QWidget):
                 item_widget = QWidget(); item_layout = QHBoxLayout(item_widget); item_layout.setContentsMargins(0, 5, 0, 5)
                 if icon := get_icon_from_path(get_pokemon_image_path(spot['pokemon'])):
                     icon_label = QLabel(); icon_label.setPixmap(icon.pixmap(32, 32)); item_layout.addWidget(icon_label)
-                info_label = QLabel(f"<b>{i+1}. {spot['pokemon']}</b> ({spot['ev_yield']})<br><i>{spot['map']} ({rate_text})</i>"); info_label.setWordWrap(True); item_layout.addWidget(info_label, 1)
+                info_label = QLabel(f"<b>{i+1}. {spot['pokemon']}</b> ({spot['ev_yield_str']})<br><i>{spot['map']} ({rate_text})</i>"); info_label.setWordWrap(True); item_layout.addWidget(info_label, 1)
                 layout.addWidget(item_widget)
         self.info_page_ev_hotspots_detail.setWidget(content); self.aux_screen_1.setText(self.parent_window.get_string('pokedex.ev_hotspots_title')); self.aux_screen_2.setText(current_item.text())
 
@@ -4846,7 +4889,13 @@ class MainWindow(QMainWindow):
             
             for poke_name, ev_info in self.ev_data.items():
                 # Verifica se este Pokémon dá EV para o stat que estamos procurando
-                ev_value = ev_info.get(stat_key, 0)
+                # Pega o valor, que pode ser int (0) ou string ("1")
+                ev_value_str_or_int = ev_info.get(stat_key, 0)
+                ev_value = 0 # Valor numérico seguro
+                try:
+                    ev_value = int(ev_value_str_or_int)
+                except (ValueError, TypeError):
+                    ev_value = 0 # Se falhar, reseta para 0
                 if ev_value <= 0:
                     continue # Próximo Pokémon
                     
@@ -5300,10 +5349,18 @@ class MainWindow(QMainWindow):
         
         parts = []
         for stat_key, value in ev_data.items():
-            if value > 0:
-                # Usa o mapa para obter o nome traduzido/curto
+            numeric_value = 0
+            try:
+                # Tenta forçar a conversão para int
+                numeric_value = int(value) 
+            except (ValueError, TypeError):
+                # Se falhar (ex: o valor era "special-attack"), ignora e continua
+                continue 
+
+            # Agora a comparação é segura, usando o número
+            if numeric_value > 0:
                 stat_name = stat_label_map.get(stat_key, stat_key)
-                parts.append(f"+{value} {stat_name}")
+                parts.append(f"+{numeric_value} {stat_name}")
                 
         if not parts:
             return self.get_string("globals.none", "Nenhum")

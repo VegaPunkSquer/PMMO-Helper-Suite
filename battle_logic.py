@@ -168,7 +168,6 @@ class BattleLogic:
         Lê o 'pokemon_learnsets.json' e filtra os golpes que o Pokémon
         realmente pode ter naquele nível.
         """
-        
         # 1. Pega o "Grimório" do Pokémon
         move_list_data = self.learnsets_data.get(pokemon_species, [])
         if not move_list_data:
@@ -176,10 +175,15 @@ class BattleLogic:
 
         # 2. Filtra pelo Nível
         # Pega todos os golpes que o Pokémon aprende ATÉ o seu nível atual
-        available_moves = [
-            move_dict["move"] for move_dict in move_list_data 
-            if move_dict["level"] <= pokemon_level
-        ]
+        available_moves = []
+
+        for move_dict in move_list_data: 
+            # Tenta pegar "level" (minúsculo) ou "Level" (maiúsculo)
+            move_level = move_dict.get("level", move_dict.get("Level"))
+
+            # Se encontrou um dos dois E o nível é válido
+            if move_level is not None and move_level <= pokemon_level:
+                available_moves.append(move_dict["move"])
         
         # 3. Remove duplicatas (ex: Growl Lvl 0 e Lvl 1)
         movepool = list(set(available_moves))
