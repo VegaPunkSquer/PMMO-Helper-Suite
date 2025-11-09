@@ -4456,6 +4456,10 @@
   "Absol": [
     {
       "level": 0,
+      "move": "Struggle"
+    },
+    {
+      "level": 0,
       "move": "Flail"
     },
     {
@@ -5106,6 +5110,10 @@
     }
   ],
   "Sableye": [
+    {
+      "level": 0,
+      "move": "Struggle"
+    },
     {
       "level": 0,
       "move": "Leer"
@@ -7285,7 +7293,7 @@
       "move": "Screech"
     }
   ],
-  "Mudkip": [ 
+  "Mudkip": [
     {
       "level": 0,
       "move": "Struggle"
@@ -7549,6 +7557,10 @@
   ],
   "Electivire": [
     {
+      "Level": 34,
+      "move": "Discharge"
+    },
+    {
       "level": 12,
       "move": "Swift"
     },
@@ -7563,10 +7575,6 @@
     {
       "level": 28,
       "move": "Thunderpunch"
-    },
-    {
-      "level": 36,
-      "move": "Discharge"
     },
     {
       "level": 40,
