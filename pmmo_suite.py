@@ -122,7 +122,7 @@ EVOLUTIONS = {
     "Sunkern": "Sunflora", "Wooper": "Quagsire", "Pineco": "Forretress", "Snubbull": "Granbull",
     "Teddiursa": "Ursaring", "Slugma": "Magcargo", "Swinub": "Piloswine", "Remoraid": "Octillery",
     "Houndour": "Houndoom", "Phanpy": "Donphan", "Smoochum": "Jynx", "Elekid": "Electabuzz", "Electabuzz": "Electivire",
-    "Magby": "Magmar", "Larvitar": "Pupitar", "Pupitar": "Tyranitar", "Mudkip": "Marshtomp", "Marshtomp": "Swampert", "Treeko": "Grovyle", "Grovyle": "Sceptile", "Torchic": "Combusken", "Combusken": "Blaziken",
+    "Magby": "Magmar", "Larvitar": "Pupitar", "Pupitar": "Tyranitar", "Mudkip": "Marshtomp", "Marshtomp": "Swampert", "Treecko": "Grovyle", "Grovyle": "Sceptile", "Torchic": "Combusken", "Combusken": "Blaziken",
     # Exemplo de multi-evolução
     "Tyrogue": ["Hitmonlee", "Hitmonchan", "Hitmontop"],
     "Eevee": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon",],
@@ -2417,8 +2417,9 @@ class BattlePlannerTab(QWidget):
         moves_label_2.setWordWrap(True)
         moves_label_2.setAlignment(Qt.AlignmentFlag.AlignTop)
 
-        moves_layout.addWidget(moves_label_1, 1) # stretch 1
-        moves_layout.addWidget(moves_label_2, 1) # stretch 1
+        moves_layout.addWidget(moves_label_1)
+        moves_layout.addWidget(moves_label_2)
+        moves_layout.addStretch()
 
         # Adiciona tudo ao card
         card_layout.addLayout(top_layout)
@@ -2629,8 +2630,9 @@ class IdealTeamsDialog(QDialog):
                 moves_label_2.setWordWrap(True)
                 moves_label_2.setAlignment(Qt.AlignmentFlag.AlignTop)
 
-                moves_layout.addWidget(moves_label_1, 1) # stretch 1
-                moves_layout.addWidget(moves_label_2, 1) # stretch 1
+                moves_layout.addWidget(moves_label_1)
+                moves_layout.addWidget(moves_label_2)
+                moves_layout.addStretch() # Empurra os golpes para a esquerda
 
                 # Adiciona tudo ao card
                 card_layout.addLayout(top_layout)
