@@ -4240,5 +4240,29 @@
       "levels": "50",
       "condition": "Halloween Event Spawn"
     }
+  ],
+  "Snorunt": [
+    {
+      "map": "Christmas Island",
+      "rate": 250,
+      "levels": "35",
+      "condition": ""
+    }
+  ],
+  "Glalie": [
+    {
+      "map": "Christmas Island",
+      "rate": 500,
+      "levels": "45",
+      "condition": ""
+    }
+  ],
+  "Spheal": [
+    {
+      "map": "Christmas Island",
+      "rate": 250,
+      "levels": "30",
+      "condition": ""
+    }
   ]
 }

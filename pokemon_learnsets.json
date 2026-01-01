@@ -5127,6 +5127,10 @@
       "move": "Confuse Ray"
     },
     {
+      "level": 21,
+      "move": "Night Shade"
+    },
+    {
       "level": 24,
       "move": "Fury Swipes"
     },
@@ -7813,6 +7817,244 @@
     {
       "level": 0,
       "move": "Thundershock"
+    }
+  ],
+  "Snorunt": [
+    {
+      "level": 0,
+      "move": "Struggle"
+    },
+    {
+      "level": 0,
+      "move": "Powder Snow"
+    },
+    {
+      "level": 5,
+      "move": "Leer"
+    },
+    {
+      "level": 20,
+      "move": "Protect"
+    },
+    {
+      "level": 35,
+      "move": "Bite"
+    },
+    {
+      "level": 40,
+      "move": "Ice Fang"
+    },
+    {
+      "level": 55,
+      "move": "Crunch"
+    },
+    {
+      "level": 60,
+      "move": "Blizzard"
+    }
+  ],
+  "Glalie": [
+    {
+      "level": 0,
+      "move": "Freeze-Dry"
+    },
+    {
+      "level": 61,
+      "move": "Crunch"
+    },
+    {
+      "level": 68,
+      "move": "Blizzard"
+    }
+  ],
+  "Spheal": [
+    {
+      "level": 0,
+      "move": "Struggle"
+    },
+    {
+      "level": 0,
+      "move": "Defense Curl"
+    },
+    {
+      "level": 4,
+      "move": "Growl"
+    },
+    {
+      "level": 8,
+      "move": "Water Gun"
+    },
+    {
+      "level": 12,
+      "move": "Powder Snow"
+    },
+    {
+      "level": 16,
+      "move": "Rest"
+    },
+    {
+      "level": 28,
+      "move": "Aurora Beam"
+    },
+    {
+      "level": 36,
+      "move": "Body Slam"
+    },
+    {
+      "level": 44,
+      "move": "Blizzard"
+    }
+  ],
+  "Sealeo": [
+    {
+      "level": 40,
+      "move": "Body Slam"
+    },
+    {
+      "level": 52,
+      "move": "Blizzard"
+    }
+  ],
+  "Walrein": [
+    {
+      "level": 56,
+      "move": "Blizzard"
+    }
+  ],
+  "Weavile": [
+    {
+      "level": 0,
+      "move": "Scratch"
+    },
+    {
+      "level": 0,
+      "move": "Leer"
+    },
+    {
+      "level": 0,
+      "move": "Agility"
+    },
+    {
+      "level": 0,
+      "move": "Slash"
+    },
+    {
+      "level": 0,
+      "move": "Quick Attack"
+    },
+    {
+      "level": 60,
+      "move": "Night Slash"
+    },
+    {
+      "level": 66,
+      "move": "Dark Pulse"
+    }
+  ],
+  "Magnezone": [
+    {
+      "level": 40,
+      "move": "Discharge"
+    },
+    {
+      "level": 64,
+      "move": "Zap Cannon"
+    }
+  ],
+  "Rhyperior": [
+    {
+      "level": 47,
+      "move": "Earthquake"
+    },
+    {
+      "level": 68,
+      "move": "Horn Drill"
+    }
+  ],
+  "Magmortar": [
+    {
+      "level": 16,
+      "move": "Flame Wheel"
+    },
+    {
+      "level": 20,
+      "move": "Confuse Ray"
+    },
+    {
+      "level": 24,
+      "move": "Scary Face"
+    },
+    {
+      "level": 28,
+      "move": "Fire Punch"
+    },
+    {
+      "level": 40,
+      "move": "Low Kick"
+    },
+    {
+      "level": 46,
+      "move": "Flamethrower"
+    },
+    {
+      "level": 58,
+      "move": "Fire Blast"
+    },
+    {
+      "level": 64,
+      "move": "Hyper Beam"
+    }
+  ],
+  "Glaceon": [
+    {
+      "level": 0,
+      "move": "Double-Edge"
+    },
+    {
+      "level": 0,
+      "move": "Take Down"
+    },
+    {
+      "level": 0,
+      "move": "Swift"
+    },
+    {
+      "level": 9,
+      "move": "Sand-Attack"
+    },
+    {
+      "level": 10,
+      "move": "Quick Attack"
+    },
+    {
+      "level": 25,
+      "move": "Bite"
+    },
+    {
+      "level": 30,
+      "move": "Ice Fang"
+    },
+    {
+      "level": 40,
+      "move": "Freeze-Dry"
+    },
+    {
+      "level": 50,
+      "move": "Blizzard"
+    }
+  ],
+  "Mamoswine": [
+    {
+      "level":44,
+      "move": "Take Down"
+    },
+    {
+      "level": 51,
+      "move": "Earthquake"
+    },
+    {
+      "level": 58,
+      "move": "Blizzard"
     }
   ]
 }

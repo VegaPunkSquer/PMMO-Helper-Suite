@@ -107,10 +107,10 @@ EVOLUTIONS = {
     "Mankey": "Primeape", "Growlithe": "Arcanine", "Poliwag": "Poliwhirl",
     "Abra": "Kadabra", "Kadabra": "Alakazam", "Machop": "Machoke", "Machoke": "Machamp",
     "Bellsprout": "Weepinbell", "Weepinbell": "Victreebel", "Tentacool": "Tentacruel", "Geodude": "Graveler",
-    "Graveler": "Golem", "Ponyta": "Rapidash", "Magnemite": "Magneton",
+    "Graveler": "Golem", "Ponyta": "Rapidash", "Magnemite": "Magneton", "Magneton": "Magnezone",
     "Doduo": "Dodrio", "Seel": "Dewgong", "Grimer": "Muk", "Shellder": "Cloyster", "Gastly": "Haunter",
     "Haunter": "Gengar", "Onix": "Steelix", "Drowzee": "Hypno", "Krabby": "Kingler", "Voltorb": "Electrode",
-    "Exeggcute": "Exeggutor", "Cubone": "Marowak", "Koffing": "Weezing", "Rhyhorn": "Rhydon",
+    "Exeggcute": "Exeggutor", "Cubone": "Marowak", "Koffing": "Weezing", "Rhyhorn": "Rhydon", "Rhydon": "Rhyperior",
     "Chansey": "Blissey", "Horsea": "Seadra", "Seadra": "Kingdra", "Goldeen": "Seaking",
     "Staryu": "Starmie", "Scyther": "Scizor", "Magikarp": "Gyarados",
     "Omanyte": "Omastar", "Kabuto": "Kabutops", "Dratini": "Dragonair", "Dragonair": "Dragonite",
@@ -119,13 +119,14 @@ EVOLUTIONS = {
     "Ledyba": "Ledian", "Spinarak": "Ariados", "Chinchou": "Lanturn", "Pichu": "Pikachu",
     "Cleffa": "Clefairy", "Igglybuff": "Jigglypuff", "Natu": "Xatu", "Mareep": "Flaaffy",
     "Flaaffy": "Ampharos", "Marill": "Azumarill", "Hoppip": "Skiploom", "Skiploom": "Jumpluff",
-    "Sunkern": "Sunflora", "Wooper": "Quagsire", "Pineco": "Forretress", "Snubbull": "Granbull",
-    "Teddiursa": "Ursaring", "Slugma": "Magcargo", "Swinub": "Piloswine", "Remoraid": "Octillery",
-    "Houndour": "Houndoom", "Phanpy": "Donphan", "Smoochum": "Jynx", "Elekid": "Electabuzz", "Electabuzz": "Electivire",
-    "Magby": "Magmar", "Larvitar": "Pupitar", "Pupitar": "Tyranitar", "Mudkip": "Marshtomp", "Marshtomp": "Swampert", "Treecko": "Grovyle", "Grovyle": "Sceptile", "Torchic": "Combusken", "Combusken": "Blaziken",
+    "Sunkern": "Sunflora", "Wooper": "Quagsire", "Pineco": "Forretress", "Snubbull": "Granbull", "Sneasel": "Weavile",
+    "Teddiursa": "Ursaring", "Slugma": "Magcargo", "Swinub": "Piloswine", "Piloswine": "Mamoswine", "Remoraid": "Octillery",
+    "Houndour": "Houndoom", "Phanpy": "Donphan", "Smoochum": "Jynx", "Elekid": "Electabuzz", "Electabuzz": "Electivire", "Togetic": "Togekiss","Murkrow": "Honchkrow",
+    "Misdreavus": "Mismagius", "Gligar": "Gliscor", "Yanma": "Yanmega",
+    "Magby": "Magmar", "Magmar": "Magmortar", "Larvitar": "Pupitar", "Pupitar": "Tyranitar", "Mudkip": "Marshtomp", "Marshtomp": "Swampert", "Treecko": "Grovyle", "Grovyle": "Sceptile", "Torchic": "Combusken", "Combusken": "Blaziken",
     # Exemplo de multi-evolução
     "Tyrogue": ["Hitmonlee", "Hitmonchan", "Hitmontop"],
-    "Eevee": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon",],
+    "Eevee": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Glaceon"],
     "Gloom": ["Vileplume", "Bellossom"],
     "Poliwhirl": ["Poliwrath", "Politoed"],
     "Slowpoke": ["Slowbro", "Slowking"],
@@ -4892,7 +4893,7 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         # --- CONTROLE DE VERSÃO E UPDATER ---
-        self.__version__ = "2.0.1" # <<-- MUDE AQUI A CADA NOVA VERSÃO
+        self.__version__ = "2.0.8" # <<-- MUDE AQUI A CADA NOVA VERSÃO
         self.github_repo = "VegaPunkSquer/PMMO-Helper-Suite" # <<-- MUDE PARA O SEU REPOSITÓRIO REAL
         # ------------------------------------
 
@@ -5475,7 +5476,7 @@ class MainWindow(QMainWindow):
 
     def setup_ui(self, retranslating=False):
         if not retranslating:
-            self.setWindowTitle(self.get_string("app_title") + " V2.0.1" + " by Vega")
+            self.setWindowTitle(self.get_string("app_title") + " V2.0.8" + " by Vega")
             self.setGeometry(100, 100, 1200, 800)
             icon_path = resource_path('icon.ico')
             if os.path.exists(icon_path): self.setWindowIcon(QIcon(icon_path))
@@ -5627,7 +5628,7 @@ class MainWindow(QMainWindow):
         self.config = load_json("config.json", {"theme": "dark", "language": "pt-br"}, is_user_data=True)
         self.translations = load_json("translations.json")
 
-        self.setWindowTitle(self.get_string("app_title") + " V2.0.1" + " by Vega")
+        self.setWindowTitle(self.get_string("app_title") + " V2.0.8" + " by Vega")
 
         # Recria as abas complexas para garantir a tradução
         # Salva a aba que estava ativa

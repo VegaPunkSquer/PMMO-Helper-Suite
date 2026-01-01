@@ -154,11 +154,11 @@ class BattleLogic:
         ev_en_reg = evs.get('en_reg', 0)
         calculated_stats['en_reg'] = round((base_en_reg / 10) + (iv_en_reg / 100) + ((ev_en_reg / 20) * 0.001), 4)
 
-        if rank is not None and rank > 0:
-            boss_buff = rank * 100
-            calculated_stats['defense'] += boss_buff
-            calculated_stats['special-defense'] += boss_buff
-            
+        # if rank is not None and rank > 0:
+        #     boss_buff = rank * 100
+        #     calculated_stats['defense'] += boss_buff
+        #     calculated_stats['special-defense'] += boss_buff
+
         return calculated_stats
 
     # --- FUNÇÃO ATUALIZADA (V4) ---
@@ -243,6 +243,7 @@ class BattleLogic:
             'moveset': moveset, 
             'level': level,
             'potion_count': potion_quantity,
+            'rank': rank if rank is not None else 0,
             # --- ATUALIZADO (V4) ---
             # Os buffs agora são valores, não "estágios"
             'buffs': { 
@@ -294,24 +295,45 @@ class BattleLogic:
                     del state['debuffs'][debuff_name] # Debuff expirou
 
     def _apply_regen_and_debuffs(self, state, tick_counter):
-        """(V4) Aplica regeneração e dano de debuff (ex: a cada 1 segundo)."""
-        if tick_counter % 10 != 0: # Roda 1x por segundo (10 ticks de 0.1s)
+        """(V4.1) Aplica regeneração e dano de debuff (Burn, Poison, Leech Seed)."""
+        
+        # Roda 1x por segundo (o tick_counter roda a cada 0.1s, então % 10 = 1s)
+        if tick_counter % 10 != 0: 
             return
 
-        # 1. Regeneração
+        # 1. Regeneração Natural
         hp_gain = state['initial_stats']['hp_reg']
         en_gain = state['initial_stats']['en_reg']
         state['current_hp'] = min(state['initial_stats']['hp'], state['current_hp'] + hp_gain)
         state['current_energy'] = min(state['initial_stats']['energy'], state['current_energy'] + en_gain)
 
-        # 2. Debuffs (ex: Poison)
+        # 2. Processamento de Debuffs (DoT)
+        
+        # POISON (Dano fixo ou configurado)
         if 'poison' in state['debuffs']:
-            damage = state['debuffs']['poison']['damage']
+            damage = state['debuffs']['poison'].get('damage', 50) 
             state['current_hp'] -= damage
+
+        # BURN (Dano por tempo - Faltava no seu)
+        if 'burn' in state['debuffs']:
+            damage = state['debuffs']['burn'].get('damage', 50)
+            state['current_hp'] -= damage
+            
+        # LEECH SEED (Com o Nerf de Nov/2025)
         if 'leech_seed' in state['debuffs']:
-            damage = state['debuffs']['leech_seed']['damage']
+            # Assume 1/16 do HP máximo (aprox 6.25%)
+            damage = max(1, int(state['initial_stats']['hp'] * 0.0625)) 
             state['current_hp'] -= damage
-            # (Aqui poderíamos adicionar a cura ao oponente, se quiséssemos)
+            
+        # TRAP (Fire Spin, Whirlpool, etc - Faltava no seu)
+        if 'trap' in state['debuffs']:
+            damage = state['debuffs']['trap'].get('damage', 30)
+            state['current_hp'] -= damage
+
+        # 3. Limpeza (Remove debuffs que acabaram o tempo)
+        expired = [k for k, v in state['debuffs'].items() if v['duration'] <= 0]
+        for k in expired:
+            del state['debuffs'][k]
 
     def _get_smarter_ai_action(self, attacker, defender, use_potions_logic):
         """
@@ -406,7 +428,14 @@ class BattleLogic:
                     attack_stat_name = 'special-attack'; defense_stat_name = 'special-defense'
 
                 attack_stat = attacker_state['initial_stats'][attack_stat_name] + attacker_state['buffs'][attack_stat_name]['value']
-                defense_stat = defender_state['initial_stats'][defense_stat_name] + defender_state['buffs'][defense_stat_name]['value']
+                # --- NOVA LÓGICA DE DEFESA DO BOSS ---
+                # Pega a defesa base + buffs/debuffs
+                base_defense = defender_state['initial_stats'][defense_stat_name] + defender_state['buffs'][defense_stat_name]['value']
+                
+                # Adiciona o bônus de Rank (proteção fixa) SEPARADAMENTE
+                rank_bonus = defender_state.get('rank', 0) * 100
+                defense_stat = max(1, base_defense + rank_bonus) # Evita divisão por zero
+                # -------------------------------------
                 
                 # 2. Multiplicador de Tipo
                 type_multiplier = 1.0
@@ -517,9 +546,8 @@ class BattleLogic:
             log_callback(f"  -> {move_name} drenou {heal_amount} HP!")
             return
 
-        # --- Lógica 4: Status (ex: Poison Sting, Ember) ---
-        # "30% chance to poison."
-        # "10% chance on hit to burn."
+        # Lógica 4: Status (Burn, Poison, etc)
+        # Regex captura: poison, burn, freeze, paralyze, sleep, flinch, stun
         pattern_status = re.compile(r"(\d+)% chance .* to (poison|burn|freeze|paralyze|sleep|flinch|stun)", re.IGNORECASE)
         match_status = pattern_status.search(description)
         
@@ -527,14 +555,24 @@ class BattleLogic:
             chance = int(match_status.group(1))
             status_name = match_status.group(2).lower()
             
+            # Rola o dado da chance
             if random.randint(1, 100) <= chance:
-                debuff_key = self.STATUS_MAP.get(status_name)
+                debuff_key = self.STATUS_MAP.get(status_name) # Ex: 'burn' -> 'burn'
+                
                 if debuff_key:
-                    # Lógica de DoT (Dano por Tempo)
-                    if debuff_key == 'poison':
-                        defender['debuffs']['poison'] = {'damage': 50, 'duration': 10.0} # Chute, precisamos da descrição do "Poison"
-                        log_callback(f"  -> {move_name} ativou o efeito! {defender['name']} está envenenado!")
-                    # (Adicionar lógica para paralysis, freeze, etc. aqui)
+                    # Lógica Genérica: Se for Poison ou Burn, aplica dano.
+                    # Se for stun/paralyze, aplicaria outra coisa (mas por enquanto simulamos só duração)
+                    
+                    if debuff_key in ['poison', 'burn']:
+                        # Define dano base estimado
+                        damage_val = 50 + (attacker['level'] * 0.5) 
+                        defender['debuffs'][debuff_key] = {'damage': damage_val, 'duration': 10.0}
+                        log_callback(f"  -> {move_name} aplicou {status_name.upper()}!")
+                    
+                    elif debuff_key in ['paralysis', 'sleep', 'freeze', 'flinch']:
+                        # Na simulação simples de DPS, isso não para o ataque, 
+                        # mas podemos registrar para logs futuros
+                        log_callback(f"  -> {move_name} aplicou {status_name.upper()} (Efeito de controle não simulado totalmente)!")
                 return
 
     # --- FUNÇÃO ATUALIZADA (V4) ---

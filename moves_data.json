@@ -263,6 +263,17 @@
     "multiplier": 10.0,
     "description": "Curse : A varied Ghost type attack; If the user is Ghost type, it will deal damage every sec for 10s. If the Ghost type user is above 50% hp, the power is doubled at the cost of 25% of the user's max hp. If the user is not a Ghost type, instead increase Att & Def by 25 + (0.25*level) & reduce Speed by (40 + (1.0* level))  for 10s."
   },
+  "Dark Pulse": {
+    "type": "Dark",
+    "category": "Special",
+    "power": 800,
+    "cost": 80,
+    "cooldown": 8.0,
+    "range": 1875,
+    "duration": 5.0,
+    "multiplier": 1.0,
+    "description": "Dark Pulse : Special Dark attack; An auto-targeting projectile. 20% chance to flinch the target. Cooldown : 8, Force : 800, Hits: 1"
+  },
   "Defense Curl": {
     "type": "Normal",
     "category": "Status",
@@ -1392,7 +1403,7 @@
     "cost": 10,
     "cooldown": 15.0,
     "range": 2000,
-    "duration": 5.0,
+    "duration": 15.0,
     "multiplier": 1.0,
     "description": "Swords Dance : Increase your attack by (0.75 * level) for 15s. Cooldown : 15"
   },

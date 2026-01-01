@@ -2832,6 +2832,20 @@
             "en_reg": 70
         }
     },
+    "Mismagius": {
+        "type1": "Ghost",
+        "base_stats": {
+            "hp": 60,
+            "attack": 85,
+            "defense": 60,
+            "special-attack": 85,
+            "special-defense": 85,
+            "speed": 60,
+            "energy": 65,
+            "hp_reg": 70,
+            "en_reg": 75
+        }
+    },
     "Girafarig": {
         "type1": "Normal",
         "type2": "Psychic",
@@ -3560,8 +3574,52 @@
         "base_stats": { "hp": 65, "attack": 130, "defense": 60, "special-attack": 75, "special-defense": 60, "speed": 75, "energy": 65, "hp_reg": 65, "en_reg": 70 },
         "type1": "Dark"
     },
+    "Snorunt": {
+        "base_stats": { "hp": 50, "attack": 50, "defense": 50, "special-attack": 50, "special-defense": 50, "speed": 50, "energy": 50, "hp_reg": 55, "en_reg": 55 },
+        "type1": "Ice"
+    },
+    "Glalie": {
+        "base_stats": { "hp": 80, "attack": 80, "defense": 80, "special-attack": 80, "special-defense": 80, "speed": 80, "energy": 85, "hp_reg": 90, "en_reg": 80 },
+        "type1": "Ice"
+    },
+    "Spheal": {
+        "base_stats": { "hp": 70, "attack": 40, "defense": 50, "special-attack": 55, "special-defense": 50, "speed": 25, "energy": 50, "hp_reg": 50, "en_reg": 45 },
+        "type1": "Ice", "type2": "Water"
+    },
+    "Sealeo": {
+        "base_stats": { "hp": 90, "attack": 60, "defense": 70, "special-attack": 75, "special-defense": 70, "speed": 45, "energy": 70, "hp_reg": 75, "en_reg": 60 },
+        "type1": "Ice", "type2": "Water"
+    },
+    "Walrein": {
+        "base_stats": { "hp": 110, "attack": 80, "defense": 90, "special-attack": 95, "special-defense": 90, "speed": 65, "energy": 90, "hp_reg": 100, "en_reg": 80 },
+        "type1": "Ice", "type2": "Water"
+    },
+    "Weavile": {
+        "base_stats": { "hp": 70, "attack": 120, "defense": 65, "special-attack": 45, "special-defense": 85, "speed": 125, "energy": 95, "hp_reg": 95, "en_reg": 100 },
+        "type1": "Dark", "type2": "Ice"
+    },
+    "Magnezone": {
+        "base_stats": { "hp": 70, "attack": 70, "defense": 115, "special-attack": 130, "special-defense": 90, "speed": 60, "energy": 90, "hp_reg": 90, "en_reg": 75 },
+        "type1": "Electric", "type2": "Steel"
+    },
+    "Rhyperior": {
+        "base_stats": { "hp": 115, "attack": 140, "defense": 130, "special-attack": 55, "special-defense": 55, "speed": 40, "energy": 90, "hp_reg": 95, "en_reg": 75 },
+        "type1": "Ground", "type2": "Rock"
+    },
     "Electivire": {
         "base_stats": { "hp": 75, "attack": 123, "defense": 67, "special-attack": 95, "special-defense": 85, "speed": 95, "energy": 100, "hp_reg": 105, "en_reg": 90 },
         "type1": "Electric"
+    },
+    "Magmortar": {
+        "base_stats": { "hp": 75, "attack": 95, "defense": 67, "special-attack": 125, "special-defense": 95, "speed": 83, "energy": 100, "hp_reg": 100, "en_reg": 85 },
+        "type1": "Fire"
+    },
+    "Glaceon": {
+        "base_stats": { "hp": 65, "attack": 60, "defense": 110, "special-attack": 130, "special-defense": 95, "speed": 65, "energy": 65, "hp_reg": 70, "en_reg": 75 },
+        "type1": "Ice"
+    },
+    "Mamoswine": {
+        "base_stats": { "hp": 110, "attack": 130, "defense": 80, "special-attack": 70, "special-defense": 60, "speed": 80, "energy": 85, "hp_reg": 90, "en_reg": 85 },
+        "type1": "Ice", "type2": "Ground"
     }
 }
