@@ -1,30 +1,31 @@
-Patch Notes v0.1 - v2.0.1 - The Silph Scope
+Patch Notes v0.1 - v2.0.8 - The Silph Scope
 Here are the technical details for curious Trainers:
+
 Hello, Trainers!
 
-Welcome to the definitive version of The Silph Scope! My name is Vega, and this project is my passion for Pokémon and the Pokémon MMO 3D transformed into a complete tool suite.
+Welcome to the definitive version of The Silph Scope! My name is Vega, and this project is my passion for Pokémon and the 3D Pokémon MMO turned into a complete toolkit.
 
-To celebrate this launch, I've prepared a summary of the application's own "evolution," detailing the technical journey that brought us here.
+To celebrate this release, I’ve prepared a summary of the app's "evolution," detailing the technical journey that brought us here.
 
 v0.1 - The Foundation
 NEW
 
-Collection Manager: The app's core. A system to add, edit, and save Pokémon with essential data (level, nature, IVs, EVs, notes).
+Collection Manager: The core of the app. A system to add, edit, and save Pokémon with essential data (level, nature, IVs, EVs, notes).
 
 v0.3 - The Dawn of Strategy
 NEW
 
-Team Analyzer (Basic): An initial tool to assemble a team of up to 6 Pokémon and generate a detailed analysis of their defensive weaknesses and resistances.
+Team Analyzer (Basic): An initial tool to build a team of up to 6 Pokémon and generate a detailed analysis of their defensive weaknesses and resistances.
 
 v0.5 - Simulating Combat
 NEW
 
-Battle Planner (Beta): First implementation of a boss battle simulation, calculating basic counters based purely on type advantage.
+Battle Planner (Beta): First implementation of a boss battle simulation, calculating basic counters purely based on type advantage.
 
-v0.8 - The Master's Tools
+v0.8 - Master’s Tools
 NEW
 
-EV Training Guide: An integrated database that suggests the best locations and Pokémon for training specific EVs, including location maps.
+EV Training Guide: An integrated database suggesting the best locations and Pokémon for training specific EVs, including location maps.
 
 NEW
 
@@ -33,21 +34,21 @@ Shiny Hunt Tracker: A module with a timer and encounter counter to help organize
 v1.0 - The Great Logic Overhaul
 UPDATE
 
-Battle Planner 2.0: The system is out of Beta. The simulation logic was rebuilt from the ground up to include a deeper analysis of base stats, damage, and survival time, resulting in a much more accurate "Battle Index".
+Battle Planner 2.0: The system left Beta. The simulation logic was rebuilt from scratch to include a deeper analysis of base stats, damage, and survival time, resulting in a much more accurate "Battle Index."
 
 UPDATE
 
-Database: Added data for moves, new Pokémon, and bosses to power the new battle logic.
+Database: Added move data, new Pokémon, and bosses to power the new battle logic.
 
 v1.1 - The Machine's Eye
 NEW
 
-Stats Calculator (OCR): Implementation of an Optical Character Recognition system. By pressing F10, the app captures a screen region and automatically extracts stats for quick addition to the collection.
+Stats Calculator (OCR): Implementation of an Optical Character Recognition system. By pressing F10, the app captures a screen region and automatically extracts stats to quickly add them to the collection.
 
-v1.2 - Refinement & QoL
+v1.2 - Refinement & Quality of Life
 NEW
 
-Themes & Languages: Added support for multiple themes (Dark, Light, Pokémon) and languages (pt-br, en-us), selectable in the new Settings tab.
+Themes and Languages: Added support for multiple themes (Dark, Light, Pokémon) and languages (PT-BR, EN-US), selectable in the new Settings tab.
 
 NEW
 
@@ -55,16 +56,16 @@ Global Sorting: Implemented an option in Settings to define the default sort ord
 
 FIX
 
-Various fixes to the OCR logic and overall app stability.
+Various fixes to OCR logic and overall app stability.
 
 v1.3 - The Living Interface
-QoL
+Quality of Life
 
-Visual Table: The Collection tab's main table was redesigned to include a column with each Pokémon's image.
+Visual Table: The main table in the Collection tab was redesigned to include an image column for each Pokémon.
 
-QoL
+Quality of Life
 
-General user interface polish across all tabs for a smoother experience.
+General UI Improvements: Enhancements across all tabs for a smoother experience.
 
 v1.3.8 - The "WOW" Factor
 NEW
@@ -77,61 +78,73 @@ Generative Sound System: Sound effects for evolution are procedurally generated 
 
 NEW
 
-Multi-Evolution Support: Pokémon with branching evolutions (e.g., Eevee) now open a dialog for the user to choose the desired path.
+Multi-Evolution Support: Pokémon with branched evolutions (e.g., Eevee) now open a dialog box for the user to choose the desired path.
 
-QoL
+Quality of Life
 
-Total Customization: Added options in Settings for the user to choose their preferred evolution animation style and sound effect.
+Full Customization: Added options in Settings for users to choose their preferred animation style and sound effects.
 
-v2.0.1 - The Ultimate Knowledge Hub (Current Version)
+v2.0.1 - The Ultimate Knowledge Hub
 NEW
 
-The Pokédex: A brand-new, fully interactive Pokédex tab, designed to mimic the classic feel of the device from the series. It's not just a list; it's a complete information hub.
+The Pokédex: A brand new, fully interactive Pokédex tab, designed to mimic the classic feel of the series' device. It’s not just a list; it’s a complete information center.
 
-Detailed Pokémon Info: Includes base stats, type matchups (offensive and defensive), EV yields, possible drops, and related quests.
+Detailed info on Pokémon, base stats, type matchups (offensive and defensive), EV yields, drops, and quests.
 
-Dynamic Stat Bars: A unique visual system that shows the strength of a Pokémon's base stats relative to all other Pokémon in the game.
+Dynamic Stat Bars: A unique visual system showing the strength of a Pokémon's base stats relative to all others in the game.
 
-Type Explorer: A complete tool to analyze the strengths and weaknesses of every type combination.
+Type Explorer: A comprehensive tool to analyze the strengths and weaknesses of every type combination.
 
-Boss Analysis & Defensive Coverage: Tools integrated into the Pokédex to check the best types against any boss or to see how your collection fares against a specific attack type.
+Boss Analysis & Defensive Coverage: Tools integrated into the Pokédex to check the best types against any boss.
 
-Map Explorer: Browse all game maps and see which Pokémon spawn in each one.
+Map Explorer & EV Spots: Navigate through maps and automatically find the best training spots.
+
+NEW
 
 Comparative Analysis: A powerful tool to compare Pokémon from your collection side-by-side, projecting their final stats at level 125 to determine the best "Tank," "Attacker," or "All-Rounder."
 
-Game Records: A fun section to discover game records, like the Pokémon with the highest base stats, the most lucrative quests, and the rarest spawns.
-
-EV Hotspots: Automatically calculates and ranks the best locations to train each specific EV stat, combining spawn rates and EV yields.
-
 UPDATE
 
-Remote Data Loading: The app now attempts to fetch the latest game data (Pokémon stats, spawn rates, etc.) directly from the project's GitHub repository upon startup, ensuring you always have the most up-to-date information without needing to download a new version of the app.
+Remote Data Loading: The app now attempts to fetch the latest game data directly from the repository upon launch, ensuring you always have the most up-to-date info without downloading a new app version.
 
-QoL
+Quality of Life
 
-Complete Internationalization: Every single piece of text in the application is now fully translated for both Brazilian Portuguese and English, providing a native experience for all users.
+Full Internationalization: Complete translation for PT-BR and EN-US.
+
+v2.0.8 - The Sinnoh Era & The Interpreter V4 (Current Version)
+NEW
+
+Data Expansion: The heavyweights have arrived! Added full support (base stats, images, and evolution) for Magmortar, Rhyperior, Magnezone, Mamoswine, Weavile, and Glaceon.
+
+OVERHAUL
+
+Battle Logic V4.0 ("The Interpreter"): The battle simulator received a massive intelligence update. Now, the system uses Regex to read and interpret move descriptions in real-time.
+
+This allows simulating complex effects like Burn, Poison, and residual Trap damage (Fire Spin/Whirlpool) with precision.
+
+The AI now correctly recognizes and applies buffs and debuffs based on percentage or level.
+
+GAME META (Synchronization)
+
+Critical update to reflect the official game's November/December 2025 balance patches:
+
+Boss Protection Fix: The simulation now respects the new mechanic where the Boss Defense Rank is not affected by debuffs (only base defense is reduced), making victory calculations much more realistic.
+
+Leech Seed Nerf: Damage calculation adjusted to reflect the in-game power reduction.
+
+Swords Dance: Buff duration adjusted to 15 seconds.
 
 FIX
 
-Countless bug fixes and stability improvements across all features, especially in the Pokédex and Comparative Analysis tools, to ensure a smooth and crash-free experience.
+Adjustments to Learnsets, including the addition of Night Shade for Sableye at level 21.
 
 Next Steps
-The journey is just beginning! With the core features now stable and robust, the focus will shift to new functionalities and community requests. Keep an eye out for future updates, which may include:
+The journey is just beginning! With core features now stable and robust, the focus will shift to new functionalities and community requests. Keep an eye out for future updates!
 
-Item Support: Battle simulation that takes potions and other items into account.
+❤️ A Project Fan-Made for Fans The Silph Scope is a passion project, developed by a single Trainer (me, Vega!) in my free time, with the sole goal of helping our community. The app is and always will be 100% free.
 
-Move Analysis: Details on Boss attacks and suggestions for Pokémon with super-effective moves.
+If this tool has helped you on your journey, please consider supporting me. Any donation, no matter the amount, gives me a huge incentive to keep developing, fixing bugs, and adding new features for all of us.
 
-Damage Calculator: A tool to predict the damage of specific attacks.
+Check the "Support" tab in the app for more details.
 
-And much more, based on community feedback and game updates!
-
-❤️ A Project Made by a Fan for a Fan
-The Silph Scope is a passion project, developed by a single Trainer (me, Vega!) in my spare time, with the sole goal of helping our community. The app is and always will be 100% free.
-
-If this tool has helped you on your journey, please consider supporting me. Any donation, no matter the amount, gives me a huge incentive to continue developing, fixing bugs, and adding new features for all of us.
-
-Check out the "Support" tab within the app for more details.
-
-Thank you very much, and happy hunting! May your next encounters be "shiny"! ✨
+Thank you so much and happy hunting! May your next encounters be "shiny"! ✨
