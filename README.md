@@ -68,6 +68,19 @@ Damage Calculator: A tool to predict the damage of specific attacks.
 
 And much more, based on community feedback and game updates!
 
+----------------------------------------------------------------------------------------------------
+
+⚙️ Technical Info & Maintenance
+To address the common concern of data obsolescence, The Silph Scope was designed to be modular:
+
+Dynamic Data: Item stats, spawn rates, and Pokémon info are pulled from a remote JSON file on launch. This allows for instant updates without needing a full app reinstall.
+
+Open for Contributions: Since the project is hosted on GitHub, the community can contribute by updating the data files or the logic if the game's formulas change.
+
+Security: The app is a standalone companion. It does not inject code, read memory, or interact with game files, ensuring 100% compliance with PMMO3D's spirit.
+
+----------------------------------------------------------------------------------------------------
+
 ❤️ A Project Made by a Fan for a Fan
 The Silph Scope is a passion project, developed by a single Trainer (me, Vega!) in my spare time, with the sole goal of helping our community. The app is and always will be 100% free.
 
